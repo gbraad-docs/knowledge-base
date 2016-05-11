@@ -48,9 +48,9 @@ About 2.4G in size. These were made using the generic cloud image:
   * http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2 (800M)
 
 
-Best to cache this image in:
+Images can be cached or specified using a download url (needs md5):
 
-    /home/[username:stack]/.quickstart/undercloud.qcow2
+    /home/[username:stack]/.quickstart/latest.qcow2
 
 
 ---
