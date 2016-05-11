@@ -108,3 +108,11 @@ Images can be cached or specified using a download url (needs md5):
 To be changed to:
 
   * https://review.gerrithub.io/#/c/274691/11/tasks/dib_build.yml
+
+
+Ansible role
+------------
+
+https://github.com/redhat-openstack/ansible-role-tripleo-image-build
+
+have added a test build at `tests\pip`
