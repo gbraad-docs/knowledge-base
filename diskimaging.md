@@ -127,3 +127,14 @@ This will generate an image, based on
     http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
 
 Successful run currently takes about 1h 30+m
+
+
+
+Packages installed
+------------------
+
+In the file `vars\default_package_list.yml` of `ansible-role-tripleo-image-build`
+the packages to be installed are defined.
+
+  * https://github.com/redhat-openstack/ansible-role-tripleo-image-build/blob/master/vars/default_package_list.yml
+
