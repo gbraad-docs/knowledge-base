@@ -115,17 +115,13 @@ Ansible role
 
 https://github.com/redhat-openstack/ansible-role-tripleo-image-build
 
-have added a test build at `tests\pip`
 
+```
+$ cd tests\pip
+$ build.sh $VIRTHOST
+```
 
+This will generate an image, based on
 
-
-
-
-
-Executing Ansible...
-+ set -x
-+ ansible-playbook -vv build_default_images.yml -e ansible_python_interpreter=/usr/bin/python -e local_working_dir=/home/gerard/ansible-role-tripleo-image-build/tests/pip/.artib -e virthost=server-124.0.dev5.ustack.in -e artib_base_os=centos7 -e artib_release=mitaka
-ERROR! Unexpected Exception: (setuptools 0.9.8 (/var/home/gerard/ansible-role-tripleo-image-build/tests/pip/.artib/lib/python2.7/site-packages), Requirement.parse('setuptools>=11.3'))
-the full traceback was:
-
+  * artib_minimal_base_image_url  
+    http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2

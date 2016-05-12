@@ -63,3 +63,4 @@ Project tripleo-quickstart-promote-master-delorean-build-images
     --extra-vars artib_delorean_hash=$dlrn_hash
 
 # The images will be in /var/lib/oooq-images dir on the virthost
+
