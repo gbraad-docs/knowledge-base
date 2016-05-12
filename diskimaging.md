@@ -146,4 +146,8 @@ installing certain packages. This list is defined in `defaults\main.yml`:
 
 After which `dib_build.yml` will prepare and do the `disk-imaging-build`, this
 generates the IPA (ironic-python-agent) ramdisk and the overcloud full image. 
-These steps invoke `library\tripleo_build_images.py`.
+These steps invoke `library\tripleo_build_images.py`. It uses respectively the
+following elements:
+
+  * artib_agent_ramdisk_elements
+  * artib_overcloud_full_elements
