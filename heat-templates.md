@@ -1,6 +1,11 @@
 Heat
 ====
 
+
+
+Puppet
+------
+
 the integration between Heat and Puppet is realized using the resource:
 
   OS::Heat::SoftwareConfig
