@@ -138,3 +138,12 @@ the packages to be installed are defined.
 
   * https://github.com/redhat-openstack/ansible-role-tripleo-image-build/blob/master/vars/default_package_list.yml
 
+The `overcloud` image gets converted into an `undercloud` image by removing and
+installing certain packages. This list is defined in `defaults\main.yml`:
+
+  * artib_undercloud_remove_packages
+  * artib_undercloud_install_packages
+
+After which `dib_build.yml` will prepare and do the `disk-imaging-build`, this
+generates the IPA (ironic-python-agent) ramdisk and the overcloud full image. 
+These steps invoke `library\tripleo_build_images.py`.
