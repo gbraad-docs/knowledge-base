@@ -18,4 +18,11 @@ that have this defined. In controller-config for instance, you will find the fol
 
   manifests/overcloud_controller.pp    =>   https://github.com/openstack/tripleo-heat-templates/blob/master/puppet/manifests/overcloud_controller.pp
 
-This is basically how they integrate Puppet into the heat deployment.
+
+
+References
+----------
+
+  * http://hardysteven.blogspot.com/2015/05/tripleo-heat-templates-part-1-roles-and.html
+  * http://hardysteven.blogspot.com/2015/05/tripleo-heat-templates-part-2-node.html
+  * http://hardysteven.blogspot.com/2015/05/tripleo-heat-templates-part-3-cluster.html
