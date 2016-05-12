@@ -125,3 +125,5 @@ This will generate an image, based on
 
   * artib_minimal_base_image_url  
     http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
+
+Successful run currently takes about 1h 30+m
