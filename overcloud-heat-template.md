@@ -62,3 +62,33 @@ Deployed servers
   * /tripleo-heat-templates/puppet/ceph-storage.yaml:
   * /tripleo-heat-templates/puppet/cinder-storage.yaml:
   * /tripleo-heat-templates/puppet/swift-storage.yaml:
+
+
+Puppet
+------
+
+the integration between Heat and Puppet is realized using the resource:
+
+  OS::Heat::SoftwareConfig
+
+which is defined with a group: puppet. In the definition they de a get_file pointing to a manifest file:
+
+For instance in `tripleo-heat-templates` they have
+
+  * puppet/compute-post
+  * puppet/controller-config
+  * puppet/controller-config-pacemaker
+  * puppet/swift-stroagepost
+
+that have this defined. In controller-config for instance, you will find the following manifest specified:
+
+  manifests/overcloud_controller.pp    =>   https://github.com/openstack/tripleo-heat-templates/blob/master/puppet/manifests/overcloud_controller.pp
+
+
+
+References
+----------
+
+  * http://hardysteven.blogspot.com/2015/05/tripleo-heat-templates-part-1-roles-and.html
+  * http://hardysteven.blogspot.com/2015/05/tripleo-heat-templates-part-2-node.html
+  * http://hardysteven.blogspot.com/2015/05/tripleo-heat-templates-part-3-cluster.html
