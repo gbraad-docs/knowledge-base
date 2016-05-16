@@ -50,3 +50,9 @@ parameter_defaults:
   BondInterfaceOvsOptions:
       "bond_mode=balance-tcp lacp=active other-config:lacp-fallback-ab=true"
 ```
+
+
+Predictable IPs
+---------------
+
+  * http://tripleo.org/advanced_deployment/node_placement.html#predictable-ips
