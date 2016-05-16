@@ -5,8 +5,21 @@ TripleO network setup
   * https://remote-lab.net/rdo-manager-ha-openstack-deployment
 
 
+Customization of the Heat templates
+-----------------------------------
+
+```
+$ mkdir customized
+$ cp -r /usr/share/openstack-tripleo-heat-templates/* customized/
+```
+
+
 Network isolation
 -----------------
+
+```
+$ vi environments/network-environment.yaml
+```
 
 ```
 resource_registry:
@@ -50,6 +63,8 @@ parameter_defaults:
   BondInterfaceOvsOptions:
       "bond_mode=balance-tcp lacp=active other-config:lacp-fallback-ab=true"
 ```
+
+  * Source: http://docs.openstack.org/developer/tripleo-docs/advanced_deployment/network_isolation.html
 
 
 Predictable IPs
