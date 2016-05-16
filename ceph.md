@@ -38,3 +38,9 @@ extra_args: "--control-scale 3 --compute-scale 3 --ceph-storage-scale 3 -e /usr/
 
 This places the `ceph-mon` on all the _controler_ nodes and `ceph-osd` on the
 nodes with _ceph_ as flavor.
+
+
+Use ceph-ansible to takeover existing deployment
+------------------------------------------------
+
+  * https://www.sebastien-han.fr/blog/2016/05/02/Take-over-an-existing-Ceph-cluster-with-Ceph-Ansible/
