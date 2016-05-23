@@ -608,3 +608,10 @@ Also deals with the flavors and vlan if defined
 
   * Advanced Deployment with TripleO  
     https://keithtenzer.com/2015/11/09/advanced-deployment-with-tripleo-and-openstack-director/
+
+
+## Packages
+
+RDO package specs are collected at http://github.com/openstack-packages/
+
+They are created using DLRN: https://github.com/openstack-packages/DLRN
