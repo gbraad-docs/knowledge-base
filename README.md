@@ -615,3 +615,20 @@ Also deals with the flavors and vlan if defined
 RDO package specs are collected at http://github.com/openstack-packages/
 
 They are created using DLRN: https://github.com/openstack-packages/DLRN
+
+### Delorean
+
+Install and configure DLRN
+  * http://dlrn.readthedocs.io/en/latest/installation.html#configuring-your-httpd
+
+
+```
+$ sudo yum install git createrepo python-virtualenv mock gcc redhat-rpm-config rpmdevtools httpd
+$ sudo usermod -a -G mock $USER
+$ newgrp mock
+$ newgrp $USER
+$ sudo systemctl start httpd
+$ virtualenv dlrn-venv
+$ source drln-venv/bin/activate
+$ pip install dlrn
+```
