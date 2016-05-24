@@ -717,6 +717,12 @@ openstack overcloud deploy --templates --libvirt-type qemu --control-flavor oooq
 
 ### undercloud: `~/storage-environment.yaml`
 ```
+parameter_defaults:
+  CinderEnableIscsiBackend: false
+  CinderEnableRbdBackend: true
+  NovaEnableRbdBackend: true
+  GlanceBackend: rbd
+  GnocchiBackend: rbd
   ComputeEnableCephStorage: true
 ```
 
