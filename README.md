@@ -616,6 +616,7 @@ RDO package specs are collected at http://github.com/openstack-packages/
 
 They are created using DLRN: https://github.com/openstack-packages/DLRN
 
+
 ### Delorean
 
 Install and configure DLRN
@@ -630,5 +631,96 @@ $ newgrp $USER
 $ sudo systemctl start httpd
 $ virtualenv dlrn-venv
 $ source drln-venv/bin/activate
-$ pip install dlrn
+$ git clone https://github.com/openstack-packages/DLRN.git
+$ cd DLRN
+$ pip install --upgrade pip
+$ pip install -r requirements.txt
+$ python setup.py develop
 ```
+
+
+## Install Ceph on Compute nodes
+Undercloud images need to be regenerated:
+
+  * https://github.com/gbraad/redhat-openstack-ansible-role-tripleo-image-build/tree/compute-ceph-enable
+  * https://github.com/gbraad/openstack-tripleo-heat-templates/tree/compute-ceph-enable
+
+
+### image-build: `override.yml`
+```
+artib_package_install_script: package-install-workarounds.sh.j2
+artib_minimal_base_image_url: file:///var/lib/oooq-images-org/CentOS-7-x86_64-GenericCloud.qcow2
+```
+
+### image-build: `package-install-workarounds.sh.j2`
+```
+#!/bin/bash
+set -eux
+yum install -y {% for package in artib_overcloud_packages %} {{ package }} {% endfor %}
+yum install -y unzip
+
+# ceph enablement
+pushd /usr/share/openstack-tripleo-heat-templates
+curl -o patch.zip https://review.openstack.org/changes/273754/revisions/32d5658b903a2ac4ab192a5b83c35a31c76d4c06/patch?zip
+unzip patch.zip
+patch -p1 < 32d5658b.diff
+popd
+```
+
+### image-build: generate image
+```
+$ build.sh -e override.yml $VIRTHOST
+```
+
+### quickstart: config
+```
+overcloud_nodes:
+  - name: control_0
+    flavor: control
+  - name: control_1
+    flavor: control
+  - name: control_2
+    flavor: control
+
+  - name: compute_0
+    flavor: compute
+  - name: compute_1
+    flavor: compute
+  - name: compute_2
+    flavor: compute
+
+  - name: storage_0
+    flavor: ceph
+  - name: storage_1
+    flavor: ceph
+  - name: storage_2
+    flavor: ceph
+
+extra_args: >-
+  --control-scale 3
+  --compute-scale 3
+  --ceph-storage-scale 3
+  -e /usr/share/openstack-tripleo-heat-templates/environments/puppet-pacemaker.yaml
+  -e ~/storage-environment.yaml
+  --ntp-server pool.ntp.org
+```
+
+### quickstart: install undercloud
+```
+./quickstart.sh --config deploy-config.yml --undercloud-image-url file:///var/lib/oooq-images/undercloud.qcow2 $VIRTHOST
+```
+
+### undercloud: `overcloud-deploy.sh`
+```
+openstack overcloud deploy --templates --libvirt-type qemu --control-flavor oooq_control --compute-flavor oooq_compute --ceph-storage-flavor oooq_ceph --timeout 60 --control-scale 3 --compute-scale 3 --ceph-storage-scale 3 -e /usr/share/openstack-tripleo-heat-templates/environments/puppet-pacemaker.yaml -e ~/storage-environment.yaml --ntp-server pool.ntp.org
+```
+
+### undercloud: `~/storage-environment.yaml`
+```
+  ComputeEnableCephStorage: true
+```
+
+### undercloud
+
+  * `overcloud-deploy.sh`
+  * `overcloud-deploy-post.sh`
