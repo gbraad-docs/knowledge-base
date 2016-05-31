@@ -136,6 +136,27 @@ nodes with _ceph_ as flavor.
   * https://remote-lab.net/rdo-manager-ha-openstack-deployment
 
 
+### Network isolation
+"When isolated networks are configured, the OpenStack services will be
+configured to use the isolated networks. If no isolated networks are configured,
+all services run on the provisioning network."
+
+Creating custom configuration is possible by modifying the templates. The
+original templates are in `/usr/share/openstack-tripleo-heat-templates/network/config/`
+A description can be found here: http://docs.openstack.org/developer/tripleo-docs/advanced_deployment/network_isolation.html#customizing-the-interface-templates
+
+"When using numbered interfaces (“nic1”, “nic2”, etc.) instead of named
+interfaces (“eth0”, “eno2”, etc.), the network interfaces of hosts within a
+role do not have to be exactly the same. For instance, one host may have
+interfaces em1 and em2, while another has eno1 and eno2, but both hosts’ NICs
+can be referred to as nic1 and nic2."
+
+"The numbered NIC scheme only takes into account the interfaces that are live
+(have a cable attached to the switch). So if you have some hosts with 4
+interfaces, and some with 6, you should use nic1-nic4 and only plug in 4 cables
+on each host."
+
+
 ### Customization of the Heat templates
 
 ```
@@ -144,7 +165,7 @@ $ cp -r /usr/share/openstack-tripleo-heat-templates/* customized/
 ```
 
 
-### Network isolation
+### Network environment setup
 
 ```
 $ vi environments/network-environment.yaml
