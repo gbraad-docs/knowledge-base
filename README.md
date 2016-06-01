@@ -751,3 +751,52 @@ parameter_defaults:
 
   * `overcloud-deploy.sh`
   * `overcloud-deploy-post.sh`
+
+
+## Post Installation Customization
+By modifying the Heat templates it is simple to install additional software on
+the nodes during the post-install phase.
+
+
+## Create post installation yaml files.
+
+```
+undercloud$ cat << EOF > ~/templates/firstboot-environment.yaml
+resource_registry:
+  OS::TripleO::NodeUserData: /home/stack/my_templates/firstboot-config.yaml
+EOF
+```
+
+```
+undercloud$ cat << EOF > ~/templates/firstboot-config.yaml
+heat_template_version: 2014-10-16
+
+resources:
+  userdata:
+    type: OS::Heat::MultipartMime
+    properties:
+      parts:
+      - config: {get_resource: repo_config}
+
+  repo_config:
+    type: OS::Heat::SoftwareConfig
+    properties:
+      config: |
+        #!/bin/bash
+        yum install -y [packages to want to be installed]
+        # and any other commands you want to be performed
+
+outputs:
+  OS::stack_id:
+    value: {get_resource: userdata}
+EOF
+```
+
+Deploy overcloud using custom the post-installation customization.
+
+```
+[stack@undercloud ~]$ openstack overcloud deploy --templates \
+   --control-flavor control --compute-flavor compute --control-scale 1
+   --compute-scale 1 --neutron-tunnel-types vxlan --neutron-network-type vxlan
+   -e ~/templates/firstboot-environment.yaml
+```
