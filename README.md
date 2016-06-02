@@ -760,6 +760,8 @@ the nodes during the post-install phase.
 
 ## Create post installation yaml files.
 
+ * http://tripleo.org/advanced_deployment/extra_config.html
+
 ```
 undercloud$ cat << EOF > ~/templates/firstboot-environment.yaml
 resource_registry:
