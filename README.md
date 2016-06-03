@@ -71,11 +71,8 @@ curl -sSL https://raw.githubusercontent.com/openstack/tripleo-quickstart/master/
 
 [TripleO scratchpad](//github.com/gbraad/openstack-tripleo-scratchpad/)
 
-### Instances
 
-```
-openstack server list
-```
+### Basic commands
 
 ```
 openstack keypair create mykey > mykey.pem
@@ -95,6 +92,10 @@ openstack image list
 
 ```
 openstack server create [name] --flavor [flavor] --image [image] --key-name [key-name]
+```
+
+```
+openstack server list
 ```
 
 ```
