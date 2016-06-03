@@ -1,5 +1,9 @@
-# Personal scratchpad
-Just some random notes
+Personal scratchpad
+===================
+
+Just a collection of some random notes
+
+_Gerard Braad <me@gbraad.nl>_
 
 
 ## OpenStack
