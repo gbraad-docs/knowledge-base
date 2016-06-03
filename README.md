@@ -10,6 +10,12 @@ Just some random notes
 pip install -U pyopenssl ndg-httpsclient pyasn1
 ```
 
+### OpenStack client
+
+```
+pip install python-openstackclient
+```
+
 
 ## Git
 
