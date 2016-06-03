@@ -134,6 +134,7 @@ export GIT_EDITOR=vim
 for i in $(find . -maxdepth 1 -type d)
 do
     pushd $i
+    git checkout master
     git pull --reb
     popd
 done
