@@ -79,7 +79,7 @@ openstack keypair create mykey > mykey.pem
 ```
 
 ```
-openstack keypair create -public-key .ssh/id_rsa.pub mykey
+openstack keypair create --public-key ~/.ssh/id_rsa.pub mykey
 ```
 
 ```
