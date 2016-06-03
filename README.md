@@ -92,6 +92,18 @@ git config --global core.editor "vim"
 export GIT_EDITOR=vim
 ```
 
+### Update all subdirectories
+
+```
+#!/bin/bash
+for i in $(find . -type d -maxdepth 1)
+do
+    pushd $i
+    git pull --reb
+    popd
+done
+```
+
 
 ## Install software
 
