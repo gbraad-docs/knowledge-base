@@ -31,6 +31,8 @@ Careful: git reset --hard WILL DELETE YOUR WORKING DIRECTORY CHANGES
 ```
 
 ### Set vim as default editor
+Needed on Ubuntu and C9 containers
+
 ```
 git config --global core.editor "vim"
 ```
