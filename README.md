@@ -131,7 +131,7 @@ export GIT_EDITOR=vim
 
 ```
 #!/bin/bash
-for i in $(find . -type d -maxdepth 1)
+for i in $(find . -maxdepth 1 -type d)
 do
     pushd $i
     git pull --reb
