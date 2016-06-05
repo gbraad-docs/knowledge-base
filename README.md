@@ -157,6 +157,7 @@ openstack baremetal configure boot
 openstack baremetal introspection bulk start
 openstack overcloud deploy --templates
 ```
+
 [TripleO install](//gist.github.com/gbraad/073052c08457526463369b8b80890afa)
 
 
