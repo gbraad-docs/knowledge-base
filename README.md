@@ -72,6 +72,16 @@ curl -sSL https://raw.githubusercontent.com/openstack/tripleo-quickstart/master/
 [TripleO scratchpad](//github.com/gbraad/openstack-tripleo-scratchpad/)
 
 
+### TripleO physical install
+
+[TripleO install](//gist.github.com/gbraad/073052c08457526463369b8b80890afa)
+
+
+### PackStack scenario001 test using WeIRDO
+
+[WeIRDO localhost](//gist.github.com/gbraad/073052c08457526463369b8b80890afa)
+
+
 ### Basic commands
 
 ```
