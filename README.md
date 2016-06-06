@@ -239,6 +239,7 @@ export GIT_EDITOR=vim
 ```
 
 ### Update all subdirectories
+Used for a project directory with no `git submodule`.
 
 ```
 #!/bin/bash
