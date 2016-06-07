@@ -12,7 +12,7 @@ _Gerard Braad <me@gbraad.nl>_
 
 
 ### tripleo-quickstart-promote-master-delorean-minimal
-
+R
     export VIRTHOST='my-cool-virthost.example.com'
     bash quickstart.sh \
     -u "http://artifacts.ci.centos.org/artifacts/rdo/images/master/delorean/testing/undercloud.qcow2" \
@@ -386,6 +386,10 @@ Prebuilt images that are used are:
     /tripleo-quickstart/quickstart.sh
   * image_url: http://artifacts.ci.centos.org/rdo/images/{{ release }}/delorean/stable/undercloud.qcow2
     /tripleo-quickstart/playbooks/roles/libvirt/defaults/main.yml:
+
+Currently available (easy copy-n-paste)
+  * http://artifacts.ci.centos.org/artifacts/rdo/images/liberty/delorean/stable/undercloud.qcow2
+  * http://artifacts.ci.centos.org/artifacts/rdo/images/mitaka/delorean/stable/undercloud.qcow2
 
 About 2.4G in size. These were made using the generic cloud image:
 
