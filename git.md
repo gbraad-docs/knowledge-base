@@ -33,3 +33,17 @@ do
     popd
 done
 ```
+
+## Git submodules
+
+```
+git submodule add [repo] [location/name]
+```
+
+```
+git submodule init
+```
+
+```
+git submodule update
+```
