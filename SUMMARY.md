@@ -4,6 +4,7 @@
 
 ## Categories
 
-  * [OpenStack](openstack.md)
+  * [Docker](docker.md)
   * [Git](git.md)
+  * [OpenStack](openstack.md)
   * [Software installation](install.md)
