@@ -723,7 +723,6 @@ extra_args: >-
   --control-scale 3
   --compute-scale 3
   --ceph-storage-scale 3
-  -e undercloud_image_url=file:///var/lib/oooq-images/undercloud-mitaka.qcow2
   -e /usr/share/openstack-tripleo-heat-templates/environments/puppet-pacemaker.yaml
   -e ~/storage-environment.yaml
   --ntp-server pool.ntp.org
@@ -731,7 +730,10 @@ extra_args: >-
 
 ### quickstart: install undercloud
 ```
-./quickstart.sh --config deploy-config.yml $VIRTHOST
+./quickstart.sh \
+   --config deploy-config.yml \
+   -e undercloud_image_url=file:///var/lib/oooq-images/undercloud-mitaka.qcow2 \
+   $VIRTHOST
 ```
 
 ### undercloud: `overcloud-deploy.sh`
