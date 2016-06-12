@@ -731,9 +731,9 @@ extra_args: >-
 ### quickstart: install undercloud
 ```
 ./quickstart.sh \
-   --config deploy-config.yml \
-   -e undercloud_image_url=file:///var/lib/oooq-images/undercloud-mitaka.qcow2 \
-   $VIRTHOST
+  --config deploy-config.yml \
+  -e undercloud_image_url=file:///var/lib/oooq-images/undercloud-mitaka.qcow2 \
+  $VIRTHOST
 ```
 
 ### undercloud: `overcloud-deploy.sh`
