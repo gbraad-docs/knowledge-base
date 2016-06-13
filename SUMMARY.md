@@ -4,6 +4,7 @@
 
 ## Categories
 
+  * [Ansible](ansible.md)
   * [Docker](docker.md)
   * [Git](git.md)
   * [OpenStack](openstack.md)
