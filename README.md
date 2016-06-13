@@ -13,7 +13,7 @@ _Gerard Braad <me@gbraad.nl>_
 
 ### tripleo-quickstart-promote-master-delorean-minimal
 
-    export VIRTHOST='my-cool-virthost.example.com'
+    export VIRTHOST='my-cool-virthost.example.com'im
     bash quickstart.sh \
     -u "http://artifacts.ci.centos.org/artifacts/rdo/images/master/delorean/testing/undercloud.qcow2" \
     -t all \
@@ -857,7 +857,7 @@ cat > instackenv.json << EOF
   "nodes":[
   {
     "_comment":"ooo2",
-    "pm_type":"pxe_ipmi",
+    "pm_type":"pxe_ipmitool",
     "mac": [
         "ec:a8:6b:ca:fe:c7"
     ],
@@ -871,7 +871,7 @@ cat > instackenv.json << EOF
   },
   {
     "_comment":"ooo3",
-    "pm_type":"pxe_ipmi",
+    "pm_type":"pxe_ipmitool",
     "mac": [
         "b8:ae:ed:ca:fe:20"
     ],
