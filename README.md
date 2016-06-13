@@ -7,6 +7,7 @@ _Gerard Braad <me@gbraad.nl>_
 
 ## Categories
 
+  * [Ansible](ansible.md)
   * [Docker](docker.md)
   * [Git](git.md)
   * [OpenStack](openstack.md)
