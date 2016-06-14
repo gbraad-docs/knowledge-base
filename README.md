@@ -19,7 +19,6 @@ _Gerard Braad <me@gbraad.nl>_
     -t all \
     -c centosci/minimal.yml \
     $VIRTHOST
-    
 
 
 ### Project tripleo-quickstart-promote-master-delorean-ha
@@ -899,3 +898,19 @@ openstack overcloud deploy --templates
 ## External links
 
   * https://www.rdoproject.org/tripleo/troubleshooting/
+
+
+## Introspection issues
+
+```
+for i in $(ironic node-list | grep -v UUID | awk ' { print $2 } '); do
+  ironic node-set-maintenance $i off;
+done
+```
+
+```
+for i in $(ironic node-list | grep available | grep -v UUID | awk ' { print $2 } '); do
+  ironic node-set-maintenance $i false;
+done
+```
+```
