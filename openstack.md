@@ -124,3 +124,12 @@ openstack server reboot [name]
 ```
 openstack server delete [name]
 ```
+
+
+## Dealing with values from the table output
+
+```
+for i in $( [command] | grep [filter] | awk ' { print $2 } '); do
+  [command] $i
+done
+```
