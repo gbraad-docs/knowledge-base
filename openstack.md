@@ -125,6 +125,18 @@ openstack server reboot [name]
 openstack server delete [name]
 ```
 
+```
+openstack volume create [volume-name] --size [size]
+```
+
+```
+openstack volume create [volume-name] --image [image] --size [size]
+```
+
+```
+openstack server add volume [server-name] [volume-name]
+```
+
 
 ## Dealing with values from the table output
 
