@@ -913,4 +913,11 @@ for i in $(ironic node-list | grep available | grep -v UUID | awk ' { print $2 }
   ironic node-set-maintenance $i false;
 done
 ```
+
+
+## Undercloud issues
+It seems to happen that the undercloud becomes unresponsive to network requests. In that case you can reboot the virtual machine
+
+```
+sudo su - stack -c "virsh reboot undercloud"
 ```
