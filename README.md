@@ -14,3 +14,4 @@ _Gerard Braad <me@gbraad.nl>_
   * [Python](python.md)
   * [Software installation](install.md)
   * [tcpdump](tcpdump.md)
+  * [Libvirt/virsh](virsh.md)
