@@ -1,17 +1,6 @@
 Libvirt/virsh
 =============
 
-## Reboot virtual machine
-
-```
-virsh reboot [vmname]
-```
-
-```
-sudo su - stack -c "virsh reboot undercloud"
-```
-
-
 ## Create snapshot
 
 ```
@@ -39,6 +28,10 @@ virsh destroy [vmname]
 
 ```
 virsh reboot [vmname]
+```
+
+```
+sudo su - stack -c "virsh reboot undercloud"
 ```
 
   * Shutdown
