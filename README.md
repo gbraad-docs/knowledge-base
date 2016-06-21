@@ -921,3 +921,15 @@ It seems to happen that the undercloud becomes unresponsive to network requests.
 ```
 sudo su - stack -c "virsh reboot undercloud"
 ```
+
+
+## Overcloud issues
+
+### Deployment failed
+
+If nodes have been associated, but the deployment failed, you can reclaim the nodes for provisioning:
+```
+for i in $(ironic node-list | grep -v UUID | awk ' { print $2 } '); do
+  ironic node-set-provision-state $i deleted
+done
+```
