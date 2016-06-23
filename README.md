@@ -905,11 +905,6 @@ automate the whole flow, however due to issues along the way
 this wasn't suggested.
 
 
-## External links
-
-  * https://www.rdoproject.org/tripleo/troubleshooting/
-
-
 ## Introspection issues
 
 ```
