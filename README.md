@@ -808,7 +808,7 @@ Deploy overcloud using custom the post-installation customization.
 ```
 
 
-## TripleO physical install
+## TripleO baremetal deployment using Instack
 ```
 cat > /etc/hosts <<EOF
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
@@ -893,6 +893,16 @@ openstack baremetal configure boot
 openstack baremetal introspection bulk start
 openstack overcloud deploy --templates
 ```
+
+
+## TripleO baremetal deployment using Quickstart
+
+  * [TripleO Quickstart on baremetal](https://gist.github.com/gbraad/51bcd499dd7def19a1213381a1468f16)
+
+This gist describes a deployment using the Quickstart in an
+interactive way. Tags and setting `step_introspect: true` can
+automate the whole flow, however due to issues along the way
+this wasn't suggested.
 
 
 ## External links
