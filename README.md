@@ -1,6 +1,8 @@
 Scratchpad for OpenStack
 ========================
 
+![OpenStack](http://docs.openstack.org/infra/publications/overview/graphics/openstack-cloud-software-horizontal-small.png)
+
 Just some thoughts and notes on OpenStack
 
 
