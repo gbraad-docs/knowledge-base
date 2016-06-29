@@ -28,3 +28,22 @@ Ref: [source](http://docs.ansible.com/ansible/playbooks_variables.html#passing-v
 ---
 - hosts: ...
 ```
+
+## Debug modules
+
+`print` will not work, so instead use the following at the top of the module:
+
+```
+import logging
+logging.basicConfig(filename="/tmp/ansible-debug.log', level=logging.DEBUG)
+```
+
+Somewhere else in the code do:
+```
+logging.debug('your message')
+```
+
+And then `tail` the log file:
+```
+$ tail -f /tmp/ansible-debug.log
+```
