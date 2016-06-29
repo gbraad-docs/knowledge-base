@@ -48,6 +48,9 @@ And then `tail` the log file:
 $ tail -f /tmp/ansible-debug.log
 ```
 
+Alternatively you can use '[q](python.md#debugging-using-q)'
+
+
 ## Debug messages
 
 ```
