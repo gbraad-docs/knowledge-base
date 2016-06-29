@@ -47,3 +47,11 @@ And then `tail` the log file:
 ```
 $ tail -f /tmp/ansible-debug.log
 ```
+
+## Debug messages
+
+```
+- debug: msg="System {{ inventory_hostname }}"
+```
+
+[Source](http://docs.ansible.com/ansible/debug_module.html)
