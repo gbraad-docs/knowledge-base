@@ -58,3 +58,14 @@ Alternatively you can use '[q](python.md#debugging-using-q)'
 ```
 
 [Source](http://docs.ansible.com/ansible/debug_module.html)
+
+
+## keep remote files
+
+```
+$ ANSIBLE_KEEP_REMOTE_FILES=1 ansible-playbook ...
+```
+
+```
+$ ls .ansible/tmp/ansible-tmp*
+```
