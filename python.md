@@ -41,3 +41,14 @@ import pdb; pdb.set_trace()
 ```
 
 More information: [Tools training](https://github.com/gbraad/tools-training/blob/master/md/slides.md#pdb)
+
+
+## Debugging using 'q'
+
+```
+$ pip install q(https://pypi.python.org/pypi/q)
+```
+
+ * Output is sent to $TMPDIR/q
+ * replace `print` with `q`
+ * use the `@q` decorator
