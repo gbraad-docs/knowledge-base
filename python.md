@@ -1,21 +1,42 @@
 Python
 ======
 
+## Install `pip`
+```
+yum -y install epel-release
+yum -y install python-pip
+```
+
+```
+apt-get -y install python-pip
+```
+
+
+## Upgrade `pip`
+```
+pip install -U pip
+```
+
+
+## Install requirements using `pip`
+```
+pip install -U -r requirements.txt
+```
+
 
 ## Install in userhome using `pip`
-
 ```
 pip install --user [name]
 ```
 
-## Install specific version using `pip`
 
+## Install specific version using `pip`
 ```
 pip install ansible==2.0
 ```
 
-## Install virtualenv
 
+## Install virtualenv
 ```
 dnf install python-virtualenv
 ```
@@ -25,13 +46,14 @@ dnf install python-pip
 pip install virtualenv
 ```
 
-## Create (and activate) virtualenv
 
+## Create (and activate) virtualenv
 ```
 mkdir .venv
 virtualenv .venv
 source .venv/bin/activate
 ```
+
 
 ## Debugging: trigger trace/breakpoint
 
@@ -44,7 +66,6 @@ More information: [Tools training](https://github.com/gbraad/tools-training/blob
 
 
 ## Debugging using 'q'
-
 ```
 $ pip install q
 ```
