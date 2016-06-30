@@ -7,17 +7,20 @@ Just a collection of some random notes
 
 _Gerard Braad <me@gbraad.nl>_
 
+
 ## Categories
 
-  * [Ansible](ansible.md)
-  * [Docker](docker.md)
-  * [Git](git.md)
-  * [Linux](linux.md)
-  * [Python](python.md)
-  * [rsync](rsync.md)
-  * [Software installation](install.md)
-  * [tcpdump](tcpdump.md)
-  * [Libvirt/virsh](virsh.md)
+## Technology
+
+  * [Ansible](technology/ansible.md)
+  * [Docker](technology/docker.md)
+  * [Git](technology/git.md)
+  * [Linux](technology/linux.md)
+  * [Python](technology/python.md)
+  * [rsync](technology/rsync.md)
+  * [Software installation](technology/install.md)
+  * [tcpdump](technology/tcpdump.md)
+  * [Libvirt/virsh](technology/virsh.md)
 
 
 ## See also
