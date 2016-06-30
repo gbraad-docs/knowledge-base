@@ -1,3 +1,8 @@
 # Summary
 
-  * [Quotes](README.md)
+
+## Categories
+
+### Various
+
+  * [Quotes](various/quotes.md)
