@@ -14,6 +14,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Git](git.md)
   * [OpenStack](openstack.md)
   * [Python](python.md)
+  * [rsync](rsync.md)
   * [Software installation](install.md)
   * [tcpdump](tcpdump.md)
   * [Libvirt/virsh](virsh.md)
