@@ -1,13 +1,12 @@
 Scratchpad for TripleO
 ======================
 
-<a href="http://www.tripleo.org/"><img src="http://tripleo.org/_static/tripleo_owl.svg" /></a>
+[!["TripleO"](https://raw.githubusercontent.com/gbraad/openstack-tripleo-scratchpad/master/tripleo_owl-icon.png)](http://tripleo.org/)
 
 Just some thoughts and notes on OpenStack TripleO
 
 
 _Gerard Braad <me@gbraad.nl>_
-
 
 
 ## CI Jobs
