@@ -17,3 +17,4 @@
 ## See also
 
   * [OpenStack scratchpad](https://github.com/gbraad/openstack-scratchpad/)
+  * [TripleO scratchpad](https://github.com/gbraad/openstack-tripleo-scratchpad/)
