@@ -1,12 +1,7 @@
-Scratchpad for TripleO
-======================
+OpenStack TripleO
+=================
 
 [!["TripleO"](tripleo_owl-icon.png)](http://tripleo.org/)
-
-Just some thoughts and notes on OpenStack TripleO
-
-
-_Gerard Braad <me@gbraad.nl>_
 
 
 ## CI Jobs
