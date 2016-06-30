@@ -1,4 +1,4 @@
-Personal scratchpad
+Gerard Braad's scratchpad
 ===================
 
 [!["Scribble"](https://raw.githubusercontent.com/gbraad/assets/gh-pages/icons/scribble-icon-64.png)](http://github.com/gbraad)
