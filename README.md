@@ -1,6 +1,8 @@
 Scratchpad for TripleO
 ======================
 
+<a href="http://www.tripleo.org/"><img src="http://tripleo.org/_static/tripleo_owl.svg" /></a>
+
 Just some thoughts and notes on OpenStack TripleO
 
 
