@@ -1,5 +1,6 @@
-Computing
-=========
+Chinese: Technology
+===================
+
 
 | zh-CN  | Translation     |
 |--------|-----------------|

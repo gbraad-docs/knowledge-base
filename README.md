@@ -5,4 +5,9 @@ Chinese
 Categories
 ----------
 
-  * [Computing](computing.md)
+
+### Language 
+
+#### Chinese
+
+  * [Technology](language/chinese/technology.md)
