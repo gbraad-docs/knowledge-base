@@ -6,7 +6,7 @@ Linux
 
 ```
 dd if=/dev/zero of=/.swapfile bs=1M count=1000
-mkswap /.swapfile
+mkswap -f /.swapfile
 sudo swapon /.swapfile
 ```
 
