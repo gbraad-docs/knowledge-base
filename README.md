@@ -10,7 +10,7 @@ _Gerard Braad <me@gbraad.nl>_
 
 ## Categories
 
-## Technology
+### Technology
 
   * [Ansible](technology/ansible.md)
   * [Docker](technology/docker.md)
@@ -28,6 +28,7 @@ _Gerard Braad <me@gbraad.nl>_
 ### Various
 
   * [Quotes](various/quotes.md)
+  * [Todo](various/todo.md)
 
 
 ### Language 
@@ -35,4 +36,3 @@ _Gerard Braad <me@gbraad.nl>_
 #### Chinese
 
   * [Technology](language/chinese/technology.md)
-
