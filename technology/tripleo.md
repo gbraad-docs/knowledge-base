@@ -1,7 +1,7 @@
 Scratchpad for TripleO
 ======================
 
-[!["TripleO"](https://raw.githubusercontent.com/gbraad/openstack-tripleo-scratchpad/master/tripleo_owl-icon.png)](http://tripleo.org/)
+[!["TripleO"](tripleo_owl-icon.png)](http://tripleo.org/)
 
 Just some thoughts and notes on OpenStack TripleO
 
