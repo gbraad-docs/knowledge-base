@@ -1,6 +1,8 @@
 Personal scratchpad
 ===================
 
+[!["Scribble"](https://raw.githubusercontent.com/gbraad/assets/gh-pages/icons/scribble-icon-64.png)](http://github.com/gbraad)
+
 Just a collection of some random notes
 
 _Gerard Braad <me@gbraad.nl>_
