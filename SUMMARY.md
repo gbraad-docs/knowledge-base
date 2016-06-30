@@ -3,7 +3,7 @@
   * [Scratchpad](README.md)
 
 
-## Categorie
+## Categories
 
 ### Technology
 
@@ -16,6 +16,11 @@
   * [Software installation](technology/install.md)
   * [tcpdump](technology/tcpdump.md)
   * [Libvirt/virsh](technology/virsh.md)
+
+
+### Various
+
+  * [Quotes](various/quotes.md)
 
 
 ## See also

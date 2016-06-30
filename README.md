@@ -23,6 +23,11 @@ _Gerard Braad <me@gbraad.nl>_
   * [Libvirt/virsh](technology/virsh.md)
 
 
+### Various
+
+  * [Quotes](various/quotes.md)
+
+
 ## See also
 
   * [OpenStack scratchpad](https://github.com/gbraad/openstack-scratchpad/)
