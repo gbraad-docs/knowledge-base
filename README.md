@@ -16,6 +16,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Docker](technology/docker.md)
   * [Git](technology/git.md)
   * [Linux](technology/linux.md)
+  * [OpenStack](technology/openstack.md)
   * [Python](technology/python.md)
   * [rsync](technology/rsync.md)
   * [Software installation](technology/install.md)
@@ -30,5 +31,4 @@ _Gerard Braad <me@gbraad.nl>_
 
 ## See also
 
-  * [OpenStack scratchpad](https://github.com/gbraad/openstack-scratchpad/)
   * [TripleO scratchpad](https://github.com/gbraad/openstack-tripleo-scratchpad/)
