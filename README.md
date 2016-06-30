@@ -12,6 +12,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Ansible](ansible.md)
   * [Docker](docker.md)
   * [Git](git.md)
+  * [Linux](linux.md)
   * [Python](python.md)
   * [rsync](rsync.md)
   * [Software installation](install.md)
