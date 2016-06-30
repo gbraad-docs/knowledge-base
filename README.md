@@ -905,6 +905,34 @@ automate the whole flow, however due to issues along the way
 this wasn't suggested.
 
 
+### Configuration
+
+Increase the VM properties by providing these variables
+```
+undercloud_memory: 16384
+undercloud_disk: 80
+undercloud_vcpu: 8
+```
+
+```
+bash quickstart.sh
+--ansible-debug
+--bootstrap
+--working-dir <my dir>
+--tags all
+--no-clone
+--requirements quickstart-role-requirements.txt
+--requirements <other roles if needed>
+--config <env specific config>
+--extra-vars @<env settings fle with settings to overwrite>
+--playbook baremetal-virt-undercloud-tripleo.yml
+--release mitaka
+--teardown all
+$VIRTHOST
+```
+
+
+
 ## Introspection issues
 
 ```
@@ -926,6 +954,7 @@ It seems to happen that the undercloud becomes unresponsive to network requests.
 ```
 sudo su - stack -c "virsh reboot undercloud"
 ```
+If this happens often, please increase the memory and VCPUs assigned to the VM.
 
 
 ## Overcloud issues
