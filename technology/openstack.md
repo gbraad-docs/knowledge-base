@@ -1,15 +1,10 @@
-Scratchpad for OpenStack
-========================
+OpenStack
+=========
 
 ![OpenStack](http://docs.openstack.org/infra/publications/overview/graphics/openstack-cloud-software-horizontal-small.png)
 
-Just some thoughts and notes on OpenStack
 
-
-_Gerard Braad <me@gbraad.nl>_
-
-
-## See also
+## Links
 
 ### Tools
 
@@ -24,12 +19,6 @@ _Gerard Braad <me@gbraad.nl>_
   * [Hands-on-labs](https://github.com/gbraad/openstack-handsonlabs)
   * [Tools training](https://github.com/gbraad/tools-training)
   * [Open Source Culture](https://github.com/gbraad/open-source-culture)
-
-
-### Notes
-
-  * [General scratchpad](https://github.com/gbraad/scratchpad)
-  * [TripleO scratchpad](https://github.com/gbraad/openstack-tripleo-scratchpad)
 
 
 ## Needed to install OpenStack client on Ubuntu 14.04 (or C9)
