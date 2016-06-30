@@ -1,3 +1,7 @@
 # Summary
 
-  * [Scratchpad](README.md)
+## Categories
+
+### Technology
+
+  * [OpenStack](various/openstack.md)
