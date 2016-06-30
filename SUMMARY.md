@@ -24,3 +24,10 @@
 
   * [Quotes](various/quotes.md)
 
+
+### Language 
+
+#### Chinese
+
+  * [Technology](language/chinese/technology.md)
+

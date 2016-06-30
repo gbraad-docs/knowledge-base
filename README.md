@@ -29,3 +29,10 @@ _Gerard Braad <me@gbraad.nl>_
 
   * [Quotes](various/quotes.md)
 
+
+### Language 
+
+#### Chinese
+
+  * [Technology](language/chinese/technology.md)
+
