@@ -18,6 +18,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Linux](technology/linux.md)
   * [OpenStack](technology/openstack.md)
   * [OpenStack TripleO](technology/tripleo.md)
+  * [ostree](technology/ostree.md)
   * [Python](technology/python.md)
   * [rsync](technology/rsync.md)
   * [Software installation](technology/install.md)
