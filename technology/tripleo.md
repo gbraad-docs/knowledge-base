@@ -943,6 +943,13 @@ for i in $(ironic node-list | grep available | grep -v UUID | awk ' { print $2 }
 done
 ```
 
+### Store ramdisk logs
+
+```
+openstack-config --set /etc/ironic-inspector/inspector.conf processing always_store_ramdisk_logs true
+systemctl restart openstack-ironic-inspector
+```
+
 
 ## Undercloud issues
 It seems to happen that the undercloud becomes unresponsive to network requests. In that case you can reboot the virtual machine
