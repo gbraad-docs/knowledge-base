@@ -36,3 +36,8 @@ _Gerard Braad <me@gbraad.nl>_
 #### Chinese
 
   * [Technology](language/chinese/technology.md)
+
+
+#### English
+
+  * [Introduction](language/english/README.md)
