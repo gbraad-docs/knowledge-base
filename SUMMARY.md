@@ -1,8 +1,5 @@
 # Summary
 
-  * [Scratchpad](README.md)
-
-
 ## Categories
 
 ### Technology
