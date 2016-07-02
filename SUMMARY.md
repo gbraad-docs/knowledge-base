@@ -5,6 +5,7 @@
 ### Technology
 
   * [Ansible](technology/ansible.md)
+  * [cloud-init](technology/cloudinit.md)
   * [Docker](technology/docker.md)
   * [Git](technology/git.md)
   * [Linux](technology/linux.md)
