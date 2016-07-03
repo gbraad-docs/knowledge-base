@@ -5,7 +5,8 @@ Linux
 ## Swapfile
 
 ```
-dd if=/dev/zero of=/.swapfile bs=1M count=1000
+dd if=/dev/zero of=/.swapfile bs=1M count=1024
+chmod 0600 /.swapfile
 mkswap -f /.swapfile
 sudo swapon /.swapfile
 ```
