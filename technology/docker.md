@@ -25,6 +25,14 @@ systemctl daemon-reload
 systemctl start docker
 ```
 
+Verify with:
+
+```
+docker info | grep Storage
+```
+
+`overlay` will be shown instead of `devicemapper`.
+
 For Fedora/CentOS you can use `docker-storage-setup` to setup the storage driver.
 
 Note:
