@@ -16,3 +16,5 @@ Quotes
 "Fail faster to succeed sooner"
 
 "Being a kid has nothing to do with age"
+
+!["The world I see is the world I create."](https://pbs.twimg.com/media/CkPi79-UYAE4Whp.jpg:large)
