@@ -40,6 +40,7 @@ git checkout f23
   * [Compose server](https://github.com/projectatomic/rpm-ostree/blob/master/docs/manual/compose-server.md)
   * [BYO Atomic](https://github.com/jasonbrooks/byo-atomic)
   * [BYO Atomic - base](https://gitlab.com/gbraad/byo-atomic)
+    * [Registry](https://gitlab.com/gbraad/byo-atomic/container_registry)
   * [BYO Atomic - CentOS](https://gitlab.com/gbraad/byo-atomic-centos)
     * Artifacts: [Archive](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/download), [Browse](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/browse)
   * [BYO Atomic - Fedora](https://gitlab.com/gbraad/byo-atomic-fedora)
