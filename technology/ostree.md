@@ -2,17 +2,6 @@ ostree
 ======
 
 
-## Links
-
-  * [Compose server](https://github.com/projectatomic/rpm-ostree/blob/master/docs/manual/compose-server.md)
-  * [BYO Atomic](https://github.com/jasonbrooks/byo-atomic)
-
-  * [BYO Atomic - base](https://gitlab.com/gbraad/byo-atomic)
-  * [BYO Atomic - CentOS](https://gitlab.com/gbraad/byo-atomic-centos)
-    * Artifacts: [Archive](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/download), [Browse](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/browse)
-  * [BYO Atomic - Fedora](https://gitlab.com/gbraad/byo-atomic-fedora)
-
-
 ## Build your own Atomic - CentOS
 Use Fedora as basis for the buildserver. In this example F24-Cloud is used.
 
@@ -44,3 +33,13 @@ git clone https://git.fedorahosted.org/git/fedora-atomic.git
 cd fedora-atomic
 git checkout f23
 ```
+
+
+## Links
+
+  * [Compose server](https://github.com/projectatomic/rpm-ostree/blob/master/docs/manual/compose-server.md)
+  * [BYO Atomic](https://github.com/jasonbrooks/byo-atomic)
+  * [BYO Atomic - base](https://gitlab.com/gbraad/byo-atomic)
+  * [BYO Atomic - CentOS](https://gitlab.com/gbraad/byo-atomic-centos)
+    * Artifacts: [Archive](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/download), [Browse](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/browse)
+  * [BYO Atomic - Fedora](https://gitlab.com/gbraad/byo-atomic-fedora)
