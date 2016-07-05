@@ -9,6 +9,7 @@ ostree
 
   * [BYO Atomic - base](https://gitlab.com/gbraad/byo-atomic)
   * [BYO Atomic - CentOS](https://gitlab.com/gbraad/byo-atomic-centos)
+    * Artifacts: [Archive](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/download), [Browse](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/browse)
   * [BYO Atomic - Fedora](https://gitlab.com/gbraad/byo-atomic-fedora)
 
 
