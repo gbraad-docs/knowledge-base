@@ -45,3 +45,4 @@ git checkout f23
     * Artifacts: [Archive](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/download), [Browse](https://gitlab.com/gbraad/byo-atomic-centos/builds/2175934/artifacts/browse)
   * [BYO Atomic - Fedora](https://gitlab.com/gbraad/byo-atomic-fedora)
   * [BYO Atomic - Toolbox](https://gitlab.com/gbraad/byo-atomic-toolbox)
+  * [CentOS Atomic rpm-ostree master](https://wiki.centos.org/SpecialInterestGroup/Atomic/Devel)
