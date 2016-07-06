@@ -77,6 +77,7 @@ If you already deployed F23 and want to rebase to F24:
 
 ## Links
 
+  * [ostree documentation](https://ostree.readthedocs.io/en/latest/)
   * [Compose server](https://github.com/projectatomic/rpm-ostree/blob/master/docs/manual/compose-server.md)
   * [BYO Atomic](https://github.com/jasonbrooks/byo-atomic)
   * [BYO Atomic - base](https://gitlab.com/gbraad/byo-atomic-base)
