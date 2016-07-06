@@ -35,6 +35,11 @@ git checkout f23
 ```
 
 
+## PXE boot Atomic image
+
+Steven Dake [describes](https://sdake.io/2014/12/09/isnt-it-atomic-on-openstack-ironic-dont-you-think/) the process of [converting](https://github.com/sdake/fedora-atomic-to-liveos-pxe) an Atomic image to be used by Ironic for PXE-boot.
+
+
 ## Links
 
   * [Compose server](https://github.com/projectatomic/rpm-ostree/blob/master/docs/manual/compose-server.md)
