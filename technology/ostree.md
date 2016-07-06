@@ -112,6 +112,7 @@ Steven Dake [describes](https://sdake.io/2014/12/09/isnt-it-atomic-on-openstack-
 
 ## Links
 
+  * [Cloud-init](cloudinit.md)
   * [ostree documentation](https://ostree.readthedocs.io/en/latest/)
   * [Compose server](https://github.com/projectatomic/rpm-ostree/blob/master/docs/manual/compose-server.md)
 
