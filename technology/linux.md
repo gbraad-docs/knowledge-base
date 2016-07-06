@@ -2,6 +2,24 @@ Linux
 =====
 
 
+## Kernel
+
+### Building (GitLab CI)
+
+  * [mainline](https://gitlab.com/gbraad/linux-kernel-build-mainline)
+  * [stable](https://gitlab.com/gbraad/linux-kernel-build-stable)
+  * [centos](https://gitlab.com/gbraad/linux-kernel-build-centos)
+
+
+## Distributions
+
+  * [Fedora](https://fedoraproject.org/)
+  * [Ubuntu](http://ubuntu.com/)
+  * [OpenSUSE](http://opensuse.org/)
+  * [Debian](http://debian.org/)
+  * ...
+
+
 ## Swapfile
 
 ```
@@ -15,22 +33,3 @@ sudo swapon /.swapfile
 ```
 /.swapfile	swap	swap	defaults	0	0
 ```
-
-
-## Distributions
-
-### Atomic
-
-  * [Getting started](http://www.projectatomic.io/download/)
-
-
-#### Fedora Atomic
-
-  * [Landingpage](https://getfedora.org/cloud/download/atomic.html)
-  * [Download images](https://mirrors.kernel.org/fedora-alt/atomic/stable/Cloud-Images/x86_64/Images/)
-
-
-#### CentOS Atomic
-
-  * [Landingpage](https://wiki.centos.org/SpecialInterestGroup/Atomic/Download/)
-  * [Download images](http://cloud.centos.org/centos/7/atomic/images/)
