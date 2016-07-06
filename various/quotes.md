@@ -18,3 +18,7 @@ Quotes
 "Being a kid has nothing to do with age"
 
 !["The world I see is the world I create."](https://pbs.twimg.com/media/CkPi79-UYAE4Whp.jpg:large)
+
+"Ecosystem is more important than the technology"
+
+"I'm going to get exactly what I want. And I'm not going to stop until I get it."
