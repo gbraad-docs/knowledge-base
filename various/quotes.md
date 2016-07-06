@@ -22,3 +22,5 @@ Quotes
 "Ecosystem is more important than the technology"
 
 "I'm going to get exactly what I want. And I'm not going to stop until I get it."
+
+"In its essence the attraction of hacking is the joy of coming to understand a complex, dynamic, semi-autonomous system, and then bending it to your will."
