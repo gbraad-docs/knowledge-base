@@ -190,3 +190,8 @@ tox -e ansible-playbook -- -vv -i hosts playbooks/packstack-scenario001.yml --ex
 ```
 $ BIFROST_INVENTORY_SOURCE=~/baremetal.json ansible-playbook -vvvv -i inventory/bifrost_inventory.py enroll-dynamic.yaml
 ```
+
+
+## Kolla
+
+  * [Chinese quickstart](https://github.com/hubchao/OpenStack_Deployment/blob/master/kolla_quickstart.rst)
