@@ -4,21 +4,54 @@ OpenStack
 ![OpenStack](http://docs.openstack.org/infra/publications/overview/graphics/openstack-cloud-software-horizontal-small.png)
 
 
-## Links
-
-### Tools
+## Setup configuration
 
   * [Devstack configurations](https://github.com/gbraad/openstack-devstack-configurations)
   * [Packstack answerfiles](https://github.com/gbraad/openstack-packstack-answerfiles)
   * [Heat templates](https://github.com/gbraad/openstack-heat-templates)
   * [OpenStack client](https://github.com/gbraad/docker-openstack-client)
+ 
 
-
-### Documentation
+## Documentation
 
   * [Hands-on-labs](https://github.com/gbraad/openstack-handsonlabs)
   * [Tools training](https://github.com/gbraad/tools-training)
   * [Open Source Culture](https://github.com/gbraad/open-source-culture)
+
+
+## Projects
+
+  * [Aodh](http://docs.openstack.org/developer/aodh/)
+  * [Ceilometer](http://docs.openstack.org/developer/ceilometer/)
+  * [Cinder](http://docs.openstack.org/developer/cinder/)
+  * [Designate](http://docs.openstack.org/developer/designate/)
+  * [Glance](http://docs.openstack.org/developer/glance/)
+  * [Gnocchi](http://docs.openstack.org/developer/gnocchi/)
+  * [Heat](http://docs.openstack.org/developer/heat/)
+  * [Horizon](http://docs.openstack.org/developer/horizon/)
+  * [Ironic](http://docs.openstack.org/developer/ironic/)
+  * [Keystone](http://docs.openstack.org/developer/keystone/)
+  * [Magnum](http://docs.openstack.org/developer/magnum/)
+  * [Manila](http://docs.openstack.org/developer/manila/)
+  * [Mistral](http://docs.openstack.org/developer/mistral/)
+  * [Murano](http://docs.openstack.org/developer/murano/)
+  * [Nova](http://docs.openstack.org/developer/nova/)
+  * [Neutron](http://docs.openstack.org/developer/neutron/)
+  * [Swift](http://docs.openstack.org/developer/swift/)
+  * [Tempest](http://docs.openstack.org/developer/tempest/)
+  * [Trove](http://docs.openstack.org/developer/trove/)
+  * [Zaqar](http://docs.openstack.org/developer/zaqar/)
+
+
+## Infrastructure components
+
+  * [Ceph](http://ceph.com/) implementation for Cinder, Glance and Nova
+  * [Openvswitch](http://openvswitch.org/) and Linuxbridge backends for Neutron
+  * [MongoDB](https://www.mongodb.org/) as a database backend for Ceilometer and Gnocchi
+  * [RabbitMQ](https://www.rabbitmq.com/) as a messaging backend for communication between services.
+  * [HAProxy](http://www.haproxy.org/) and [Keepalived](http://www.keepalived.org/) for high availability of services and their endpoints.
+  * [MariaDB and Galera](https://mariadb.com/kb/en/mariadb/galera-cluster/) for highly available MySQL databases
+  * [Heka](http://hekad.readthedocs.org/) A distributed and scalable logging system for openstack services.
 
 
 ## Needed to install OpenStack client on Ubuntu 14.04 (or C9)
