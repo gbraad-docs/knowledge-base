@@ -14,7 +14,6 @@ OpenStack
   * [Devstack configurations](https://github.com/gbraad/openstack-devstack-configurations)
   * [Packstack answerfiles](https://github.com/gbraad/openstack-packstack-answerfiles)
   * [Heat templates](https://github.com/gbraad/openstack-heat-templates)
-  * [OpenStack client](https://github.com/gbraad/docker-openstack-client)
  
 
 ## Documentation
