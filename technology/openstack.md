@@ -6,7 +6,7 @@ OpenStack
 
 ## Contents
 
-  * [Client](client.md)
+  * [Client](openstack/client.md)
 
 
 ## Setup configuration
