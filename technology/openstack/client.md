@@ -1,18 +1,48 @@
 # OpenStack client
 
 
+
+## Setup 
+
+
+### Docker image
+The easiest way is to use the Docker container I created: [OpenStack client](https://github.com/gbraad/docker-openstack-client)
+
+```
+alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:centos stack'
+```
+
+Then create a configuration file at `.stack` for your environment, and prepend commands with:
+
+
+```
+stack trystack [command]
+```
+
+
+### Install
+Alternatively you can use the following installation methods
+
+
+### Using PIP
 ```
 pip install python-openstackclient
 ```
 
+
+#### On Fedora/RHEL/CentOS
 ```
-dnf install python-openstackclient
+yum install -y python-openstackclient   # dnf
 ```
 
+
+#### On Ubuntu/Debian
 ```
-apt-get install python-openstackclient
+apt-get install -y python-openstackclient
 ```
 
+
+#### Using Ansible playbook
 ```
 curl -sSL https://raw.githubusercontent.com/gbraad/ansible-playbooks/master/playbooks/install-openstack-client.yml > /tmp/install.yml
 ansible-playbook /tmp/install.yml
