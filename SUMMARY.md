@@ -34,3 +34,10 @@
 #### English
 
   * [Introduction](language/english/README.md)
+
+
+### Other documentation
+
+  * OpenStack [Hands-on-labs](https://github.com/gbraad/openstack-handsonlabs)
+  * [Tools training](https://github.com/gbraad/tools-training)
+  * [Open Source Culture](https://github.com/gbraad/open-source-culture)
