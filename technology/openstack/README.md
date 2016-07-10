@@ -9,18 +9,12 @@ OpenStack
   * [Client](client.md)
 
 
-## Setup configuration
+## Contributions
 
   * [Devstack configurations](https://github.com/gbraad/openstack-devstack-configurations)
   * [Packstack answerfiles](https://github.com/gbraad/openstack-packstack-answerfiles)
   * [Heat templates](https://github.com/gbraad/openstack-heat-templates)
- 
-
-## Documentation
-
   * [Hands-on-labs](https://github.com/gbraad/openstack-handsonlabs)
-  * [Tools training](https://github.com/gbraad/tools-training)
-  * [Open Source Culture](https://github.com/gbraad/open-source-culture)
 
 
 ## Projects
