@@ -69,58 +69,11 @@ done
 ```
 
 
-## TripleO quickstart
-
-`deploy-config.yml`
-```
-overcloud_nodes:
-  - name: control_0
-    flavor: control
-  - name: control_1
-    flavor: control
-  - name: control_2
-    flavor: control
-
-  - name: compute_0
-    flavor: compute
-  - name: compute_1
-    flavor: compute
-  - name: compute_2
-    flavor: compute
-
-  - name: storage_0
-    flavor: ceph
-  - name: storage_1
-    flavor: ceph
-  - name: storage_2
-    flavor: ceph
-
-extra_args: "--control-scale 3 --ceph-storage-scale 3 -e /usr/share/openstack-tripleo-heat-templates/environments/puppet-pacemaker.yaml --ntp-server pool.ntp.org"
-```
-
-`deploy`
-```
-#!/bin/sh
-export VIRTHOST=pps10.spotsnel.net
-./quickstart.sh --tags all --config deploy-config.yml --undercloud-image-url file:///var/lib/oooq-images/undercloud-mitaka.qcow2 $VIRTHOST
-```
-
-`undercloud`
-```
-#!/bin/sh
-ssh -F .quickstart/ssh.config.ansible undercloud
-```
-
-```
-vi deploy-config.yml
-curl -sSL https://raw.githubusercontent.com/openstack/tripleo-quickstart/master/quickstart.sh -o quickstart.sh
-./deploy
-./undercloud
-```
+## TripleO
 
 Information for TripleO is collected in a separate scratchpad:
 
-  * [TripleO scratchpad](/technology/tripleo.md)
+  * [TripleO scratchpad](tripleo.md)
   * [TripleO install](//gist.github.com/gbraad/073052c08457526463369b8b80890afa)
 
 
