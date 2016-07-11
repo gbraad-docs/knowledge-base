@@ -19,27 +19,27 @@ OpenStack
 
 ## Projects
 
-  * [Aodh](http://docs.openstack.org/developer/aodh/)
-  * [Bifrost](http://docs.openstack.org/developer/bifrost/)
-  * [Ceilometer](http://docs.openstack.org/developer/ceilometer/)
-  * [Cinder](http://docs.openstack.org/developer/cinder/)
-  * [Designate](http://docs.openstack.org/developer/designate/)
-  * [Glance](http://docs.openstack.org/developer/glance/)
-  * [Gnocchi](http://docs.openstack.org/developer/gnocchi/)
-  * [Heat](http://docs.openstack.org/developer/heat/)
-  * [Horizon](http://docs.openstack.org/developer/horizon/)
-  * [Ironic](http://docs.openstack.org/developer/ironic/)
-  * [Keystone](http://docs.openstack.org/developer/keystone/)
-  * [Magnum](http://docs.openstack.org/developer/magnum/)
-  * [Manila](http://docs.openstack.org/developer/manila/)
-  * [Mistral](http://docs.openstack.org/developer/mistral/)
-  * [Murano](http://docs.openstack.org/developer/murano/)
-  * [Nova](http://docs.openstack.org/developer/nova/)
-  * [Neutron](http://docs.openstack.org/developer/neutron/)
-  * [Swift](http://docs.openstack.org/developer/swift/)
-  * [Tempest](http://docs.openstack.org/developer/tempest/)
-  * [Trove](http://docs.openstack.org/developer/trove/)
-  * [Zaqar](http://docs.openstack.org/developer/zaqar/)
+  * [Aodh](http://docs.openstack.org/developer/aodh/), provides alarms and notifications based on metrics
+  * [Bifrost](http://docs.openstack.org/developer/bifrost/), automates the task of deploying a base image on baremetal using Ironic
+  * [Ceilometer](http://docs.openstack.org/developer/ceilometer/), is a component of the Telemetry project. Its data can be used to provide customer billing, resource tracking, and alarming capabilities
+  * [Cinder](http://docs.openstack.org/developer/cinder/) provides “block storage as a service”
+  * [Designate](http://docs.openstack.org/developer/designate/) provides "DNS as a service"
+  * [Glance](http://docs.openstack.org/developer/glance/) provides a service where users can upload and discover data assets that are meant to be used with other services
+  * [Gnocchi](http://docs.openstack.org/developer/gnocchi/) is a multi-tenant timeseries, metrics and resources database
+  * [Heat](http://docs.openstack.org/developer/heat/) is a service to orchestrate composite cloud applications using a declarative template format 
+  * [Horizon](http://docs.openstack.org/developer/horizon/) is the canonical implementation of OpenStack’s Dashboard
+  * [Ironic](http://docs.openstack.org/developer/ironic/) provisions bare metal (as opposed to virtual) machines by leveraging common technologies such as PXE boot and IPMI
+  * [Keystone](http://docs.openstack.org/developer/keystone/) provides Identity, Token, Catalog and Policy services 
+  * [Magnum](http://docs.openstack.org/developer/magnum/) offers container orchestration engines for deploying and managing containers
+  * [Manila](http://docs.openstack.org/developer/manila/) provides “Shared Filesystems as a service”.
+  * [Mistral](http://docs.openstack.org/developer/mistral/) provides a mechanism to define tasks and workflows without writing code, manage and execute them
+  * [Murano](http://docs.openstack.org/developer/murano/) combines an application catalog with versatile tooling to simplify and accelerate packaging and deployment
+  * [Nova](http://docs.openstack.org/developer/nova/) provides power massively scalable, on demand, self service access to compute resources
+  * [Neutron](http://docs.openstack.org/developer/neutron/) provides “network connectivity as a service” between interface devices (e.g., vNICs)
+  * [Swift](http://docs.openstack.org/developer/swift/) is a highly available, distributed, eventually consistent object/blob store
+  * [Tempest](http://docs.openstack.org/developer/tempest/) is an integration test suite
+  * [Trove](http://docs.openstack.org/developer/trove/) provides "database as a service"
+  * [Zaqar](http://docs.openstack.org/developer/zaqar/) is a multi-tenant cloud messaging and notification service for web and mobile developers
 
 
 ## Infrastructure components
