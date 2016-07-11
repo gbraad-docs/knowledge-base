@@ -94,3 +94,14 @@ openstack volume create [volume-name] --image [image] --size [size]
 ```
 openstack server add volume [server-name] [volume-name]
 ```
+
+
+## Examples
+```
+wget -q http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2 -O /tmp/centos7.qcow2
+qemu-img convert /tmp/centos7.qcow2 /tmp/centos7.raw
+#openstack image create --disk-format qcow2 --file /tmp/centos7.qcow2 centos7
+openstack image create --disk-format raw --container-format bare --file /tmp/centos7.raw centos7
+net_id=$(openstack network list -f value |awk '{print $1}')
+openstack server create --flavor m1.small --image centos7 --nic net-id=${net_id} --key-name mykey test-instance
+```
