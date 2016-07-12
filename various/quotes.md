@@ -24,3 +24,7 @@ Quotes
 "I'm going to get exactly what I want. And I'm not going to stop until I get it."
 
 "In its essence the attraction of hacking is the joy of coming to understand a complex, dynamic, semi-autonomous system, and then bending it to your will."
+
+"Failure is always an option" - Adam Savage
+
+"Making a mistake is human. Failing is God-like!" - I often use this to acquint users to contribute ;-)
