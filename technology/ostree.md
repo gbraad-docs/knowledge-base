@@ -110,10 +110,20 @@ git checkout f23
 Steven Dake [describes](https://sdake.io/2014/12/09/isnt-it-atomic-on-openstack-ironic-dont-you-think/) the process of [converting](https://github.com/sdake/fedora-atomic-to-liveos-pxe) an Atomic image to be used by Ironic for PXE-boot.
 
 
+## Grow the `/` filesystem
+```
+lvremove /dev/mapper/atomicos-docker--pool
+lvresize -l +100%FREE /dev/atomicos/root
+xfs_growfs /dev/atomicos/root
+```
+
+Note: this trashes the `docker` storage pool
+
+
 ## Links
 
   * [Cloud-init](cloudinit.md)
   * [ostree documentation](https://ostree.readthedocs.io/en/latest/)
   * [Compose server](https://github.com/projectatomic/rpm-ostree/blob/master/docs/manual/compose-server.md)
   * [Photon OS](https://github.com/vmware/photon), [wiki](https://github.com/vmware/photon/wiki/Photon-RPM-OSTree:-Preface)
-
+  * [Testing Atomic for OpenStack](https://gist.github.com/gbraad/36c572fe58aeee703c829c94d9dc8a95)
