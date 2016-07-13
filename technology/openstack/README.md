@@ -7,6 +7,7 @@ OpenStack
 ## Contents
 
   * [Client](client.md)
+  * [RDO](rdo.md)
 
 
 ## Contributions
