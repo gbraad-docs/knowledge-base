@@ -7,6 +7,7 @@ OpenStack
 ## Contents
 
   * [Client](client.md)
+  * [Puppet](puppet.md)
   * [RDO](rdo.md)
 
 
