@@ -55,20 +55,9 @@ OpenStack
   * [Heka](http://hekad.readthedocs.org/) A distributed and scalable logging system for openstack services.
 
 
-## Needed to install OpenStack client on Ubuntu 14.04 (or C9)
+## OpenStack Infra projects
 
-```
-pip install -U pyopenssl ndg-httpsclient pyasn1
-```
-
-
-## Dealing with values from the table output
-
-```
-for i in $( [command] | grep [filter] | awk ' { print $2 } '); do
-  [command] $i
-done
-```
+  * [Shade](http://docs.openstack.org/infra/shade/) dlient library for interacting with OpenStack clouds
 
 
 ## TripleO
