@@ -1,6 +1,8 @@
 # OpenStack client
 
 
+[Documentation](http://docs.openstack.org/developer/python-openstackclient/)
+
 
 ## Setup 
 
