@@ -51,6 +51,13 @@ ansible-playbook /tmp/install.yml
 ```
 
 
+## Needed to install OpenStack client on Ubuntu 14.04 (or C9)
+
+```
+pip install -U pyopenssl ndg-httpsclient pyasn1
+```
+
+
 ## Basic commands
 
 ```
@@ -107,3 +114,13 @@ openstack image create --disk-format raw --container-format bare --file /tmp/cen
 net_id=$(openstack network list -f value |awk '{print $1}')
 openstack server create --flavor m1.small --image centos7 --nic net-id=${net_id} --key-name mykey test-instance
 ```
+
+
+## Dealing with values from the table output
+
+```
+for i in $( [command] | grep [filter] | awk ' { print $2 } '); do
+  [command] $i
+done
+```
+
