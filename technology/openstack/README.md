@@ -60,6 +60,12 @@ OpenStack
   * [Shade](http://docs.openstack.org/infra/shade/) dlient library for interacting with OpenStack clouds
 
 
+## OpenStack modules
+
+  * [Ansible](http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack)
+  * [Puppet](http://docs.openstack.org/developer/puppet-openstack-guide/module-list.html#puppet-openstack-modules)
+
+
 ## TripleO
 
 Information for TripleO is collected in a separate scratchpad:
