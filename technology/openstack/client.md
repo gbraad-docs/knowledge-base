@@ -1,7 +1,7 @@
 # OpenStack client
 
   * [Documentation](http://docs.openstack.org/developer/python-openstackclient/)
-  * `clouds.yaml` [support](http://specs.openstack.org/openstack/openstack-specs/specs/clouds-yaml-support.html)
+  * `clouds.yaml`: [usage](http://docs.openstack.org/developer/python-openstackclient/configuration.html), [support](http://specs.openstack.org/openstack/openstack-specs/specs/clouds-yaml-support.html)
 
 
 ## Setup 
