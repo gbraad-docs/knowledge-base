@@ -2,8 +2,7 @@ Cloud-init
 ==========
 
 
-Post-creation script
---------------------
+## Post-creation script
 
 A simple example of using a post-creation script, as possible with OpenStack, is as follows:
 
@@ -17,8 +16,61 @@ ssh_pwauth: True
 This will set a password for the login user (differs per image?!) and allow this user to login using `ssh`.
 
 
-Config drive
-------------
+## Force run of cloud-init script
+
+You can just run it like this:
+```
+/usr/bin/cloud-init -d init
+```
+This runs the cloud init setup with the initial modules. Note: the `-d` option is for debug. 
+
+If want to run all the modules you have to run:
+
+```
+/usr/bin/cloud-init -d modules
+```
+
+Keep in mind that the second time you run these it doesn't do much since it has already run at boot time. To force to run after boot time you can run from the command line:
+
+```
+( cd /var/lib/cloud/ && sudo rm -rf * )
+```
+
+
+## Always run cloud-init scripts
+
+In 11.10, 12.04 and later, you can achieve this by making the 'scripts-user' run 'always'. In `/etc/cloud/cloud.cfg` you'll see something like:
+```
+cloud_final_modules:
+ - rightscale_userdata
+ - scripts-per-once
+ - scripts-per-boot
+ - scripts-per-instance
+ - scripts-user
+ - keys-to-console
+ - phone-home
+ - final-message
+```
+
+This can be modified after boot, or `cloud-config` data overriding this stanza can be inserted via `user-data`. Ie, in user-data you can provide:
+
+```
+#cloud-config
+cloud_final_modules:
+ - rightscale_userdata
+ - scripts-per-once
+ - scripts-per-boot
+ - scripts-per-instance
+ - [scripts-user, always]
+ - keys-to-console
+ - phone-home
+ - final-message
+```
+
+[More info](http://bazaar.launchpad.net/~cloud-init-dev/cloud-init/trunk/view/head:/doc/examples/cloud-config.txt)
+
+
+## Config drive
 
 Most virtual platforms will provision instances with no root password, so it's necessary to supply a
 password or key to log in using cloud-init. If you're using a virtualization application without
