@@ -1,6 +1,25 @@
 Cloud-init
 ==========
 
+
+Post-creation script
+--------------------
+
+A simple example of using a post-creation script, as possible with OpenStack, is as follows:
+
+```
+#cloud-config
+password: passw0rd
+chpasswd: { expire: False }
+ssh_pwauth: True
+```
+
+This will set a password for the login user (differs per image?!) and allow this user to login using `ssh`.
+
+
+Config drive
+------------
+
 Most virtual platforms will provision instances with no root password, so it's necessary to supply a
 password or key to log in using cloud-init. If you're using a virtualization application without
 cloud-init support, such as virt-manager or VirtualBox, you can create a simple iso image to provide
