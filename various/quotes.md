@@ -28,3 +28,5 @@ Quotes
 "Failure is always an option" - Adam Savage
 
 "Making a mistake is human. Failing is God-like!" - I often use this to acquint users to contribute ;-)
+
+"If someone offers you an amazing opportunity and you’re not sure you can do it, say yes – then learn how to do it later." - Richard Branson
