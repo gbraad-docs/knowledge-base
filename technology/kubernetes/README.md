@@ -6,6 +6,17 @@ Kubernetes
     * Published: [GitBook](https://gbraad.gitbooks.io/kubernetes-handsonlabs/content/), [HTML](http://gbraad.gitlab.io/kubernetes-handsonlabs/)
 
 
+Client
+------
+
+```
+$ wget http://storage.googleapis.com/kubernetes-release/release/v1.3.4/bin/linux/amd64/kubectl
+$ chmod +x kubectl
+```
+
+  * [Docker container](https://github.com/gbraad/docker-kubernetes-client)
+
+
 Ansible
 -------
 
