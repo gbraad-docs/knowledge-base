@@ -58,50 +58,91 @@ pip install -U pyopenssl ndg-httpsclient pyasn1
 ```
 
 
-## Basic commands
+## Managing users and projects
+```
+$ openstack project list
 
-```
-openstack keypair create mykey > mykey.pem
-```
+$ openstack user list
 
-```
-openstack keypair create --public-key ~/.ssh/id_rsa.pub mykey
-```
-
-```
-openstack flavor list
+$ openstack role list
 ```
 
+
+### Add new user
 ```
-openstack image list
+$ openstack user create <username> --project <project> --password <password>
 ```
 
+### Grant role to user
 ```
-openstack server create [name] --flavor [flavor] --image [image] --key-name [key-name]
-```
-
-```
-openstack server list
+$ openstack role add --user <username> --project <project> <role>
 ```
 
+## Managing SSH keys
+
+### Create a new key-pair
 ```
-openstack server reboot [name]
+$ openstack keypair create mykey > mykey.pem
 ```
 
+### Upload existing key
 ```
-openstack server delete [name]
-```
-
-```
-openstack volume create [volume-name] --size [size]
+$ openstack keypair create --public-key ~/.ssh/id_rsa.pub mykey
 ```
 
+
+## Managing images
 ```
-openstack volume create [volume-name] --image [image] --size [size]
+$ openstack image list
 ```
 
+### Upload image
 ```
-openstack server add volume [server-name] [volume-name]
+# openstack image create <name> --disk-format <dformat> --container-format <cformat> --file <file> --property os_distro=<||>
+```
+
+
+## Managing instances
+```
+$ openstack flavor list
+
+$ openstack server list
+```
+
+### Create instance
+```
+$ openstack server create <name> --flavor <flavor> --image <image> --key-name <key-name>
+```
+
+### Lifecycle
+```
+$ openstack server reboot <name>
+
+$ openstack server delete <name>
+```
+
+
+## Managing volumes
+```
+$ openstack volume create <volume-name> --size <size>
+
+$ openstack volume create <volume-name> --image <image> --size <size>
+
+$ openstack server add volume <server-name> <volume-name>
+```
+
+
+## Managing networks
+```
+$ openstack network list
+
+$ openstack network show <network>
+```
+
+
+### Create network
+```
+$ openstack network create [--prefix prefix] [--enable | --disable] [--share | --no-share] <name>
 ```
 
 
