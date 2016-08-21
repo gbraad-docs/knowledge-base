@@ -23,6 +23,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [ostree](technology/ostree.md)
   * [Python](technology/python.md)
   * [rsync](technology/rsync.md)
+  * [sed](technology/sed.md)
   * [Software installation](technology/install.md)
   * [tcpdump](technology/tcpdump.md)
   * [Libvirt/virsh](technology/virsh.md)
