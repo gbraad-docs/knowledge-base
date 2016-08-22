@@ -3,7 +3,7 @@ Photon OS
 
 
   * [GitLab](https://gitlab.com/gbraad/photon) buildwrapper
-  * [Unofficial mirror](https://gitlab.com/unofficial-mirrors/photon) on GitLab
+  * [Unofficial mirror](https://gitlab.com/unofficial-mirrors/photon) on GitLab, [my fork](https://gitlab.com/gbraad/vmware-photon)
 
 
 Install on OpenStack
