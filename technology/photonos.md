@@ -36,12 +36,6 @@ root [ ~ ]# systemctl restart systemd-networkd.service
 ```
 
 
-## Download a Docker container (https://registry.hub.docker.com/)
-```
-$ docker pull vmwarecna/nginx
-```
-
-
 ## Start Docker Container
 ```
 $ docker run -d -p 80:80 vmwarecna/nginx
