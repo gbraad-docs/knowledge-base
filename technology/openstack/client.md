@@ -11,14 +11,15 @@
 The easiest way is to use the Docker container I created: [OpenStack client](https://github.com/gbraad/docker-openstack-client)
 
 ```
-alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:centos stack'
+$ alias stack='docker run -it --rm -v $PWD:/workspace -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:centos stack'
+$ alias openstack='docker run -it --rm -v $PWD:/workspace -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:centos openstack'
 ```
 
 Then create a configuration file at `.stack` for your environment, and prepend commands with:
 
 
 ```
-stack trystack [command]
+$ stack trystack [command]
 ```
 
 
@@ -28,33 +29,33 @@ Alternatively you can use the following installation methods
 
 ### Using PIP
 ```
-pip install python-openstackclient
+$ pip install python-openstackclient
 ```
 
 
 #### On Fedora/RHEL/CentOS
 ```
-yum install -y python-openstackclient   # dnf
+$ yum install -y python-openstackclient   # dnf
 ```
 
 
 #### On Ubuntu/Debian
 ```
-apt-get install -y python-openstackclient
+$ apt-get install -y python-openstackclient
 ```
 
 
 #### Using Ansible playbook
 ```
-curl -sSL https://raw.githubusercontent.com/gbraad/ansible-playbooks/master/playbooks/install-openstack-client.yml > /tmp/install.yml
-ansible-playbook /tmp/install.yml
+$ curl -sSL https://raw.githubusercontent.com/gbraad/ansible-playbooks/master/playbooks/install-openstack-client.yml > /tmp/install.yml
+$ ansible-playbook /tmp/install.yml
 ```
 
 
 ## Needed to install OpenStack client on Ubuntu 14.04 (or C9)
 
 ```
-pip install -U pyopenssl ndg-httpsclient pyasn1
+$ pip install -U pyopenssl ndg-httpsclient pyasn1
 ```
 
 
