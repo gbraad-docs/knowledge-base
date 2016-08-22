@@ -20,7 +20,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Linux](technology/linux.md)
   * [OpenStack](technology/openstack/README.md)
   * [OpenStack TripleO](technology/openstack/tripleo.md)
-  * [ostree](technology/ostree.md)
+  * [ostree / Atomic](technology/ostree.md)
   * [Python](technology/python.md)
   * [rsync](technology/rsync.md)
   * [sed](technology/sed.md)
