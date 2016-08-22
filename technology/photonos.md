@@ -2,6 +2,10 @@ Photon OS
 =========
 
 
+  * [GitLab](https://gitlab.com/gbraad/photon) buildwrapper
+  * [Unofficial mirror](https://gitlab.com/unofficial-mirrors/photon) on GitLab
+
+
 Install on OpenStack
 --------------------
 
