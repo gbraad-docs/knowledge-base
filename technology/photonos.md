@@ -17,3 +17,47 @@ $ openstack server create photon --flavor m1.tiny --image photon --key-name c9
 $ ssh root@[ipaddress]
 root@photon [ ~ ]#
 ```
+
+
+## Disable DHCP
+```
+root [ ~ ]# mv /etc/systemd/network/10-dhcp-eth0.network  /etc/systemd/network/10-static-eth0.network
+root [ ~ ]# vi /etc/systemd/network/10-static-eth0.network
+root [ ~ ]# cat /etc/systemd/network/10-static-eth0.network
+[Match]
+Name=eth0
+
+[Network]
+Address=192.168.79.134/24
+Gateway=192.168.79.2
+DNS=8.8.8.8
+Domains=photon.local
+root [ ~ ]# systemctl restart systemd-networkd.service
+```
+
+
+## Download a Docker container (https://registry.hub.docker.com/)
+```
+$ docker pull vmwarecna/nginx
+```
+
+
+## Start Docker Container
+```
+$ docker run -d -p 80:80 vmwarecna/nginx
+```
+
+  * `-d`       - Run the container in the background
+  * `-p 80:80` - Publish the container's port to the host
+
+
+## Display the public-facing port that is NAT-ed to the container 
+```
+$ docker port 5f6b0e03c6de
+```
+
+
+## Automatically start Docker containers at boot time
+```
+$ docker run --restart=always -d -p 80:80 vmwarecna/nginx
+```
