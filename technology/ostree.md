@@ -124,12 +124,12 @@ Note: this trashes the `docker` storage pool
 
 ```
 $ wget http://http://cloud.centos.org/centos/7/atomic/images/CentOS-Atomic-Host-7-GenericCloud.qcow2
-$ openstack image create "CentOS7 Atomic" --file CentOS-Atomic-Host-7-GenericCloud.qcow2 --disk-format qcow2 --container-format bare --property os_distro=centos
+$ openstack image create "CentOS7 Atomic" --progress --file CentOS-Atomic-Host-7-GenericCloud.qcow2 --disk-format qcow2 --container-format bare --property os_distro=centos
 ```
 
 ```
 $ wget https://download.fedoraproject.org/pub/alt/atomic/stable/CloudImages/x86_64/images/Fedora-Atomic-24-20160809.0.x86_64.qcow2
-$ openstack image create "Fedora24 Atomic" --file Fedora-Atomic-24-20160809.0.x86_64.qcow2 --disk-format qcow2 --container-format bare --property os_distro=fedora
+$ openstack image create "Fedora24 Atomic" --progress --file Fedora-Atomic-24-20160809.0.x86_64.qcow2 --disk-format qcow2 --container-format bare --property os_distro=fedora
 ```
 
 ## OSTree tests
