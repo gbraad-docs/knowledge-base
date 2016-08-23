@@ -132,6 +132,11 @@ $ wget https://download.fedoraproject.org/pub/alt/atomic/stable/CloudImages/x86_
 $ openstack image create "Fedora24 Atomic" --file Fedora-Atomic-24-20160809.0.x86_64.qcow2 --disk-format qcow2 --container-format bare --property os_distro=fedora
 ```
 
+## OSTree tests
+
+  * [OSTree tests](https://github.com/giuseppe/ostreetests)
+  * OSTree tests wrapper; [GitLab](https://gitlab.com/gbraad/ostreetests/), [GitHub](https://github.com/gbraad/ostreetests-wrapper)
+
 
 ## Links
 
