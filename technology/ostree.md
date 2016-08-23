@@ -145,3 +145,4 @@ $ openstack image create "Fedora24 Atomic" --progress --file Fedora-Atomic-24-20
   * [Compose server](https://github.com/projectatomic/rpm-ostree/blob/master/docs/manual/compose-server.md)
   * [Photon OS](https://github.com/vmware/photon), [wiki](https://github.com/vmware/photon/wiki/Photon-RPM-OSTree:-Preface)
   * [Testing Atomic for OpenStack](https://gist.github.com/gbraad/36c572fe58aeee703c829c94d9dc8a95)
+  * [Build Docker container from OSTree](https://github.com/giuseppe/ostree-docker-builder)
