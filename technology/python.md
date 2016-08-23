@@ -17,6 +17,12 @@ $ . ./lets-go/bin/activate
 
 [Source](https://glyph.twistedmatrix.com/2016/08/python-packaging.html)
 
+```
+$ python3 -m venv lets-go
+$ source ./lets-go/bin/activate
+(lets-go) $ pip install -U pip setuptools
+```
+
 
 ## Install `pip`
 ```
