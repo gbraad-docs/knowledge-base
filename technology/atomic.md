@@ -22,7 +22,7 @@ CentOS Atomic
 Atomic Reactor
 --------------
 
-On Fedora 24
+On Fedora 24 or CentOS 7
 ```
 $ dnf install -y atomic-reactor
 $ docker pull registry.gitlab.com/gbraad/fedora:atomicreactor
