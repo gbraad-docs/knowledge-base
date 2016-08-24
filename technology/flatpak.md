@@ -37,17 +37,25 @@ Builders
   * freedesktop Runtime and SDK: [GitLab](https://gitlab.com/gbraad/flatpak-builder-freedesktop)  
     `docker run -it --rm -v $PWD:/workspace registry.gitlab.com/gbraad/flatpak-builder-freedesktop bash`
 
+
 Runtimes
 --------
 
+  * Official [runtimes](http://flatpak.org/runtimes.html)
   * Automated runtime build; [GitLab](https://gitlab.com/gbraad/flatpak-runtime-build)
   * CentOS: https://github.com/matthiasclasen/flatpak-runtime
   * openSUSE: https://github.com/fcrozat/opensuse-flatpak-runtime
-  * Mono: (wip): https://gitlab.com/gbraad/flatpak-mono-runtime
+  * Mono: (WIP): https://gitlab.com/gbraad/flatpak-mono-runtime
+
+
+Applications
+------------
+
+  * Spotify build wrapper: [GitLab](https://gitlab.com/gbraad/flatpak-spotify-build)
+  * Hello app: [GitLab](https://gitlab.com/gbraad/flatpak-hello)
+
 
 Test
 ----
 
   * Test container: [GitHub](https://github.com/gbraad/docker-flatpak), [GitLab](https://gitlab.com/gbraad/flatpak)
-  * Spotify build wrapper: [GitLab](https://gitlab.com/gbraad/flatpak-spotify-build)
-  * Hello app: [GitLab](https://gitlab.com/gbraad/flatpak-hello)
