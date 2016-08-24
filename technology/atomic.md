@@ -24,8 +24,10 @@ Kubernetes on Atomic
 
 Deploy kubernetes on CentOS and CentOS Atomic hosts using Ansible
 
+  * About [Kubernetes](kubernetes/README.md)
   * [Ansible playbook](https://github.com/gbraad/ansible-playbook-kubernetes)
-  * [Kubernetes](kubernetes/README.md)
+  * [Getting started with containers](https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/)
+  * [Getting started guide](http://www.projectatomic.io/docs/gettingstarted/) at Project Atomic
 
 
 Atomic Reactor
