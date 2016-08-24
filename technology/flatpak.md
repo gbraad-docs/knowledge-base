@@ -32,9 +32,9 @@ $ flatpak install gnome org.gnome.Sdk 3.20
 Builders
 --------
 
-  * GNOME Runtime and SDK: [GitLab](https://gitlab.com/gbraad/flatpak-builder-gnome)  
+  * GNOME Runtime and SDK: [GitLab](https://gitlab.com/gbraad/flatpak-builder-gnome), [GitHub](https://github.com/gbraad/docker-flatpak-builder-gnome)  
     `docker run -it --rm -v $PWD:/workspace registry.gitlab.com/gbraad/flatpak-builder-gnome bash`
-  * freedesktop Runtime and SDK: [GitLab](https://gitlab.com/gbraad/flatpak-builder-freedesktop)  
+  * freedesktop Runtime and SDK: [GitLab](https://gitlab.com/gbraad/flatpak-builder-freedesktop), [GitHub](https://github.com/gbraad/docker-flatpak-builder-freedesktop)  
     `docker run -it --rm -v $PWD:/workspace registry.gitlab.com/gbraad/flatpak-builder-freedesktop bash`
 
 
@@ -45,7 +45,8 @@ Runtimes
   * Automated runtime build; [GitLab](https://gitlab.com/gbraad/flatpak-runtime-build)
   * CentOS: https://github.com/matthiasclasen/flatpak-runtime
   * openSUSE: https://github.com/fcrozat/opensuse-flatpak-runtime
-  * Mono: (WIP): https://gitlab.com/gbraad/flatpak-mono-runtime
+  * Mono: (WIP!): https://gitlab.com/gbraad/flatpak-mono-runtime, https://github.com/gbraad/flatpak-mono-runtime
+  * Fedora (WIP!): https://gitlab.com/gbraad/flatpak-fedora-runtime, https://github.com/gbraad/flatpak-fedora-runtime
 
 
 Applications
