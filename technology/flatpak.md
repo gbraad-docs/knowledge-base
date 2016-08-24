@@ -2,7 +2,7 @@ Flatpak
 =======
 
   * Project [Flatpak](http://flatpak.org/)
-  * Automated runtime build; [GitLab](https://gitlab.com/gbraad/flatpak-runtime-build)
+  * [Getting Started](http://flatpak.org/developer.html)
 
 
 Installation
@@ -27,3 +27,27 @@ $ flatpak run org.gnome.gedit
 ```
 $ flatpak install gnome org.gnome.Sdk 3.20
 ```
+
+
+Builders
+--------
+
+  * GNOME Runtime and SDK: [GitLab](https://gitlab.com/gbraad/flatpak-builder-gnome)  
+    `docker run -it --rm -v $PWD:/workspace registry.gitlab.com/gbraad/flatpak-builder-gnome bash`
+  * freedesktop Runtime and SDK: [GitLab](https://gitlab.com/gbraad/flatpak-builder-freedesktop)  
+    `docker run -it --rm -v $PWD:/workspace registry.gitlab.com/gbraad/flatpak-builder-freedesktop bash`
+
+Runtimes
+--------
+
+  * Automated runtime build; [GitLab](https://gitlab.com/gbraad/flatpak-runtime-build)
+  * CentOS: https://github.com/matthiasclasen/flatpak-runtime
+  * openSUSE: https://github.com/fcrozat/opensuse-flatpak-runtime
+  * Mono: (wip): https://gitlab.com/gbraad/flatpak-mono-runtime
+
+Test
+----
+
+  * Test container: [GitHub](https://github.com/gbraad/docker-flatpak), [GitLab](https://gitlab.com/gbraad/flatpak)
+  * Spotify build wrapper: [GitLab](https://gitlab.com/gbraad/flatpak-spotify-build)
+  * Hello app: [GitLab](https://gitlab.com/gbraad/flatpak-hello)
