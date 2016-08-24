@@ -14,6 +14,7 @@ _Gerard Braad <me@gbraad.nl>_
 
   * [Ansible](technology/ansible.md)
   * [Atomic](technology/atomic.md)
+  * [Ceph](technology/ceph.md)
   * [cloud-init](technology/cloudinit.md)
   * [Docker](technology/docker.md)
   * [Flatpak](technology/flatpak.md)
