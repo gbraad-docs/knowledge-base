@@ -1,6 +1,9 @@
 Flatpak
 =======
 
+  * Project [Flatpak](http://flatpak.org/)
+  * Automated runtime build; [GitLab](https://gitlab.com/gbraad/flatpak-runtime-build)
+
 
 Installation
 ------------
