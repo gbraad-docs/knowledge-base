@@ -18,3 +18,5 @@ $ atomic-reactor build git --method hostdocker \
              --target-registries 10.5.0.2:5000 \
              --uri "https://github.com/gbraad/docker-hello-world.git"
 ```
+
+[More info](https://github.com/projectatomic/atomic-reactor)
