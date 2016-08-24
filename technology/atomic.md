@@ -1,7 +1,7 @@
 Project Atomic
 ==============
 
-  * See also [ostree/Atomic](ostree.md)
+  * See also [ostree](ostree.md)
   * [Getting started](http://www.projectatomic.io/download/)
 
 
