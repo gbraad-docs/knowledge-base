@@ -1,10 +1,23 @@
-Building Ceph
-=============
+Ceph
+====
+
+
+Deployment
+----------
+
+  * [ceph-ansible](https://github.com/ceph/ceph-ansible)
+  * [ceph-docker](https://github.com/ceph/ceph-docker)
+
+
+Building
+--------
+
+### Build wrapper
 
   * https://gitlab.com/gbraad/ceph-build (http://github.com/gbraad/ceph-build-wrapper)
 
 
-## Standard build using cmake
+### Standard build using cmake
 The following GitLab CI runner script can run on a shared runner. it performs a basic build using `cmake`. Note: artifacts are not stored.
 
 `.gitlab-ci.yml`
@@ -25,3 +38,8 @@ build:
     - cd build
     - make
 ```
+
+Links
+-----
+
+  * [Ceph](http://ceph.com/) homepage
