@@ -2,6 +2,40 @@ Docker
 ======
 
 
+Containers and registries
+-------------------------
+
+### Docker hub
+
+  * Personal [repos](https://hub.docker.com/r/gbraad/)
+
+
+### GitLab
+
+
+  * [devenv](https://gitlab.com/gbraad/devenv)
+  * [Jupyter](https://gitlab.com/gbraad/jupyter)
+  * [Kubernetes](https://gitlab.com/gbraad/kubernetes-client) client
+  * [Mono](https://gitlab.com/gbraad/mono)
+  * [OpenStack](https://gitlab.com/gbraad/openstack-client) client
+  * [ostreetests](https://gitlab.com/gbraad/ostreetests)
+
+### Proxies (at GitLab)
+
+  * [Alpine](https://gitlab.com/gbraad/alpine)
+  * [CentOS](https://gitlab.com/gbraad/centos) + custom
+  * [Debian](https://gitlab.com/gbraad/debian)
+  * [Fedora](https://gitlab.com/gbraad/fedora) + custom
+  * [openSUSE](https://gitlab.com/gbraad/opensuse)
+  * [Photon](https://gitlab.com/gbraad/vmware-photon)
+  * [Ubuntu](https://gitlab.com/gbraad/ubuntu)
+
+### Test wrappers (at GitLab)
+
+  * [CentOS min](https://gitlab.com/gbraad/centosmin)
+  * [Fedora min](https://gitlab.com/gbraad/fedoramin)
+
+
 ## Get private IP address of container
 
 ```
