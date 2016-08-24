@@ -8,6 +8,7 @@
   * [Atomic](technology/atomic.md)
   * [cloud-init](technology/cloudinit.md)
   * [Docker](technology/docker.md)
+  * [Flatpak](technology/flatpak.md)
   * [Git](technology/git.md)
   * [Kubernetes](technology/kubernetes/README.md)
   * [Linux](technology/linux.md)
