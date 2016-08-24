@@ -19,6 +19,15 @@ CentOS Atomic
   * [Download images](http://cloud.centos.org/centos/7/atomic/images/)
 
 
+Kubernetes on Atomic
+--------------------
+
+Deploy kubernetes on CentOS and CentOS Atomic hosts using Ansible
+
+  * [Ansible playbook](https://github.com/gbraad/ansible-playbook-kubernetes)
+  * [Kubernetes](kubernetes/README.md)
+
+
 Atomic Reactor
 --------------
 
