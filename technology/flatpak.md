@@ -44,7 +44,7 @@ Runtimes
 
   * Official [runtimes](http://flatpak.org/runtimes.html)
   * Automated runtime build; [GitLab](https://gitlab.com/gbraad/flatpak-runtime-build)
-  * CentOS: https://github.com/matthiasclasen/flatpak-runtime
+  * CentOS: https://github.com/matthiasclasen/flatpak-runtime, [build](https://gitlab.com/gbraad/flatpak-centos-runtime-build)
   * openSUSE: https://github.com/fcrozat/opensuse-flatpak-runtime
   * Mono: (WIP!): https://gitlab.com/gbraad/flatpak-mono-runtime, https://github.com/gbraad/flatpak-mono-runtime
   * Fedora (WIP!): https://gitlab.com/gbraad/flatpak-fedora-runtime, https://github.com/gbraad/flatpak-fedora-runtime
