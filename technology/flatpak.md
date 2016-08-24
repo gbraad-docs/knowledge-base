@@ -54,6 +54,7 @@ Applications
 
   * Spotify build wrapper: [GitLab](https://gitlab.com/gbraad/flatpak-spotify-build)
   * Hello app: [GitLab](https://gitlab.com/gbraad/flatpak-hello)
+  * OpenStack (WIP!) https://github.com/gbraad/flatpak-openstack-client
 
 
 Test
