@@ -50,7 +50,8 @@ $ atomic-reactor build git --method hostdocker \
 Note: currently `FROM:scratch` builds are not supported.
 
 
-## Build your own Atomic
+Build your own Atomic
+---------------------
 
   * [BYO Atomic](https://github.com/jasonbrooks/byo-atomic)
   * [BYO Atomic](https://gitlab.com/gbraad/byo-atomic) - base
@@ -98,7 +99,9 @@ cd fedora-atomic
 git checkout f23
 ```
 
-## Upstream ostree
+
+Upstream ostree
+---------------
 
 ### Using CentOS continuous ostree
 
@@ -150,7 +153,8 @@ xfs_growfs /dev/atomicos/root
 Note: this trashes the `docker` storage pool
 
 
-## Upload images to OpenStack
+Atomic on OpenStack
+----------------
 
 ```
 $ wget http://http://cloud.centos.org/centos/7/atomic/images/CentOS-Atomic-Host-7-GenericCloud.qcow2
@@ -161,6 +165,33 @@ $ openstack image create "CentOS7 Atomic" --progress --file CentOS-Atomic-Host-7
 $ wget https://download.fedoraproject.org/pub/alt/atomic/stable/CloudImages/x86_64/images/Fedora-Atomic-24-20160809.0.x86_64.qcow2
 $ openstack image create "Fedora24 Atomic" --progress --file Fedora-Atomic-24-20160809.0.x86_64.qcow2 --disk-format qcow2 --container-format bare --property os_distro=fedora
 ```
+
+Note: for Ceph you might have to `convert-img` to RAW format.
+
+
+Atomic using Vagrant
+--------------------
+
+### CentOS
+
+```
+$ vagrant init centos/atomic-host && vagrant up --provider virtualbox 
+```
+
+[Source](https://atlas.hashicorp.com/centos/boxes/atomic-host)
+
+
+### Fedora
+
+```
+$ vagrant init fedora/24-atomic-host && vagrant up --provider virtualbox
+```
+
+[Source](https://atlas.hashicorp.com/fedora/boxes/24-atomic-host)
+
+
+Other resources
+---------------
 
   * [Cloud-init](cloudinit.md)
   * [Compose server](https://github.com/projectatomic/rpm-ostree/blob/master/docs/manual/compose-server.md)
