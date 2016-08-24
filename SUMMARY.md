@@ -5,6 +5,7 @@
 ### Technology
 
   * [Ansible](technology/ansible.md)
+  * [Atomic](technology/atomic.md)
   * [cloud-init](technology/cloudinit.md)
   * [Docker](technology/docker.md)
   * [Git](technology/git.md)
@@ -12,7 +13,7 @@
   * [Linux](technology/linux.md)
   * [OpenStack](technology/openstack/README.md)
   * [OpenStack TripleO](technology/openstack/tripleo.md)
-  * [ostree / Atomic](technology/ostree.md)
+  * [ostree](technology/ostree.md)
   * [Photon OS](technology/photonos.md)
   * [Python](technology/python.md)
   * [rsync](technology/rsync.md)
