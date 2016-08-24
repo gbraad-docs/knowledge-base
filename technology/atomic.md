@@ -176,6 +176,7 @@ Atomic using Vagrant
 
 ```
 $ vagrant init centos/atomic-host && vagrant up --provider virtualbox 
+# or  --provider libvirt
 ```
 
 [Source](https://atlas.hashicorp.com/centos/boxes/atomic-host)
@@ -185,6 +186,7 @@ $ vagrant init centos/atomic-host && vagrant up --provider virtualbox
 
 ```
 $ vagrant init fedora/24-atomic-host && vagrant up --provider virtualbox
+# or  --provider libvirt
 ```
 
 [Source](https://atlas.hashicorp.com/fedora/boxes/24-atomic-host)
