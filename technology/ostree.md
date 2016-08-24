@@ -2,12 +2,7 @@ ostree
 ======
 
   * See also [Atomic](atomic.md)
-
-
-## Flatpak
-
-  * Project [Flatpak](http://flatpak.org/)
-  * Automated runtime build; [GitLab](https://gitlab.com/gbraad/flatpak-runtime-build)
+  * See also [Flatpak](flatpak.md)
 
 
 ## OSTree tests
