@@ -3,6 +3,7 @@ Flatpak
 
   * Project [Flatpak](http://flatpak.org/)
   * [Getting Started](http://flatpak.org/developer.html)
+  * [Examples](https://github.com/flatpak/flatpak/wiki/Examples)
 
 
 Installation
@@ -47,6 +48,8 @@ Runtimes
   * openSUSE: https://github.com/fcrozat/opensuse-flatpak-runtime
   * Mono: (WIP!): https://gitlab.com/gbraad/flatpak-mono-runtime, https://github.com/gbraad/flatpak-mono-runtime
   * Fedora (WIP!): https://gitlab.com/gbraad/flatpak-fedora-runtime, https://github.com/gbraad/flatpak-fedora-runtime
+
+Also see `Examples` at the top of the page
 
 
 Applications
