@@ -36,6 +36,8 @@ $ atomic-reactor build git --method hostdocker \
 
 [More info](https://github.com/projectatomic/atomic-reactor)
 
+Note: currently `FROM:scratch` builds are not supported.
+
 
 ## Build your own Atomic
 
