@@ -87,7 +87,6 @@ ceph_rgw_civetweb_port: 8080
 generate_fsid: 'true'
 
 ceph_docker_dev_image: false
-skip_tags: 'with_pkg'
 ceph_origin: distro
 monitor_interface: eth0
 public_network: 10.3.0.0/24
@@ -108,7 +107,7 @@ cephx: false
 ```
 
 ```
-$ ansible-playbook -i hosts site.yml
+$ ansible-playbook -i hosts site.yml --skip-tags with_pkg
 ```
 
 
