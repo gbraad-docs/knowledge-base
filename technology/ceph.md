@@ -84,6 +84,7 @@ journal_size: 5120
 journal_collocation: true
 devices:
    - /dev/vdb
+cephx: false
 ```
 
 `group_vars/mons`
