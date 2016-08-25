@@ -24,7 +24,7 @@ Ref: [source](http://docs.ansible.com/ansible/playbooks_variables.html#passing-v
 ## Execute command on remote host
 
 ```
-$ ansible -i hosts all-u centos -s -m shell -a "rm -rf /"
+$ ansible -i hosts all -u centos -s -m shell -a "rm -rf /"
 ```
 
 ## Executable playbooks
