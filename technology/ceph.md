@@ -107,6 +107,8 @@ ceph_mon_docker_subnet: 10.3.0.0/.0/24
 ```
 
 ```
+$ ansible -i hosts all -m shell -a "rm -rf /etc/ceph/*.conf" -u centos -s
+$ ansible -i hosts all -m shell -a "rm -rf /var/lib/ceph/*" -u centos -s
 $ ansible-playbook -i hosts site.yml --skip-tags with_pkg
 ```
 
