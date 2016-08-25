@@ -2,11 +2,6 @@ Cloud-init
 ==========
 
 
-## Automated creation of configdrive
-
-  * Project at [GitLab](https://gitlab.com/gbraad/cloud-init-configdrive) and [output](https://gitlab.com/gbraad/cloud-init-configdrive/builds/2572382/artifacts/browse/public/)
-
-
 ## Post-creation script
 
 A simple example of using a post-creation script, as possible with OpenStack, is as follows:
@@ -109,3 +104,9 @@ Once you have completed your files, they need to packaged into an ISO image. For
 You can boot from this iso image, and the auth details it contains will be passed along to your instance.
 
 For more information about creating these `cloud-init` iso images, see [config-drive](http://cloudinit.readthedocs.org/en/latest/topics/datasources.html#config-drive).
+
+
+## Automated creation of configdrive
+
+  * Project at [GitLab](https://gitlab.com/gbraad/cloud-init-configdrive) and [output](https://gitlab.com/gbraad/cloud-init-configdrive/builds/2572382/artifacts/browse/public/)
+
