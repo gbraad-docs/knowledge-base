@@ -2,6 +2,11 @@ Cloud-init
 ==========
 
 
+## Automated creation of configdrive
+
+  * Project at [GitLab](https://gitlab.com/gbraad/cloud-init-configdrive) and [output](https://gitlab.com/gbraad/cloud-init-configdrive/builds/2572382/artifacts/browse/public/)
+
+
 ## Post-creation script
 
 A simple example of using a post-creation script, as possible with OpenStack, is as follows:
