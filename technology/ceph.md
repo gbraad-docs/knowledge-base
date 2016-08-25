@@ -86,7 +86,7 @@ devices:
 
 `group_vars/mons`
 ```
-
+cephx: false
 ```
 
 ```
