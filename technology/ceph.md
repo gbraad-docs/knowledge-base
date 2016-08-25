@@ -117,7 +117,7 @@ $ ansible-playbook -i hosts site.yml --skip-tags with_pkg
 Building
 --------
 
-  * Build wrapper: [GitLab](https://gitlab.com/gbraad/ceph-build), [GitHub](http://github.com/gbraad/ceph-build-wrapper)  
+  * Build wrapper: [GitLab](https://gitlab.com/gbraad/ceph), [GitHub](http://github.com/gbraad/ceph-build-wrapper)  
     Runs automated builds of the master branch at `ceph/ceph`.
 
 
