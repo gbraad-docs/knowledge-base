@@ -71,10 +71,15 @@ $ cp group_vars/osds.sample group_vars/osds
 `group_vars/all`
 ```
 skip_tags: 'with_pkg'
+ceph_origin: distro
+monitor_interface: eth0
+public_network: 10.3.0.0/255
+journal_size: 5120
 ```
 
 `group_vars/osds`
 ```
+journal_collocation: true
 devices:
    - /dev/vdb
 ```
