@@ -4,6 +4,11 @@ Linux
 
 ## Kernel
 
+## Workspace
+
+  * [Cloud9](https://ide.c9.io/gbraad/linux-kernel)
+
+
 ### Build wrappers (at GitLab)
 
   * [mainline](https://gitlab.com/gbraad/linux-kernel-build-mainline), [kernel-mainline.repo](https://gitlab.com/gbraad/linux-kernel-build-stable/blob/master/kernel-mainline.repo)
