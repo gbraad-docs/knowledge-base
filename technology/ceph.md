@@ -27,6 +27,7 @@ atomic-06 ansible_ssh_host=10.3.0.19
 `ansible.cfg`
 ```
 [defaults]
+action_plugins = plugins/actions
 retry_files_enabled = False
 host_key_checking = False
 remote_user = centos
@@ -67,7 +68,25 @@ $ cp group_vars/mons.sample group_vars/mons
 $ cp group_vars/osds.sample group_vars/osds
 ```
 
-... **in progress** ...
+`group_vars/all`
+```
+skip_tags: 'with_pkg'
+```
+
+`group_vars/osds`
+```
+devices:
+   - /dev/vdb
+```
+
+`group_vars/mons`
+```
+
+```
+
+```
+$ ansible-playbook -i hosts site.yml
+```
 
 
 Building
