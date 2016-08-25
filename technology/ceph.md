@@ -70,12 +70,27 @@ $ cp group_vars/osds.sample group_vars/osds
 
 `group_vars/all`
 ```
-docker: true
+mon_containerized_deployment: true
+osd_containerized_deployment: true
+mds_containerized_deployment: true
+rgw_containerized_deployment: true
+nfs_containerized_deployment: true
+restapi_containerized_deployment: true
+rbd_mirror_containerized_deployment: true
+ceph_mon_docker_interface: eth0
+ceph_mon_docker_subnet: 10.3.0.0/.0/24
+ceph_osd_docker_extra_env: "CEPH_DAEMON=OSD_CEPH_DISK_ACTIVATE,OSD_JOURNAL_SIZE=100"
+cluster_network: 10.3.0.0/24
+ceph_osd_docker_devices: ['/dev/sdb']
+ceph_docker_on_openstack: true
+ceph_rgw_civetweb_port: 8080
+generate_fsid: 'true'
+
 ceph_docker_dev_image: false
 skip_tags: 'with_pkg'
 ceph_origin: distro
 monitor_interface: eth0
-public_network: 10.3.0.0/255
+public_network: 10.3.0.0/24
 journal_size: 5120
 ```
 
