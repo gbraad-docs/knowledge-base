@@ -81,7 +81,7 @@ ceph_mon_docker_interface: eth0
 ceph_mon_docker_subnet: 10.3.0.0/.0/24
 ceph_osd_docker_extra_env: "CEPH_DAEMON=OSD_CEPH_DISK_ACTIVATE,OSD_JOURNAL_SIZE=100"
 cluster_network: 10.3.0.0/24
-ceph_osd_docker_devices: ['/dev/sdb']
+ceph_osd_docker_devices: ['/dev/vdb']
 ceph_docker_on_openstack: true
 ceph_rgw_civetweb_port: 8080
 generate_fsid: 'true'
