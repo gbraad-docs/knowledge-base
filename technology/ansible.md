@@ -21,6 +21,12 @@ ansible-playbook release.yml --extra-vars "hosts=vipers user=starbuck"
 Ref: [source](http://docs.ansible.com/ansible/playbooks_variables.html#passing-variables-on-the-command-line)
 
 
+## Execute command on remote host
+
+```
+$ ansible -i hosts all-u centos -s -m shell -a "rm -rf /"
+```
+
 ## Executable playbooks
 
 ```
