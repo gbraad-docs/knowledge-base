@@ -70,6 +70,8 @@ $ cp group_vars/osds.sample group_vars/osds
 
 `group_vars/all`
 ```
+docker: true
+ceph_docker_dev_image: false
 skip_tags: 'with_pkg'
 ceph_origin: distro
 monitor_interface: eth0
