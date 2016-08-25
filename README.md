@@ -21,6 +21,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Git](technology/git.md)
   * [Kubernetes](technology/kubernetes/README.md)
   * [Linux](technology/linux.md)
+  * [OpenShift](technology/openshift.md)
   * [OpenStack](technology/openstack/README.md)
   * [OpenStack TripleO](technology/openstack/tripleo.md)
   * [ostree](technology/ostree.md)
