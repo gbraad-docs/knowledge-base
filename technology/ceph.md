@@ -113,6 +113,12 @@ $ ansible -i hosts all -m shell -a "rm -rf /var/lib/ceph/*" -u centos -s
 $ ansible-playbook -i hosts site.yml --skip-tags with_pkg
 ```
 
+### Alternative; Ceph Atomic
+
+  * https://gist.github.com/gbraad/9111e00e91170d91a1d180c3b62423c6
+  * https://gitlab.com/gbraad/ceph-atomic
+  * https://gitlab.com/gbraad/byo-atomic-ceph
+
 
 Building
 --------
