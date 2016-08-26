@@ -122,7 +122,7 @@ Building
 
 
 ### Standard build using cmake
-The following script performs a basic build using `cmake` on CentOS 7.
+The following script performs a basic build using `cmake` on CentOS 7 (Cloud image).
 
 ```
 # prepare
