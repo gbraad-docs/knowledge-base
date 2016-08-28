@@ -47,3 +47,29 @@ git submodule init
 ```
 git submodule update
 ```
+
+
+## Initial commit
+
+`git newclone name [gitlab|github]`
+```
+#!/bin/sh
+git clone git@${2:-"gitlab"}.com:gbraad/${1}.git
+cd ${1}
+touch README.md
+git add README.md
+git commit -m "Initial commit"
+git push -u origin master
+```
+
+`git newrepo name [gitlab|github]` 
+```
+#!/bin/sh
+mkdir -p ${1}
+cd ${1}
+git remote add origin git@${2:-"gitlab"}.com:gbraad/${1}.git
+touch README.md
+git add README.md
+git commit -m "Initial commit"
+git push -u origin master
+```
