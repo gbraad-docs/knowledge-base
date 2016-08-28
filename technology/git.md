@@ -23,6 +23,7 @@ export GIT_EDITOR=vim
 ## Update all subdirectories
 Used for a project directory with no `git submodule`.
 
+`git-pullall`
 ```
 #!/bin/bash
 for i in $(find . -maxdepth 1 -type d)
