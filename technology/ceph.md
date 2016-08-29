@@ -11,6 +11,24 @@ Deployment
 
 ### Play `ceph-ansible` with CentOS cloud hosts
 
+`site.yml`
+```
+- hosts: mons # gather mon facts first before we process ceph-mon serially
+  tasks: []
+
+- hosts: mons
+  become: True
+  gather_facts: false
+  roles:
+  - ceph-mon
+  serial: 1
+
+- hosts: osds
+  become: True
+  roles:
+  - ceph-osd
+```
+
 `hosts`
 ```
 [mons]
