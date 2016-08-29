@@ -189,11 +189,11 @@ $ cp group_vars/osds.sample group_vars/osds
 cluster_network: 10.3.0.0/24
 generate_fsid: 'true'
 skip_tags: 'with_pkg'
-docker: true
 ceph_origin: distro
 monitor_interface: eth0
 public_network: 10.3.0.0/24
 journal_size: 5120
+cephx: false
 ```
 
 `group_vars/osds`
