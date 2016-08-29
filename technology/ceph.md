@@ -120,6 +120,12 @@ $ ansible-playbook -i hosts site.yml --skip-tags with_pkg
   * https://gitlab.com/gbraad/byo-atomic-ceph
 
 
+```
+$ ansible -i hosts all -u centos -s -m shell -a "ostree remote add --set=gpg-verify=false byo-atomic-ceph https://gbraad.gitlab.io/byo-atomic-ceph/"
+$ ansible -i hosts all -u centos -s -m shell -a "rpm-ostree rebase byo-atomic-ceph:centos-atomic-host/7/x86_64/ceph-hammer"
+```
+
+
 Building
 --------
 
