@@ -9,6 +9,46 @@ Deployment
   * [ceph-docker](https://github.com/ceph/ceph-docker)
 
 
+### Play `ceph-ansible` with CentOS cloud hosts
+
+`hosts`
+```
+[mons]
+centos-01 ansible_ssh_host=10.3.0.15
+centos-02 ansible_ssh_host=10.3.0.18
+centos-03 ansible_ssh_host=10.3.0.14
+
+[osds]
+centos-04 ansible_ssh_host=10.3.0.16
+centos-05 ansible_ssh_host=10.3.0.17
+centos-06 ansible_ssh_host=10.3.0.19
+```
+
+`group_vars/all`
+```
+cluster_network: 10.3.0.0/24
+generate_fsid: 'true'
+ceph_origin: upstream
+ceph_stable: true
+monitor_interface: eth0
+public_network: 10.3.0.0/24
+journal_size: 5120
+```
+
+`group_vars/mons`
+```
+cephx: false
+```
+
+`group_vars/osds`
+```
+journal_collocation: true
+devices:
+   - /dev/vdb
+cephx: false
+```
+
+
 ### Play `ceph-ansible` with Atomic hosts
 
 `hosts`
