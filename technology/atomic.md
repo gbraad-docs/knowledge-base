@@ -59,6 +59,33 @@ Build your own Atomic
   * [BYO Atomic - Toolbox](https://gitlab.com/gbraad/byo-atomic-toolbox)
 
 
+### Creating a custom image
+
+You can add repos simply by including them in the same folder as your `myostree.json` definition.
+
+In the json file you define:
+```
+{
+    "include": "centos-atomic-host.json",
+    "ref": "centos-atomic-host/7/x86_64/my-software",
+    "automatic_version_prefix": "2016.0",
+    "repos": ["myrepo"],
+    "packages": [
+        "my-sofware"
+     ]
+}
+```
+
+and create a file `myrepo.repo` containing:
+
+```
+[myrepo]
+name=My software repo
+baseurl=http://gbraad.gitlab.io/mysoftware
+gpgcheck=0
+```
+
+
 ### Variant: CentOS
 Automated GitLab CI runner is available: [BYO Atomic - CentOS](https://gitlab.com/gbraad/byo-atomic-centos)
 
