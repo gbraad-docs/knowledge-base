@@ -115,7 +115,6 @@ $ ansible-playbook -i hosts site.yml --skip-tags with_pkg
 
 ### Alternative; Ceph Atomic
 
-  * https://gist.github.com/gbraad/9111e00e91170d91a1d180c3b62423c6
   * https://gitlab.com/gbraad/ceph-atomic
   * https://gitlab.com/gbraad/byo-atomic-ceph
 
@@ -128,6 +127,8 @@ $ ansible -i hosts all -u centos -s -m shell -a "systemctl reboot"  # will throw
 $ ansible -i hosts all -u centos -s -m ping
 $ ansible-playbook -i hosts site.yml --skip-tags with_pkg,package-install
 ```
+
+[Gist](https://gist.github.com/gbraad/9111e00e91170d91a1d180c3b62423c6)
 
 
 Building
