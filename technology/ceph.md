@@ -113,7 +113,7 @@ $ ansible -i hosts all -m shell -a "rm -rf /var/lib/ceph/*" -u centos -s
 $ ansible-playbook -i hosts site.yml --skip-tags with_pkg
 ```
 
-### Alternative; Ceph Atomic
+### Ceph-ansible; Ceph Atomic
 
   * https://gitlab.com/gbraad/ceph-atomic
   * https://gitlab.com/gbraad/byo-atomic-ceph
@@ -129,6 +129,18 @@ $ ansible-playbook -i hosts site.yml --skip-tags with_pkg,package-install
 ```
 
 [Gist](https://gist.github.com/gbraad/9111e00e91170d91a1d180c3b62423c6)
+
+
+### Ceph-ansible: installation source
+
+`group_vars/all`
+```
+#ceph_origin: distro
+ceph_origin: upstream
+ceph_stable: true
+```
+
+`distro` does not install any repos, while `upstream` will and needs you to specify and installation type; `ceph_stable` used here.
 
 
 Building
