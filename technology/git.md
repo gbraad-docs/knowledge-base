@@ -68,6 +68,7 @@ git push -u origin master
 #!/bin/sh
 mkdir -p ${1}
 cd ${1}
+git init
 git remote add origin git@${2:-"gitlab"}.com:gbraad/${1}.git
 touch README.md
 git add README.md
