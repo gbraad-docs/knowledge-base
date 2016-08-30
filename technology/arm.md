@@ -2,7 +2,7 @@ ARM
 ===
 
   * RaspberryPi
-  * [Mozilla B2G]() / Firefox OS
+  * [Mozilla B2G](#mozilla-b2g) / Firefox OS
   * etc.
 
 
