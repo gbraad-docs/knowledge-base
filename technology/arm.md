@@ -57,3 +57,5 @@ $ ./config.sh flame-kk       # or nexus5
 $ docker pull gbraad/b2g-build  # registry.gitlab.com/gbraad/b2g-build:base
 $ docker run -v $PWD:/B2G -i -t gbraad/b2g-build -j4
 ```
+
+  * B2G-build: [GitLab](https://gitlab.com/gbraad/B2G-build), [GitHub](https://github.com/gbraad/B2G-build), [Docker hub](https://hub.docker.com/r/gbraad/b2g-build/)
