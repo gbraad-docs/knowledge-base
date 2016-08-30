@@ -28,6 +28,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [ostree](technology/ostree.md)
   * [Photon OS](technology/photonos.md)
   * [Python](technology/python.md)
+  * [RISC-V](technology/riscv.md)
   * [rsync](technology/rsync.md)
   * [sed](technology/sed.md)
   * [Software installation](technology/install.md)
