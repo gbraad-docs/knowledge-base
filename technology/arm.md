@@ -16,7 +16,9 @@ Distros
 
 ### CentOS
 
-  * 
+  * http://mirror.centos.org/altarch/7/isos/aarch64/
+  * http://mirror.centos.org/altarch/7/isos/armhfp/
+  * https://wiki.centos.org/SpecialInterestGroup/AltArch/Arm32
 
 
 Docker
