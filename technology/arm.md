@@ -5,6 +5,10 @@ ARM
   * Firefox B2G
   * etc.
 
+## Fedora
+
+  * https://dl.fedoraproject.org/pub/fedora/linux/releases/24/Spins/armhfp/images/Fedora-Minimal-armhfp-24-1.2-sda.raw.xz
+
 
 ## Docker
 
