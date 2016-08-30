@@ -5,6 +5,7 @@
 ### Technology
 
   * [Ansible](technology/ansible.md)
+  * [ARM](technology/arm.md)
   * [Atomic](technology/atomic.md)
   * [Ceph](technology/ceph.md)
   * [cloud-init](technology/cloudinit.md)
