@@ -5,19 +5,30 @@ ARM
   * Firefox B2G
   * etc.
 
-## Fedora
+
+Distros
+-------
+
+### Fedora
 
   * https://dl.fedoraproject.org/pub/fedora/linux/releases/24/Spins/armhfp/images/Fedora-Minimal-armhfp-24-1.2-sda.raw.xz
 
 
-## Docker
+### CentOS
+
+  * 
+
+
+Docker
+------
 
   * [Installing and running Docker](https://github.com/umiddelb/armhf/wiki/Installing,-running,-using-docker-on-armhf-(ARMv7)-devices)
 
 ### Containers
 
   * [Debian](https://hub.docker.com/r/armv7/armhf-debian/)
-  * [Fedora](https://hub.docker.com/r/armv7/armhf-fedora/)
+  * [Fedora <24](https://hub.docker.com/r/armv7/armhf-fedora/)  
+    [Fedora 24+](https://hub.dokcer.com/r/gbraad/armhf-fedora/)
   * [Ubuntu](https://hub.docker.com/r/armv7/armhf-ubuntu/)
 
 ### Repository
