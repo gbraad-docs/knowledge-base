@@ -21,4 +21,16 @@ requests.packages.urllib3.disable_warnings()
 lab = gitlab.Gitlab(host="gitlab.com",token="fdsf")
 project = lab.getproject("gbraad/gauth")
 issues = lab.getprojectissues(project["id"])
+
+table = PrettyTable(["Title", "Labels", "State"])
+table.align["Title"] = "l"
+
+issues = lab.getprojectissues(project["id"])
+for issue in issues:
+    title = issue['title']
+    labels = ",".join(issue['labels'])
+    state = issue['state']
+    table.add_row([title, labels, state])
+
+print(table)
 ```
