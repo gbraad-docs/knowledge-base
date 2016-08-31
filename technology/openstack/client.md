@@ -52,13 +52,6 @@ $ ansible-playbook /tmp/install.yml
 ```
 
 
-## Needed to install OpenStack client on Ubuntu 14.04 (or C9)
-
-```
-$ pip install -U pyopenssl ndg-httpsclient pyasn1
-```
-
-
 ## Managing users and projects
 ```
 $ openstack project list
