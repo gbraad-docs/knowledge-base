@@ -98,3 +98,13 @@ $ pip install q
  * use the `@q` decorator
 
 [Source](https://pypi.python.org/pypi/q)
+
+
+Troubleshooting
+---------------
+
+### Needed on Ubuntu 14.04 when dealing with oudated SSL and `InsecurePlatformWarning`
+
+```
+$ pip install -U pyopenssl ndg-httpsclient pyasn1
+```
