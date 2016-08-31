@@ -20,6 +20,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Docker](technology/docker.md)
   * [Flatpak](technology/flatpak.md)
   * [Git](technology/git.md)
+  * [GitLab](technology/gitlab.md)
   * [Kubernetes](technology/kubernetes/README.md)
   * [Linux](technology/linux.md)
   * [OpenShift](technology/openshift.md)
