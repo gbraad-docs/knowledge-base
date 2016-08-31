@@ -14,7 +14,7 @@ GitLab
   * [GitHub](https://github.com/pyapi-gitlab/pyapi-gitlab)
 
 ### Usage
-```
+```python
 import gitlab
 import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings()
