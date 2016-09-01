@@ -30,7 +30,7 @@ $ cd ~/Projects/[something]
 $ c9ide
 ```
 
-[Source](https://github.com/gbraad/docker-c9ide)
+Source: [GitLab](https://gitlab.com/gbraad/c9ide), [GitHub](https://github.com/gbraad/docker-c9ide), [Docker hub](https://hub.docker.com/r/gbraad/c9ide)
 
 
 ### Docker cloud
@@ -43,6 +43,8 @@ Select the preferred flavor from the image selecter.
   * `c7` is based on CentOS 7
   * `f24` is based on Fedora 24
   * `u1604` is based on Ubuntu 16.04 (xenial)
+
+If you want to know what is in these images, please see the source under the [Docker](#docker) header on this page.
 
 _Note: Images with the `-devenv` suffix are based on my [devenv](htttp://github.com/gbraad/devenv) environment. Unless you know what you are doing, it is best to not use these._
 
