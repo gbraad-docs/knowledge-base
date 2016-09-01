@@ -35,7 +35,9 @@ Source: [GitLab](https://gitlab.com/gbraad/c9ide), [GitHub](https://github.com/g
 
 ### Docker cloud
 
-Create a new service and search Docker hub for `gbraad/c9ide`, and confirm with clicking Select.
+Create a new account, or re-use your Docker hub acount, at [Docker cloud](https://cloud.docker.com). Now open the [Node list](https://cloud.docker.com/node/cluster/list/) and Bring your own node. Setting up the first node is free of charge. It explaisn you how to deploy the docker cloud engine on a machine with a simple one-liner.
+
+Now open the [Service list](https://cloud.docker.com/container/list/) and create a new service. Search Docker hub for `gbraad/c9ide`, and confirm with clicking Select. Below are the settings to can/need to be changed to allow you to start the C9 service on your own Docker cloud node.
 
 #### General settings
 Select the preferred flavor from the image selecter.
