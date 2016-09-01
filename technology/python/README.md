@@ -4,6 +4,12 @@ Python
   * [Django](django.md)
 
 
+Books
+-----
+
+  * [Learning Python The Hard Way](http://learnpythonthehardway.org/)
+
+
 ## Setup development
 
 ```
