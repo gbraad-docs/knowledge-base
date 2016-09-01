@@ -1,6 +1,8 @@
 Quotes
 ======
 
+!["The world I see is the world I create."](https://pbs.twimg.com/media/CkPi79-UYAE4Whp.jpg:large)
+
 "What doesn't go upstream is a liability!"
 
 "Do good things and talk about it"
@@ -17,8 +19,6 @@ Quotes
 
 "Being a kid has nothing to do with age"
 
-!["The world I see is the world I create."](https://pbs.twimg.com/media/CkPi79-UYAE4Whp.jpg:large)
-
 "Ecosystem is more important than the technology"
 
 "I'm going to get exactly what I want. And I'm not going to stop until I get it."
@@ -32,3 +32,5 @@ Quotes
 "If someone offers you an amazing opportunity and you’re not sure you can do it, say yes – then learn how to do it later." - Richard Branson
 
 "Ceaseless change is the only constant thing in Nature." - John Candee Dean
+
+"To succeed in bringing a person to a certain place, you need to start by finding out where is in the first place."
