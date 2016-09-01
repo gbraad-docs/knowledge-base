@@ -1,6 +1,9 @@
 Python
 ======
 
+  * [Django](django.md)
+
+
 ## Setup development
 
 ```
