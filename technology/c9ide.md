@@ -56,3 +56,5 @@ USERNAME          user
 After clicking `Create & Deploy` you will be shown the endpoints Open the Service endpoint for `tcp/80` in your browser
 (without the tcp:// prefix) and you will be shown a authentication prompt. User the parameters you set from the
 Environment variables section and happy coding!
+
+_Note: Be sure to push your code out to a git repository or attach a volume to `/workspace`.
