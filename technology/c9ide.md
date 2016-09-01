@@ -38,7 +38,7 @@ $ c9ide
 Create a new service and search Docker hub for `gbraad/c9ide`, and confirm with clicking Select.
 
 #### General settings
-Select the preferred flavor from the image selecter. At the moment there is a CentOS 7 and Fedora 24 based image.
+Select the preferred flavor from the image selecter. At the moment there is a CentOS 7 and Fedora 24 image based on my [devenv](htttp://github.com/gbraad/devenv) environment.
 
 #### Ports
 ```
