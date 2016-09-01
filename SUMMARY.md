@@ -9,6 +9,7 @@
   * [Atomic](technology/atomic.md)
   * [C9 IDE](technology/c9ide.md)
   * [Ceph](technology/ceph.md)
+  * [Cloud Foundry](technology/cloudfoundry.md)
   * [cloud-init](technology/cloudinit.md)
   * [Docker](technology/docker.md)
   * [Flatpak](technology/flatpak.md)
