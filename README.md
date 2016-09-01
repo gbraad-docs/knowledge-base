@@ -42,6 +42,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Quotes](various/quotes.md)
   * [Todo](various/todo.md)
   * [Books](various/books.md)
+  * [Persuasion](various/persuasion.md)
 
 
 ### Language 
