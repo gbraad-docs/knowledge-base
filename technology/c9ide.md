@@ -38,7 +38,14 @@ $ c9ide
 Create a new service and search Docker hub for `gbraad/c9ide`, and confirm with clicking Select.
 
 #### General settings
-Select the preferred flavor from the image selecter. At the moment there is a CentOS 7 and Fedora 24 image based on my [devenv](htttp://github.com/gbraad/devenv) environment.
+Select the preferred flavor from the image selecter.
+
+  * `c7` is based on CentOS 7
+  * `f24` is based on Fedora 24
+  * `u1604` is based on Ubuntu 16.04 (xenial)
+
+_Note: Images with the `-devenv` suffix are based on my [devenv](htttp://github.com/gbraad/devenv) environment. Unless you know what you are doing, it is best to not use these._
+
 
 #### Ports
 ```
