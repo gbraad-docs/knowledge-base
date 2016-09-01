@@ -1,34 +1,71 @@
 Cloud 9 IDE
 ===========
 
-a web-based IDE
+This scratchpad will detail how to setup a powerful development environment in the cloud, under your control!
+
+For more information about Cloud 9, have a look at:
 
   * [Homepage](http://c9.io)
-  * [Source](https://github.com/c9/core)
+  * [Source](https://github.com/c9/core), [Team](https://github.com/c9) with all the plugins
 
 
 ## Installation
+To install, choose your preferred method.
 
 ### Oneliner
+This will install C9 core (SDK and plugins) and needed dependencies on any machine or virtual machine, by using a single command.
 
 ```
 $ curl -sSL https://raw.githubusercontent.com/gbraad/oneliners/master/install_c9.sh | bash
 ```
 
 ### Ansible
+This will install C9 core (SDK and plugins) and needed dependenciesusing, using an Ansible playbook. It is assumed that you target your localhost with this.
 
 ```
 $ curl -sSL https://github.com/gbraad/ansible-playbooks/raw/master/playbooks/install-c9sdk.yml -o install-c9sdk.yml`
 $ ansible-playbook install-c9sdk.yml
 ```
 
-### Docker
+Also available available as a role for use in Ansible playbooks: [GitHub](github.com/gbraad/ansible-role-c9sdk), [Galaxy](https://galaxy.ansible.com/gbraad/c9sdk/). This can be helpful if you want to install to several machines. You first need to install the role:
 
+```
+$ ansible-galaxy install gbraad.c9sdk
+```
+
+After which you can define the playbook `deploy-c9sdk-workstations.yml`:
+```
+- name: Install C9 SDK
+  hosts: workstations
+  roles:
+    - gbraad.c9sdk
+```
+
+And substitute your targetes in the `hosts` file:
+
+```
+[workstations]
+192.168.1.[2:10]
+```
+
+you can deploy to multiple machines with:
+
+```
+$ ansible-playbook -i hosts deploy-c9sdk-workstations.yml
+```
+
+
+### Docker
+The Docker container is based on standard images, provided by CentOS, Fedora and Ubuntu, and install `curl`, `ansible` and `python` to allow the Docker build process to deploy using the Ansible playbook. This means that the containers are minimal in setup, but allow you to fully customize the environment.
+
+Using the following alias, you can easily develop on code in the current directory from your web browser.
 ```
 $ alias c9ide='docker run -it --rm -v `pwd`:/workspace gbraad/c9ide:c7'
 $ cd ~/Projects/[something]
 $ c9ide
 ```
+
+Different flavours exist, such as 'c7' (CentOS 7), 'f24' (Fedora 24) and 'u16.04' (Ubuntu Xenial).
 
 Source: [GitLab](https://gitlab.com/gbraad/c9ide), [GitHub](https://github.com/gbraad/docker-c9ide), [Docker hub](https://hub.docker.com/r/gbraad/c9ide)
 
