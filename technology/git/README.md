@@ -1,8 +1,8 @@
 Git
 ===
 
-  * [GitLab](technology/gitlab.md)
-  * [GitHub](technology/github.md)
+  * [GitLab](gitlab.md)
+  * [GitHub](github.md)
 
 
 ## Delete commits from a branch
