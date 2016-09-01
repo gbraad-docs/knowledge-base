@@ -1,6 +1,9 @@
 Git
 ===
 
+  * [GitLab](technology/gitlab.md)
+  * [GitHub](technology/github.md)
+
 
 ## Delete commits from a branch
 Careful: git reset --hard WILL DELETE YOUR WORKING DIRECTORY CHANGES
