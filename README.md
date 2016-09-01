@@ -15,6 +15,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Ansible](technology/ansible.md)
   * [ARM](technology/arm.md)
   * [Atomic](technology/atomic.md)
+  * [C9 IDE](technology/c9ide.md)
   * [Ceph](technology/ceph.md)
   * [cloud-init](technology/cloudinit.md)
   * [Docker](technology/docker.md)
