@@ -34,3 +34,5 @@ Quotes
 "Ceaseless change is the only constant thing in Nature." - John Candee Dean
 
 "To succeed in bringing a person to a certain place, you need to start by finding out where is in the first place."
+
+"If your heart is not right, no one cares about your skills"
