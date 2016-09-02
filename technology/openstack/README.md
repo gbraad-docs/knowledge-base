@@ -74,6 +74,11 @@ Information for TripleO is collected in a separate scratchpad:
   * [TripleO install](//gist.github.com/gbraad/073052c08457526463369b8b80890afa)
 
 
+## DevStack
+
+  * [Dockenstack](https://github.com/ewindisch/dockenstack)
+
+
 ## Bifrost
 
   * [Source](https://github.com/openstack/bifrost)
