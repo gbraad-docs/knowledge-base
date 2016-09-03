@@ -37,6 +37,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Software installation](technology/install.md)
   * [tcpdump](technology/tcpdump.md)
   * [Libvirt/virsh](technology/virsh.md)
+  * [Windows](technology/windows.md)
 
 
 ### Various
