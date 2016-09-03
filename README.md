@@ -41,10 +41,10 @@ _Gerard Braad <me@gbraad.nl>_
 
 ### Various
 
+  * [Books](books/README.md)
+  * [Persuasion](various/persuasion.md)
   * [Quotes](various/quotes.md)
   * [Todo](various/todo.md)
-  * [Books](various/books.md)
-  * [Persuasion](various/persuasion.md)
 
 
 ### Language 
