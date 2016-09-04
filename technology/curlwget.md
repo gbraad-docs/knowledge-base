@@ -16,3 +16,16 @@ $ wget \
      --no-parent \
          www.website.org/files/
 ```
+
+
+## Silent mode
+
+### `curl`
+```
+$ curl --silent 
+```
+
+### `wget`
+```
+$ wget --quiet
+```
