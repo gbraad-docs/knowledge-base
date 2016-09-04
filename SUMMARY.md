@@ -4,6 +4,7 @@
 
 ### Technology
 
+  * [Android](technology/android.md)
   * [Ansible](technology/ansible.md)
   * [ARM](technology/arm.md)
   * [Atomic](technology/atomic.md)
