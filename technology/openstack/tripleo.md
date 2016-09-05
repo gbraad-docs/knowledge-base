@@ -4,6 +4,12 @@ OpenStack TripleO
 [!["TripleO"](tripleo_owl-icon.png)](http://tripleo.org/)
 
 
+
+## TripleO
+
+  * [TripleO install](//gist.github.com/gbraad/073052c08457526463369b8b80890afa)
+
+
 ## Quickstart
 
 `deploy-config.yml`
