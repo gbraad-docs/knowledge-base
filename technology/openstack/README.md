@@ -9,6 +9,7 @@ OpenStack
   * [Client](client.md)
   * [Puppet](puppet.md)
   * [RDO](rdo.md)
+  * [TripleO](tripleo.md)
 
 
 ## Contributions
@@ -64,14 +65,6 @@ OpenStack
 
   * [Ansible](http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack)
   * [Puppet](http://docs.openstack.org/developer/puppet-openstack-guide/module-list.html#puppet-openstack-modules)
-
-
-## TripleO
-
-Information for TripleO is collected in a separate scratchpad:
-
-  * [TripleO scratchpad](tripleo.md)
-  * [TripleO install](//gist.github.com/gbraad/073052c08457526463369b8b80890afa)
 
 
 ## DevStack
