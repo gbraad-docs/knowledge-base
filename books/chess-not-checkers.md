@@ -13,3 +13,9 @@ Notes
 
   1. Bet on Leadership  
      Growing leaders grow organizations
+  2. Act as One  
+     Alignment multiplies impact
+  3. Win the Heart  
+     Engagement energizes effort
+  4. Excel at Execution  
+     Greatness hinges on execution
