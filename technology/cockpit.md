@@ -2,6 +2,10 @@ Cockpit
 =======
 
 
+  * [Cockpit](http://www.projectatomic.io/docs/cockpit/)
+  * [Homepage](http://cockpit-project.org)
+
+
 ```
 $ dnf update
 $ dnf install docker
