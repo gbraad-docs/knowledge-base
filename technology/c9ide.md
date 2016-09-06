@@ -109,7 +109,7 @@ _Note: Be sure to push your code out to a git repository or attach a volume to `
 
 
 ### Self-hosted
-I wrote an article which improves in the previous trial with Docker cloud, by hosting the environment yourself, supported by a service container for Nginx and certificate provided by Let's Encrypt.
+I wrote an article which improves on the previous trial with Docker cloud, by hosting the environment yourself, supported by a service container for Nginx and certificate provided by Let's Encrypt.
 
   * [Published](http://gbraad.nl/blog/setting-up-a-powerful-self-hosted-ide-in-the-cloud.html) on my blog
   * Source at [GitLab](https://gitlab.com/gbraad/blog-content/blob/master/0004-setup-self-hosted-cloud9.md), [GitHub](https://github.com/gbraad/blog-content/blob/master/0004-setup-self-hosted-cloud9.md)
