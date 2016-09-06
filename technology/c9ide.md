@@ -106,3 +106,11 @@ After clicking `Create & Deploy` you will be shown the endpoints Open the Servic
 Environment variables section and happy coding! Be aware that the first load of the page might take some time, as about 8.5M of data (JavaScript and CSS) need to be trasnferred.
 
 _Note: Be sure to push your code out to a git repository or attach a volume to `/workspace`. Also, the container runs on port 80, which is unprotected (no TLS), which means that you should not work on super-secret code or use ultra-secure user/pass combination, as these will be littered all over the internet._
+
+
+### Self-hosted
+I wrote an article which improves in the previous trial with Docker cloud, by hosting the environment yourself, supported by a service container for Nginx and certificate provided by Let's Encrypt.
+
+  * [Published](http://gbraad.nl/blog/setting-up-a-powerful-self-hosted-ide-in-the-cloud.html) on my blog
+  * Source at [GitLab](https://gitlab.com/gbraad/blog-content/blob/master/0004-setup-self-hosted-cloud9.md), [GitHub](https://github.com/gbraad/blog-content/blob/master/0004-setup-self-hosted-cloud9.md)
+  * [Published](https://gbraad.gitbooks.io/blog-articles/content/0004-setup-self-hosted-cloud9.html) on GitBook
