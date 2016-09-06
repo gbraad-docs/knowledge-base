@@ -17,6 +17,7 @@ _Gerard Braad <me@gbraad.nl>_
   * [Atomic](technology/atomic.md)
   * [C9 IDE](technology/c9ide.md)
   * [Ceph](technology/ceph.md)
+  * [Cockpit](technology/cockpit.md)
   * [Cloud Foundry](technology/cloudfoundry.md)
   * [cloud-init](technology/cloudinit.md)
   * [Docker](technology/docker.md)
