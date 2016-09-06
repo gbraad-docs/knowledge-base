@@ -11,7 +11,7 @@ $ dnf update
 $ dnf install docker
 $ systemctl enable docker
 $ systemctl start docker
-$ dnf install cockpit
+$ dnf install cockpit cockpit-docker
 $ systemctl enable cockpit.socket
 $ systemctl start cockpit
 $ firewall-cmd --add-service=cockpit
