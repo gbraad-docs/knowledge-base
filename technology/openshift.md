@@ -30,12 +30,15 @@ $ vagrant up
 ### Binary
 
 ```
+$ yum install -y docker wget screen
+$ systemctl enable docker
+$ systemctl start docker
 $ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
+$ tar -zxvf openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz -C /opt/server
 $ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
+$ tar -zxvf openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz -C /opt/client
+$ /opt/server/openshift start
 ```
-
-Unpack and use...
-
 
   * https://github.com/openshift/origin/releases
 
