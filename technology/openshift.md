@@ -29,5 +29,13 @@ $ vagrant up
 
 ### Binary
 
+```
+$ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
+$ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
+```
+
+Unpack and use...
+
+
   * https://github.com/openshift/origin/releases
 
