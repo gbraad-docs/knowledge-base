@@ -44,6 +44,13 @@ $ export PATH=/opt/server/:$PATH
 $ openshift start
 ```
 
+```
+$ export KUBECONFIG="$(pwd)"/openshift.local.config/master/admin.kubeconfig
+$ export CURL_CA_BUNDLE="$(pwd)"/openshift.local.config/master/ca.crt
+$ sudo chmod +r "$(pwd)"/openshift.local.config/master/admin.kubeconfig
+```
+
+
   * https://github.com/openshift/origin/releases
 
 
