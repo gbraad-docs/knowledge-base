@@ -40,7 +40,7 @@ $ tar -zxvf openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz -C
 $ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
 $ tar -zxvf openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz -C /opt/client
 $ export PATH=/opt/server/:$PATH
-$ /opt/server/openshift start
+$ openshift start
 ```
 
   * https://github.com/openshift/origin/releases
