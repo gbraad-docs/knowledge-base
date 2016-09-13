@@ -6,6 +6,7 @@ OpenStack
 
 ## Contents
 
+  * [Keystone](keystone.md)
   * [Client](client.md)
   * [Puppet](puppet.md)
   * [RDO](rdo.md)
