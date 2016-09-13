@@ -32,6 +32,7 @@ $ vagrant up
 ### Binary
 
 ```
+$ vi /etc/hosts # make sure your hostname is resolved to an IP
 $ yum install -y docker wget screen
 $ systemctl enable docker
 $ systemctl start docker
