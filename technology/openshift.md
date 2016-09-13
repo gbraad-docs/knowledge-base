@@ -42,3 +42,8 @@ $ /opt/server/openshift start
 
   * https://github.com/openshift/origin/releases
 
+
+## Ansible
+
+  * https://github.com/openshift/openshift-ansible
+
