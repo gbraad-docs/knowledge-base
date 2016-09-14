@@ -39,6 +39,25 @@ $ yum install -y qemu-img
 $ qemu-img convert box-disk1.vmdk -O qcow2 openshift.qcow2
 ```
 
+### Upload disk image to OpenStack
+The converted Vagrant image can be uploaded to OpenStack
+
+```
+$ openstack image create "OpenShift" --file openshift.qcow2 --disk-format qcow2 --container-format bare
+```
+
+	+------------------+------------------------------------------------------+
+	| Field            | Value                                                |
+	+------------------+------------------------------------------------------+
+	| container_format | bare                                                 |
+	| disk_format      | qcow2                                                |
+	| name             | OpenShift                                            |
+	| schema           | /v2/schemas/image                                    |
+	| size             | 9393799168                                           |
+	+------------------+------------------------------------------------------+
+
+Note: current image does not come with `cloud-init`, so setup can be tricky.
+
 
 ### Binary
 
