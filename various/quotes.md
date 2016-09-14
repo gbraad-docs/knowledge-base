@@ -40,3 +40,5 @@ Quotes
 "Writing is like driving at night in the fog. You can only see as far as your headlights, but you can make the whole trip that way." - E.L. Doctorow
 
 "It's a crazy world out there. Be curious." - Stephen Hawking
+
+"Set goals, not limits"
