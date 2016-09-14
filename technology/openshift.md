@@ -30,6 +30,16 @@ $ vagrant up
   * https://atlas.hashicorp.com/openshift/boxes/origin-all-in-one/versions/1.3.0-alpha.3/providers/virtualbox.box
 
 
+### Convert disk image
+
+```
+$ wget https://atlas.hashicorp.com/openshift/boxes/origin-all-in-one/versions/1.3.0-alpha.3/providers/virtualbox.box -O openshift.tar.gz
+$ tar -zxvf openshift.tar.gz
+$ yum install -y qemu-img
+$ qemu-img convert box-disk1.vmdk -O qcow2 openshift.qcow2
+```
+
+
 ### Binary
 
 ```
