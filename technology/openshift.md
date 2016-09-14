@@ -40,6 +40,22 @@ $ qemu-img convert box-disk1.vmdk -O qcow2 openshift.qcow2
 ```
 
 ### Upload disk image to OpenStack
+Current image does not come with `cloud-init`, so setup can be tricky.
+
+```
+$ yum install -y libguestfs-tools
+$ systemctl start libvirtd
+$ openssl passwd -1 changeme
+$1$BspPlj7e$f/.mW9B8/TCdayId0fuq.0
+$ guestfish
+><fs> add openshift.qcow2
+><fs> run
+><fs> mount /dev/VolGroup00/LogVol00 /
+><fs> vi /etc/shadow
+# change the entry to vagrant with $1$BspPlj7e$f/.mW9B8/TCdayId0fuq.0
+><fs> exit
+```
+
 The converted Vagrant image can be uploaded to OpenStack
 
 ```
@@ -56,7 +72,7 @@ $ openstack image create "OpenShift" --file openshift.qcow2 --disk-format qcow2 
 	| size             | 9393799168                                           |
 	+------------------+------------------------------------------------------+
 
-Note: current image does not come with `cloud-init`, so setup can be tricky.
+Login using 'vagrant'
 
 
 ### Binary
