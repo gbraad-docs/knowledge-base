@@ -36,6 +36,12 @@ $ yum install -y origin
 ```
 
 
+### As Docker container from client
+```
+$ oc cluster up  # --version=v1.3.0-alpha.1
+```
+
+
 ### As Docker container
 ```
 $ sudo docker run -d --name "origin" \
