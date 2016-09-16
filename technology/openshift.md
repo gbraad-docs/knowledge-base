@@ -28,6 +28,8 @@ $ mv openshift-origin-client-tools-v1.1.6-ef1caba-linux-64bit/oc /usr/bin/oc
 
 ## Installation of Origin Server
 
+  * [Prerequisites](https://docs.openshift.org/latest/install_config/install/prerequisites.html#install-config-install-prerequisites)
+
 Note: add `--insecure-registry 172.30.0.0/16` or similar to your `/etc/sysconfig/docker` configuration.
 
 
