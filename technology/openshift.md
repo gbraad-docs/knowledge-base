@@ -25,6 +25,13 @@ $ tar zxvf openshift-origin-client-tools-v1.1.6-ef1caba-linux-64bit.tar.gz
 $ mv openshift-origin-client-tools-v1.1.6-ef1caba-linux-64bit/oc /usr/bin/oc
 ```
 
+### Containerized client **WIP**
+```
+$ docker pull gbraad/openshift-client:fedora   # registry.gitlab.com/gbraad/openshift-client:fedora
+$ docker run --name oc -d gbraad/openshift-client:fedora
+$ docker exec oc oc login https://x.x.x.x:8443
+```
+
 
 ## Installation of Origin Server
 
