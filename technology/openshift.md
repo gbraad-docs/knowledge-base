@@ -23,9 +23,8 @@ $ sudo docker run -d --name "origin" \
 
 ```
 $ yum install -y centos-release-openshift-origin
+$ yum install -y origin
 ```
-
-**???**
 
 
 ### Binary
