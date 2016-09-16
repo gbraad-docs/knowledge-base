@@ -19,6 +19,8 @@ Containers and registries
   * [Mono](https://gitlab.com/gbraad/mono)
   * [OpenStack](https://gitlab.com/gbraad/openstack-client) client
   * [ostreetests](https://gitlab.com/gbraad/ostreetests)
+  * [Openshift](https://gitlab.com/gbraad/openshift-client) client
+
 
 ### Proxies (at GitLab)
 
@@ -92,4 +94,8 @@ $ chcon -Rt svirt_sandbox_file_t [location]
 ## Remove untagged images
 ```
 $ docker rmi $(docker images -a | grep "^<none>" | awk '{print $3}')
+```
+
+```
+$ docker rmi $(docker images -f "dangling=true" -q)
 ```
