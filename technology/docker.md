@@ -89,9 +89,9 @@ $ rm -rf /var/lib/docker
 $ systemctl start docker
 ```
 
-
 Note:
-_This involves removing existing images and containers!_
+  * _This involves removing existing images and containers!_
+  * _SELinux is not supported with the OverlayFS driver_
 
 [Source](http://www.projectatomic.io/blog/2015/06/notes-on-fedora-centos-and-docker-storage-drivers/), [more info](https://docs.docker.com/engine/userguide/storagedriver/selectadriver/)
 [GitHub](https://github.com/projectatomic/docker-storage-setup)
