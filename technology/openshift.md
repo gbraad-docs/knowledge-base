@@ -5,9 +5,38 @@ OpenShift
   * Deploy OpenShift [Build System](https://github.com/projectatomic/osbs-client/blob/master/docs/osbs_instance_setup.md)
 
 
-## Installation
+## Installation of Origin Client
 
-### Docker
+### CentOS
+```
+$ yum install -y centos-release-openshift-origin
+$ yum install -y origin-clients
+```
+
+### Fedora
+```
+$ dnf install -y origin-clients
+```
+
+### Any
+```
+$ wget https://github.com/openshift/origin/releases/download/v1.1.6/openshift-origin-client-tools-v1.1.6-ef1caba-linux-64bit.tar.gz
+$ tar zxvf openshift-origin-client-tools-v1.1.6-ef1caba-linux-64bit.tar.gz
+$ mv openshift-origin-client-tools-v1.1.6-ef1caba-linux-64bit/oc /usr/bin/oc
+```
+
+
+## Installation of Origin Server
+
+### On CentOS 7
+
+```
+$ yum install -y centos-release-openshift-origin
+$ yum install -y origin
+```
+
+
+### As Docker container
 ```
 $ sudo docker run -d --name "origin" \
         --privileged --pid=host --net=host \
@@ -17,14 +46,6 @@ $ sudo docker run -d --name "origin" \
 ```
 
 * https://hub.docker.com/r/openshift/origin/
-
-
-### On CentOS 7
-
-```
-$ yum install -y centos-release-openshift-origin
-$ yum install -y origin
-```
 
 
 ### Binary
@@ -48,13 +69,7 @@ $ export CURL_CA_BUNDLE="$(pwd)"/openshift.local.config/master/ca.crt
 $ sudo chmod +r "$(pwd)"/openshift.local.config/master/admin.kubeconfig
 ```
 
-
   * https://github.com/openshift/origin/releases
-
-
-## Ansible
-
-  * https://github.com/openshift/openshift-ansible
 
 
 ## All-in-one
@@ -105,3 +120,8 @@ $ openstack image create "OpenShift" --file openshift.qcow2 --disk-format qcow2 
 	+------------------+------------------------------------------------------+
 
 Login using 'vagrant'
+
+
+## Ansible
+
+  * https://github.com/openshift/openshift-ansible
