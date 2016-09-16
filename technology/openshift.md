@@ -64,6 +64,7 @@ $ vi /etc/hosts # make sure your hostname is resolved to an IP
 $ yum install -y docker wget screen
 $ systemctl enable docker
 $ systemctl start docker
+# modify /etc/sysconfig/docker to use --insecure-registry 172.30.0.0/16
 $ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
 $ tar -zxvf openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz -C /opt/server
 $ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
