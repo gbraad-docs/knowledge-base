@@ -5,7 +5,7 @@ OpenShift
   * Deploy OpenShift [Build System](https://github.com/projectatomic/osbs-client/blob/master/docs/osbs_instance_setup.md)
 
 
-## All-in-one
+## Installation
 
 ### Docker
 ```
@@ -18,6 +18,47 @@ $ sudo docker run -d --name "origin" \
 
 * https://hub.docker.com/r/openshift/origin/
 
+
+### On CentOS 7
+
+```
+$ yum install -y centos-release-openshift-origin
+```
+
+**???**
+
+
+### Binary
+
+```
+$ vi /etc/hosts # make sure your hostname is resolved to an IP
+$ yum install -y docker wget screen
+$ systemctl enable docker
+$ systemctl start docker
+$ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
+$ tar -zxvf openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz -C /opt/server
+$ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
+$ tar -zxvf openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz -C /opt/client
+$ export PATH=/opt/server/:$PATH
+$ openshift start
+```
+
+```
+$ export KUBECONFIG="$(pwd)"/openshift.local.config/master/admin.kubeconfig
+$ export CURL_CA_BUNDLE="$(pwd)"/openshift.local.config/master/ca.crt
+$ sudo chmod +r "$(pwd)"/openshift.local.config/master/admin.kubeconfig
+```
+
+
+  * https://github.com/openshift/origin/releases
+
+
+## Ansible
+
+  * https://github.com/openshift/openshift-ansible
+
+
+## All-in-one
 
 ### Vagrant
 
@@ -65,34 +106,3 @@ $ openstack image create "OpenShift" --file openshift.qcow2 --disk-format qcow2 
 	+------------------+------------------------------------------------------+
 
 Login using 'vagrant'
-
-
-### Binary
-
-```
-$ vi /etc/hosts # make sure your hostname is resolved to an IP
-$ yum install -y docker wget screen
-$ systemctl enable docker
-$ systemctl start docker
-$ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
-$ tar -zxvf openshift-origin-server-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz -C /opt/server
-$ wget https://github.com/openshift/origin/releases/download/v1.3.0-alpha.3/openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz
-$ tar -zxvf openshift-origin-client-tools-v1.3.0-alpha.3-7998ae4-linux-64bit.tar.gz -C /opt/client
-$ export PATH=/opt/server/:$PATH
-$ openshift start
-```
-
-```
-$ export KUBECONFIG="$(pwd)"/openshift.local.config/master/admin.kubeconfig
-$ export CURL_CA_BUNDLE="$(pwd)"/openshift.local.config/master/ca.crt
-$ sudo chmod +r "$(pwd)"/openshift.local.config/master/admin.kubeconfig
-```
-
-
-  * https://github.com/openshift/origin/releases
-
-
-## Ansible
-
-  * https://github.com/openshift/openshift-ansible
-
