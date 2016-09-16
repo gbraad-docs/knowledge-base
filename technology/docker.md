@@ -80,10 +80,16 @@ _This involves removing existing images and containers!_
   * [Registry API v2](https://docs.docker.com/registry/spec/api/)
 
 
-## SELinuc errors
+## SELinux errors
 If you get 'permission denied' from the container and you use CentOS/Fedora, you likely ran into SELinux permission not given:
 
 Relabel the target with:
 ```
 $ chcon -Rt svirt_sandbox_file_t [location]
+```
+
+
+## Remove untagged images
+```
+$ docker rmi $(docker images -a | grep "^<none>" | awk '{print $3}')
 ```
