@@ -108,6 +108,7 @@ $ vagrant up
 
   * https://atlas.hashicorp.com/openshift/boxes/origin-all-in-one
   * https://atlas.hashicorp.com/openshift/boxes/origin-all-in-one/versions/1.3.0-alpha.3/providers/virtualbox.box
+  * https://github.com/openshift-evangelists/vagrant-origin/
 
 
 ### Convert disk image
