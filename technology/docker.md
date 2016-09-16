@@ -78,10 +78,16 @@ For Fedora/CentOS you can use `docker-storage-setup` to setup the storage driver
 
 To use OverlayFS
 ```
+$ systemctl stop docker
 $ vi /etc/sysconfig/docker-storage
 ```
 
     `DOCKER_STORAGE_OPTIONS= -s overlay`
+
+```
+$ rm -rf /var/lib/docker
+$ systemctl start docker
+```
 
 
 Note:
