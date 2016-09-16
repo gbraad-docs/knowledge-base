@@ -28,12 +28,16 @@ $ mv openshift-origin-client-tools-v1.1.6-ef1caba-linux-64bit/oc /usr/bin/oc
 
 ## Installation of Origin Server
 
-  * [Prerequisites](https://docs.openshift.org/latest/install_config/install/prerequisites.html#install-config-install-prerequisites)
-
-Note: add `--insecure-registry 172.30.0.0/16` or similar to your `/etc/sysconfig/docker` configuration.
+  * Review [prerequisites](https://docs.openshift.org/latest/install_config/install/prerequisites.html#install-config-install-prerequisites)
+  * Add `--insecure-registry 172.30.0.0/16` or similar to your `/etc/sysconfig/docker` configuration.
+  * Configure [Docker storage](https://docs.openshift.org/latest/install_config/install/prerequisites.html#configuring-docker-storage)
 
 
 ### On CentOS 7
+
+```
+$ yum install wget git net-tools bind-utils iptables-services bridge-utils bash-completion
+```
 
 ```
 $ yum install -y centos-release-openshift-origin
@@ -137,6 +141,12 @@ Login using 'vagrant'
 ## Ansible
 
   * https://github.com/openshift/openshift-ansible
+
+```
+$ yum install ansible
+$ git clone https://github.com/openshift/openshift-ansible -b master
+$ cd openshift-ansible
+```
 
 
 ## Usage
