@@ -125,3 +125,16 @@ Login using 'vagrant'
 ## Ansible
 
   * https://github.com/openshift/openshift-ansible
+
+
+## Usage
+
+```
+$ openshift start
+```
+
+```
+$ oc login http://localhost:8443
+```
+Note: `~/.kube/config`
+
