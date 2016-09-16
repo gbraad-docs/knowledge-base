@@ -138,3 +138,4 @@ $ oc login http://localhost:8443
 ```
 Note: `~/.kube/config`
 
+Or use a browser to open: http://localhost:8443
