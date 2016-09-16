@@ -54,8 +54,10 @@ $ yum install -y origin
 
 ### As Docker container from client
 ```
-$ oc cluster up  # --version=v1.3.0-alpha.1
+$ oc cluster up  # --version=v1.3.0-alpha.1 | origin:v1.3.0-alpha.3
 ```
+
+Note: the version specifier refers to tags on the Docker Hub: eg. `openshift/origin:v1.3.0-alpha.3`
 
 
 ### As Docker container
