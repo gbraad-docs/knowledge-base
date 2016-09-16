@@ -47,6 +47,8 @@ docker inspect --format="{{.NetworkSettings.IPAddress}}" [container id or name]
 
 ## Use OverlayFS
 
+
+### Docker container engine
 If running Docker engine from docker.io:
 ```
 systemctl stop docker
@@ -69,12 +71,24 @@ docker info | grep Storage
 
 `overlay` will be shown instead of `devicemapper`.
 
+
+### Fedora/CentOS
+
 For Fedora/CentOS you can use `docker-storage-setup` to setup the storage driver.
+
+To use OverlayFS
+```
+$ vi /etc/sysconfig/docker-storage
+```
+
+    `DOCKER_STORAGE_OPTIONS= -s overlay`
+
 
 Note:
 _This involves removing existing images and containers!_
 
 [Source](http://www.projectatomic.io/blog/2015/06/notes-on-fedora-centos-and-docker-storage-drivers/), [more info](https://docs.docker.com/engine/userguide/storagedriver/selectadriver/)
+[GitHub](https://github.com/projectatomic/docker-storage-setup)
 
 
 ## Registry
