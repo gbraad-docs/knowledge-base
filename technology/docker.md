@@ -86,6 +86,7 @@ $ vi /etc/sysconfig/docker-storage
 
 ```
 $ rm -rf /var/lib/docker
+$ docker-storage-setup
 $ systemctl start docker
 ```
 
