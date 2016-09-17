@@ -1,0 +1,36 @@
+stages:
+  - build
+  - deploy
+
+build_page:
+  image: registry.gitlab.com/gbraad/gitbook-server:3.2.0
+  stage: build
+  script:
+    - gitbook build
+    - mv _book public
+  artifacts:
+    paths:
+      - public
+
+publish:
+  image: registry.gitlab.com/gbraad/docker:git
+  stage: deploy
+  script:
+    - cd public
+    - git init
+    - git remote add github https://gbraad:$GITHUB_TOKEN@github.com/gbraad/knowledge-base.git
+    - git add .
+    - git config --global user.email "me@gbraad.nl"
+    - git config --global user.name "Gerard Braad"
+    - "git commit -m 'Deployed by GitLab: https://gitlab.com/gbraad/knowledge-base'"
+    - git branch -m gh-pages
+    - git push github :gh-pages || echo 1
+    - git push github gh-pages
+
+pages:
+  stage: deploy
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
