@@ -10,6 +10,8 @@ $ docker pull manageiq/manageiq:latest-darga
 $ docker run --privileged -di -p 80:80 -p 443:443 manageiq/manageiq:latest-darga
 ```
 
+Credentials: admin/smartvm
+
 [Source](https://hub.docker.com/r/manageiq/manageiq/)
 
 
