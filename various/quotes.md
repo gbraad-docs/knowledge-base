@@ -42,3 +42,5 @@ Quotes
 "It's a crazy world out there. Be curious." - Stephen Hawking
 
 "Set goals, not limits"
+
+"The best way to predict the future is to create it"
