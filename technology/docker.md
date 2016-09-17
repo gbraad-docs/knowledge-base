@@ -120,3 +120,19 @@ $ docker rmi $(docker images -a | grep "^<none>" | awk '{print $3}')
 ```
 $ docker rmi $(docker images -f "dangling=true" -q)
 ```
+
+
+## Export / Import
+Used for containers
+```
+$ docker run -d --name devenv gbraad/c9ide:f24
+$ docker stop devenv
+$ docker export devenv > devenv-f24.tar
+```
+
+## Save / Load
+Used for images
+
+```
+$ docker save gbraad/c9ide:c7 > c9ide-c7.tar 
+```
