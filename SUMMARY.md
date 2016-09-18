@@ -32,7 +32,7 @@
   * [Software installation](technology/install.md)
   * [tcpdump](technology/tcpdump.md)
   * [Libvirt/virsh](technology/virsh.md)
-  * [Windows](technolog/windows.md)
+  * [Windows](technology/windows.md)
 
 #### OpenStack
 
