@@ -9,8 +9,18 @@ Deployment
   * https://openedx.atlassian.net/wiki/display/OpenOPS/Open+edX+Installation+Options
 
 
+Troubleshooting
+---------------
 
+### `no alternatives for libblas.so.3gf`
 
+```
+TASK: [edxapp | code sandbox | Use libblas for 3gf] *************************** 
+failed: [localhost] => {"changed": true, "cmd": ["update-alternatives", "--set", "libblas.so.3gf", "/usr/lib/libblas/libblas.so.3gf"], "delta": "0:00:00.002302", "end": "2016-09-18 09:26:37.399477", "rc": 2, "start": "2016-09-18 09:26:37.397175", "warnings": []}
+stderr: update-alternatives: error: no alternatives for libblas.so.3gf
+
+FATAL: all hosts have already failed -- aborting
+```
 
 `cd /edx/app/edx_ansible/edx_ansible/`
 ```
