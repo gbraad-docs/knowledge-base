@@ -136,3 +136,45 @@ Used for images
 ```
 $ docker save gbraad/c9ide:c7 > c9ide-c7.tar 
 ```
+
+
+
+## My repositories (on GitHub; after rename)
+
+### Source for images
+  * https://github.com/gbraad/dockerfile-openshift-client
+  * https://github.com/gbraad/dockerfile-gitbook-server
+  * https://github.com/gbraad/dockerfile-openstack-keystone
+  * https://github.com/gbraad/dockerfile-gollum
+  * https://github.com/gbraad/dockerfile-c9ide
+  * https://github.com/gbraad/dockerfile-flatpak-builder-gnome
+  * https://github.com/gbraad/dockerfile-flatpak-builder-freedesktop
+  * https://github.com/gbraad/dockerfile-jupyter
+  * https://github.com/gbraad/dockerfile-mono
+  * https://github.com/gbraad/dockerfile-openstack-client
+  * https://github.com/gbraad/dockerfile-kubernetes-client
+  * https://github.com/gbraad/dockerfile-glusterfs
+  * https://github.com/gbraad/dockerfile-flatpak
+  * https://github.com/gbraad/dockerfile-httpd
+
+### Containerized `libvirt`
+  * https://github.com/gbraad/dockerfile-image-libvirt
+  * https://github.com/gbraad/dockerfile-image-libvirt-client
+
+### Brew of wellknown distributions
+  * https://github.com/gbraad/dockerfile-brew-debian
+  * https://github.com/gbraad/dockerfile-brew-ubuntu-core
+  * https://github.com/gbraad/dockerfile-brew-fedora
+  * https://github.com/gbraad/dockerfile-alpine
+
+### Source for GitLab proxies/container registries
+  * https://github.com/gbraad/container-registry-cirros
+  * https://github.com/gbraad/container-registry-arm
+  * https://github.com/gbraad/container-registry-steam
+  * https://github.com/gbraad/container-registry-fedora
+  * https://github.com/gbraad/container-registry-centos
+  * https://github.com/gbraad/container-registry-opensuse
+  * https://github.com/gbraad/container-registry-photon
+  * https://github.com/gbraad/container-registry-debian
+  * https://github.com/gbraad/container-registry-docker
+  * https://github.com/gbraad/container-registry-ubuntu
