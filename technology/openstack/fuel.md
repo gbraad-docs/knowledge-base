@@ -22,8 +22,8 @@ $ git clone https://github.com/openstack/fuel-docs
 On Ubuntu 14.04
 
 ```
-git clone https://github.com/openstack/fuel-main
-cd fuel-main
-./prepare-build-env.sh
-make iso
+$ git clone https://github.com/openstack/fuel-main
+$ cd fuel-main
+$ ./prepare-build-env.sh
+$ make iso
 ```
