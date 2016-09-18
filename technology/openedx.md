@@ -33,7 +33,7 @@ index 1793cb5..08070b3 100644
  # TODO: Switch to using alternatives module in 1.6
  - name: code sandbox | Use libblas for 3gf
 -  command: update-alternatives --set libblas.so.3gf /usr/lib/libblas/libblas.so.3gf
-+  command: update-alternatives --set libblas.so.3g/usr/lib/libblas/libblas.so.3
++  command: update-alternatives --set libblas.so.3 /usr/lib/libblas/libblas.so.3
  
  # TODO: Switch to using alternatives module in 1.6
  - name: code sandbox | Use liblapac for 3gf
