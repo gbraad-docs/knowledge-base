@@ -33,13 +33,13 @@ $ git clone -b release https://github.com/edx/configuration
 #### 4. Allow password-based SSH authentication
 `configuration/playbooks/roles/common/defaults/main.yml`
 ```
-COMMON_SSH_PASSWORD_AUTH to "yes"
+COMMON_SSH_PASSWORD_AUTH="yes"
 ```
 
 #### 5. Install requirements
 ```
 $ cd /var/tmp/configuration
-$sudo pip install -r requirements.txt
+$ sudo pip install -r requirements.txt
 ```
 
 #### 6. Run the edx_sandbox.yml playbook in the configuration/playbooks directory
