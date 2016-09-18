@@ -39,10 +39,10 @@
   * [Overview](technology/openstack/README.md)
   * [TripleO](technology/openstack/tripleo.md)
   * [Client](technology/openstack/client.md)
-  * [Fuel]((technology/openstack/fuel.md)
-  * [Keystone]((technology/openstack/keystone.md)
-  * [Puppet]((technology/openstack/puppet.md)
-  * [RDO]((technology/openstack/rdo.md)
+  * [Fuel](technology/openstack/fuel.md)
+  * [Keystone](technology/openstack/keystone.md)
+  * [Puppet](technology/openstack/puppet.md)
+  * [RDO](technology/openstack/rdo.md)
 
 
 ### Various
