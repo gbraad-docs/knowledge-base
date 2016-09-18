@@ -9,6 +9,48 @@ Deployment
   * https://openedx.atlassian.net/wiki/display/OpenOPS/Open+edX+Installation+Options
 
 
+### In a few steps
+
+#### 1. Update and upgrade Ubuntu 14.04
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+#### 2. Install dependencies
+```
+sudo apt-get install -y build-essential software-properties-common python-software-properties curl git-core libxml2-dev libxslt1-dev python-pip python-apt python-dev  libxmlsec1-dev swig
+sudo pip install --upgrade pip
+sudo pip install --upgrade virtualenv
+```
+
+#### 3. Clone the configuration repository
+```
+$ cd /var/tmp
+$ git clone -b release https://github.com/edx/configuration
+```
+
+#### 4. Allow password-based SSH authentication
+`configuration/playbooks/roles/common/defaults/main.yml`
+```
+COMMON_SSH_PASSWORD_AUTH to "yes"
+```
+
+#### 5. Install requirements
+```
+$ cd /var/tmp/configuration
+$sudo pip install -r requirements.txt
+```
+
+#### 6. Run the edx_sandbox.yml playbook in the configuration/playbooks directory
+```
+$ cd /var/tmp/configuration/playbooks && sudo ansible-playbook -c local ./edx_sandbox.yml -i "localhost,"
+```
+
+#### 7. Open edX
+[http://localhost](http://localhost)
+
+
 Troubleshooting
 ---------------
 
