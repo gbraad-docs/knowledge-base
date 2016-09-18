@@ -47,4 +47,6 @@ index 1793cb5..08070b3 100644
 ```
 $ vi /edx/app/edx_ansible/edx_ansible/playbooks/roles/edxapp/tasks/python_sandbox_env.yml
 # change .3gf to .3
+$ ansible-playbook -i localhost, -c local vagrant-fullstack.yml -e@$ANSIBLE_ROOT/server-vars.yml -e@$ANSIBLE_ROOT/extra-vars.yml --skip-tags install:code
 ```
+
