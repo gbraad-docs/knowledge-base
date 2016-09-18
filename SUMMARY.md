@@ -21,11 +21,10 @@
   * [ManageIQ](technology/manageiq.md)
   * [Open edX](technology/openedx.md)
   * [OpenShift](technology/openshift.md)
-  * [OpenStack](technology/openstack/README.md)
-  * [OpenStack TripleO](technology/openstack/tripleo.md)
   * [ostree](technology/ostree.md)
   * [Photon OS](technology/photonos.md)
   * [Python](technology/python/README.md)
+    * [Django](technology/python/django.md)
   * [Raspberry Pi](technology/raspi.md)
   * [RISC-V](technology/riscv.md)
   * [rsync](technology/rsync.md)
@@ -35,13 +34,28 @@
   * [Libvirt/virsh](technology/virsh.md)
   * [Windows](technolog/windows.md)
 
+#### OpenStack
+
+  * [Overview](technology/openstack/README.md)
+  * [TripleO](technology/openstack/tripleo.md)
+  * [Client](technology/openstack/client.md)
+  * [Fuel]((technology/openstack/fuel.md)
+  * [Keystone]((technology/openstack/keystone.md)
+  * [Puppet]((technology/openstack/puppet.md)
+  * [RDO]((technology/openstack/rdo.md)
+
 
 ### Various
 
-  * [Books](books/README.md)
   * [Persuasion](various/persuasion.md)
   * [Quotes](various/quotes.md)
   * [Todo](various/todo.md)
+
+#### Books
+
+  * [Overview](books/README.md)
+    * [Chess Not Checkers](books/chess-not-checkers.md)
+    * [Let's stop meeting like this](books/lets-stop-meeting-like-this.md)
 
 
 ### Language 
@@ -49,7 +63,6 @@
 #### Chinese
 
   * [Technology](language/chinese/technology.md)
-
 
 #### English
 
