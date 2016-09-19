@@ -158,3 +158,12 @@ EOF
 ```
 $ sudo -u keystone /usr/local/bin/keystone-all --config-file=/etc/keystone/keystone.conf  --log-file=/var/log/keystone/keystone.log
 ```
+
+
+## Verify Keystone using `curl`
+
+  * http://docs.openstack.org/developer/keystone/api_curl_examples.html
+
+```
+$ curl -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "password"},"tenantName": "admin"}}' -H "Content-Type: application/json" http://localhost:5000/v2.0/tokens
+```
