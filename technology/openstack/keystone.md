@@ -90,12 +90,14 @@ $ sudo -u keystone /usr/local/bin/keystone-all --config-file=/etc/keystone/keyst
 ```
 
 
-### Insert records
+### Create service entry
 
 ```
 $ keystone --os-token $TOKEN --os-endpoint http://localhost:35357/v2.0/ service-create --name=keystone --type=identity --description="Keystone Identity Service"
 $ keystone --os-token $TOKEN --os-endpoint http://localhost:35357/v2.0/ endpoint-create --service keystone --publicurl 'http://localhost:5000/v2.0' --adminurl 'http://localhost:35357/v2.0' --internalurl 'http://localhost:5000/v2.0'
 ```
+
+### Create admin user
 
 ```
 $ keystone --os-token $TOKEN --os-endpoint http://localhost:35357/v2.0/ user-create --name admin --pass password
