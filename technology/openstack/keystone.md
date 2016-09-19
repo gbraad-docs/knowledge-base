@@ -165,10 +165,61 @@ $ sudo -u keystone /usr/local/bin/keystone-all --config-file=/etc/keystone/keyst
   * http://docs.openstack.org/developer/keystone/api_curl_examples.html
 
 ```
-$ curl -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "password"},"tenantName": "admin"}}' -H "Content-Type: application/json" http://localhost:5000/v2.0/tokens
+$ curl -s -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "password"},"tenantName": "admin"}}' -H "Content-Type: application/json" http://localhost:5000/v2.0/tokens
 # Add
 #   | python -mjson.tool
 #   | jq .
 # for pretty print
 ```
 
+    {
+      "access": {
+        "metadata": {
+          "roles": [
+            "1180e62cfaff4d288f26730d0c613b78"
+          ],
+          "is_admin": 0
+        },
+        "user": {
+          "name": "admin",
+          "roles": [
+            {
+              "name": "admin"
+            }
+          ],
+          "id": "497e17c64d6b4d10a07dc3d61e75170b",
+          "roles_links": [],
+          "username": "admin"
+        },
+        "serviceCatalog": [
+          {
+            "name": "keystone",
+            "type": "identity",
+            "endpoints_links": [],
+            "endpoints": [
+              {
+                "publicURL": "http://localhost:5000/v2.0",
+                "id": "184cfc47a8f84e4e9a49ef621f67a18e",
+                "internalURL": "http://localhost:5000/v2.0",
+                "region": "regionOne",
+                "adminURL": "http://localhost:35357/v2.0"
+              }
+            ]
+          }
+        ],
+        "token": {
+          "audit_ids": [
+            "6EKt-yI7Rmu1glQKA9GhpA"
+          ],
+          "tenant": {
+            "name": "admin",
+            "id": "fd45db445d1a47e38d41d38c12cdbf43",
+            "enabled": true,
+            "description": null
+          },
+          "id": "627a40ea7cbb4a93bc3f0e9d2df607b0",
+          "expires": "2016-09-19T10:14:40Z",
+          "issued_at": "2016-09-19T09:14:40.345707Z"
+        }
+      }
+    }
