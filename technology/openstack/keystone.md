@@ -52,14 +52,14 @@ $ git clone https://github.com/openstack/keystone.git -b stable/mitaka
 ```
 
 
-#### Setup development environment in VirtualEnv
+#### Choose: Setup development environment in `virtualenv`
 ```
 $ tox -e venv --notest
 $ source .tox/venv/bin/activate
 $ pip install MySQL
 ```
 
-#### Setup development outside VirtualEnv
+#### or: Setup development outside `virtualenv`
 ```
 $ pip install -r requirements.txt
 $ pip install -r test-requirements.txt
