@@ -2,6 +2,6 @@ Storage
 =======
 
   * [Ceph](ceph.md)
-  * GlusterFS
+  * [GlusterFS](glusterfs.md)
   * xfs
   * zfs
