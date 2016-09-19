@@ -165,5 +165,10 @@ $ sudo -u keystone /usr/local/bin/keystone-all --config-file=/etc/keystone/keyst
   * http://docs.openstack.org/developer/keystone/api_curl_examples.html
 
 ```
-$ curl -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "password"},"tenantName": "admin"}}' -H "Content-Type: application/json" http://localhost:5000/v2.0/tokens | python -mjson.tool
+$ curl -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "password"},"tenantName": "admin"}}' -H "Content-Type: application/json" http://localhost:5000/v2.0/tokens
+# Add
+#   | python -mjson.tool
+#   | jq .
+# for pretty print
 ```
+
