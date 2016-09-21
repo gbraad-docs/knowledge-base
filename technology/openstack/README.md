@@ -11,6 +11,7 @@ OpenStack
   * [Puppet](puppet.md)
   * [RDO](rdo.md)
   * [TripleO](tripleo.md)
+  * [Devstack](devstack.md)
 
 
 ## Contributions
