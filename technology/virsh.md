@@ -4,7 +4,7 @@ Libvirt/virsh
 ## Create snapshot
 
 ```
-virsh snapshot-create-as [vmname] snapshot1 "Before installation" --disk-only --atomic
+$ virsh snapshot-create-as [vmname] snapshot1 "Before installation" --disk-only --atomic
 ```
 
 
@@ -13,13 +13,13 @@ virsh snapshot-create-as [vmname] snapshot1 "Before installation" --disk-only --
 ### Start
 
 ```
-virsh start [vmname]
+$ virsh start [vmname]
 ```
 
 ### Stop (forcibly)
 
 ```
-virsh destroy [vmname]
+$ virsh destroy [vmname]
 ```
 
 ### ACPI events
@@ -27,15 +27,26 @@ virsh destroy [vmname]
   * Reboot
 
 ```
-virsh reboot [vmname]
+$ virsh reboot [vmname]
 ```
 
 ```
-sudo su - stack -c "virsh reboot undercloud"
+$ sudo su - stack -c "virsh reboot undercloud"
 ```
 
   * Shutdown
 
 ```
-virsh shutdown [vmname]
+$ virsh shutdown [vmname]
 ```
+
+
+## Configure libvirt pool
+Create a libvirt persistent pool and start it:
+```
+$ virsh pool-define-as --type=dir --name=default --target=/var/lib/libvirt/images
+$ virsh pool-autostart default
+$ virsh pool-start default
+```
+
+`/var/lib/libvirt/images` is where QEMU QCOW images will be stored, so make sure this directory is attached to a file system with sufficient storage.
