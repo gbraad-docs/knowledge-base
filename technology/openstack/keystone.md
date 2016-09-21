@@ -228,3 +228,11 @@ $ curl -s -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "
         }
       }
     }
+
+    
+## Use `python-openstackclient`
+
+```
+export OS_TOKEN=secrete
+$ openstack --os-token $OS_TOKEN --os-url http://localhost:35357/v2.0/ user list
+```
