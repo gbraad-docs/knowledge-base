@@ -33,3 +33,10 @@ $ docker run -d \
    -v /var/run/docker.sock:/var/run/docker.sock:ro \
    jrcs/letsencrypt-nginx-proxy-companion
 ```
+
+[Source](https://hub.docker.com/r/jrcs/letsencrypt-nginx-proxy-companion/)
+
+
+### Example of deployment
+
+[Setting up a powerful self-hosted IDE in the cloud](http://gbraad.nl/blog/setting-up-a-powerful-self-hosted-ide-in-the-cloud.html)
