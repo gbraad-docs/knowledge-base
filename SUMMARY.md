@@ -17,6 +17,8 @@
     * [Docker](technology/docker.md)
   * [Flatpak](technology/flatpak.md)
   * [Git](technology/git/README.md)
+    * [GitHub](technology/git/github.md)
+    * [GitLab](technology/git/gitlab.md)
   * [Kubernetes](technology/kubernetes/README.md)
   * [Linux](technology/linux.md)
   * [ManageIQ](technology/manageiq.md)
@@ -31,9 +33,14 @@
   * [rsync](technology/rsync.md)
   * [sed](technology/sed.md)
   * [Software installation](technology/install.md)
-  * [tcpdump](technology/tcpdump.md)
   * [Libvirt/virsh](technology/virsh.md)
   * [Windows](technology/windows.md)
+
+#### Network
+
+  * [nginx](technology/nginx.md)
+  * [tcpdump](technology/tcpdump.md)
+  * [traefik](technology/traefik.md)
 
 #### OpenStack
 
