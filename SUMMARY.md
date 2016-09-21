@@ -40,6 +40,7 @@
   * [Overview](technology/openstack/README.md)
   * [TripleO](technology/openstack/tripleo.md)
   * [Client](technology/openstack/client.md)
+  * [Devstack](technology/openstack/devstack.md)
   * [Fuel](technology/openstack/fuel.md)
   * [Keystone](technology/openstack/keystone.md)
   * [Puppet](technology/openstack/puppet.md)
