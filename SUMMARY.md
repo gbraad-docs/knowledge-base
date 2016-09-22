@@ -52,6 +52,7 @@
   * [Keystone](technology/openstack/keystone.md)
   * [Puppet](technology/openstack/puppet.md)
   * [RDO](technology/openstack/rdo.md)
+  * [PackStack](technology/openstack/packstack.md)
 
 
 ### Various

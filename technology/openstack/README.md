@@ -13,6 +13,7 @@ OpenStack
   * [TripleO](tripleo.md)
   * [Devstack](devstack.md)
   * [Fuel](fuel.md)
+  * [PackStack](packstack.md)
 
 
 ## Contributions

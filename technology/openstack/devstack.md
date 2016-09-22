@@ -1,6 +1,9 @@
 # OpenStack Devstack
 
 
+  * [Devstack configurations](https://github.com/gbraad/openstack-devstack-configurations)
+
+
 ## Installation
 On Ubuntu 14.04
 
