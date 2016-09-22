@@ -12,6 +12,7 @@ OpenStack
   * [RDO](rdo.md)
   * [TripleO](tripleo.md)
   * [Devstack](devstack.md)
+  * [Fuel](fuel.md)
 
 
 ## Contributions
