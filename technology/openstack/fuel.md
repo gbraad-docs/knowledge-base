@@ -5,6 +5,9 @@ Fuel
 Development
 -----------
 
+  * https://ide.c9.io/gbraad/openstack-fuel
+
+
 ### Source
 ```
 $ git clone https://github.com/openstack/fuel-main
