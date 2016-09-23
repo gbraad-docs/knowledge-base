@@ -5,7 +5,7 @@ ISBN: 0785342379433
 ---
 
 ## Title
-Object Design
+Object Design:
 Roles, Responsibilities and Collaborations
 
 
