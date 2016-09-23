@@ -1,6 +1,8 @@
 Books
 =====
 
+  * Reviews I post on my blog can be found [here](http://gbraad.nl/blog/category/books.html)
+
 
 Technology
 ----------
@@ -24,5 +26,5 @@ Software
 --------
 
   * Clean code
-  * Object by Design
+  * [Object Design](object-design.md)
   * The Pragmatic Programmer: From Journeyman to Master
