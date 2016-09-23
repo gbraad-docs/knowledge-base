@@ -44,3 +44,5 @@ Quotes
 "Set goals, not limits"
 
 "The best way to predict the future is to create it"
+
+"If you don't have any shadows, you're not standing in the light" - Marissa Mayer
