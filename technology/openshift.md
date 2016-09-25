@@ -18,7 +18,7 @@ $ yum install -y origin-clients
 $ dnf install -y origin-clients
 ```
 
-### Any
+### Install binary
 ```
 $ wget https://github.com/openshift/origin/releases/download/v1.1.6/openshift-origin-client-tools-v1.1.6-ef1caba-linux-64bit.tar.gz
 $ tar zxvf openshift-origin-client-tools-v1.1.6-ef1caba-linux-64bit.tar.gz
@@ -53,7 +53,12 @@ $ yum install -y origin
 
 
 ### As Docker container from client
+
+First, install [the client](#install_client)
 ```
+$ dnf install -y docker
+$ systemctl enable docker
+$ systemctl start docker
 $ oc cluster up  # --version=v1.3.0-alpha.1 | origin:v1.3.0-alpha.3
 ```
 
