@@ -32,6 +32,7 @@ $ docker run --name oc -d gbraad/openshift-client:fedora
 $ docker exec oc oc login https://x.x.x.x:8443
 ```
 
+Note: this doesn't communicate with the local Docker instance, so standing up a cluster is not supported. Also, not mapping has been made to the local `~/.kube` folder.
 
 ## Installation of Origin Server
 
