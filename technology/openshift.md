@@ -54,7 +54,7 @@ $ yum install -y origin
 
 ### As Docker container from client
 
-First, install [the client](#install_client)
+First, install [the client](#install-binary) as binary
 ```
 $ dnf install -y docker
 $ systemctl enable docker
@@ -64,6 +64,12 @@ $ oc cluster up  # --version=v1.3.0-alpha.1 | origin:v1.3.0-alpha.3
 
 Note: the version specifier refers to tags on the Docker Hub: eg. `openshift/origin:v1.3.0-alpha.3`
 
+Note: On Fedora Rawhide (25) you can use
+```
+$ dnf install -y origin origin-clients
+$ oc cluster up
+```
+as this comes with Origin v1.3.
 
 ### As Docker container
 ```
