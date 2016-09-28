@@ -45,6 +45,23 @@ docker inspect --format="{{.NetworkSettings.IPAddress}}" [container id or name]
 ```
 
 
+## Use LVM thin pool
+
+```
+$ systemctl stop docker
+$ rm -rf /var/lib/docker
+$ pvcreate /dev/vdb
+$ vgcreate docker_vol /dev/vdb
+$ vi /etc/sysconfig/docker-storage-setup 
+```
+
+    VG="docker_vol"
+
+```
+$ docker-storage-setup
+```
+
+
 ## Use OverlayFS
 
 
