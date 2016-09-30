@@ -32,6 +32,7 @@
   * [RISC-V](technology/riscv.md)
   * [rsync](technology/rsync.md)
   * [sed](technology/sed.md)
+  * [shell scripting](technology/shell.md) (bash, zsh)
   * [Software installation](technology/install.md)
   * [Libvirt/virsh](technology/virsh.md)
   * [Windows](technology/windows.md)
