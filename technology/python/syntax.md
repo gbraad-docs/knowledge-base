@@ -186,3 +186,60 @@ while condition:
 ...     n += 1
 ```
 
+
+### For Loop
+
+```
+for iterating_var in sequence:
+    statement
+>>> for i in range(0, 11):  # Print 0-10
+...     print(i)
+```
+
+```
+>>> sum = 0
+>>> n = 10
+>>> for i in range(1, n):
+...     sum += i
+...
+>>> print(sum)
+45
+```
+
+
+### Break
+
+```
+>>> word = "Python2 Programming"
+>>> for letter in word:
+...     if letter == "2":
+...         break
+...     print(letter)
+...
+P
+y
+t
+h
+o
+n
+```
+
+### Continue
+```
+>>> word = "Python3 Programming"
+>>> for letter in word:
+...     if letter == "3":
+...         continue
+...     print(letter)
+...
+P
+y
+t
+h
+o
+n
+ 
+P
+r
+.
+```
