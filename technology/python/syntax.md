@@ -398,3 +398,365 @@ TypeError: 'tuple' object doesn't support item deletion
 >>> data
 {'gerard': 'Fedora', 'quentin': 'Fedora', 'diwen': 'Debian'}
 ```
+
+
+#### Loop through Dict
+
+```
+>>> for x, y in data.items():
+...     print("%s uses %s" % (x, y))
+...
+gerard uses Fedora
+quentin uses Fedora
+diwen uses Debian
+```
+
+
+### Sets
+
+```
+>>> a = set('abcthabcjwethddda')
+>>> a
+{'a', 'c', 'b', 'e', 'd', 'h', 'j', 't', 'w'}
+>>> a.add('p')
+>>> a
+{'a', 'c', 'b', 'e', 'd', 'h', 'j', 'q', 'p', 't', 'w'}
+```
+
+
+### Slicing
+
+
+#### List
+```
+>>> a = [1, 2, 3, 4, 5, 6, 7]
+>>> a[1:4]
+[2, 3, 4]
+>>> a[:-1]
+[1, 2, 3, 4, 5, 6]
+>>> a[::-1]
+[7, 6, 5, 4, 3, 2, 1] # Reverse
+```
+
+#### Tuple
+
+```
+>>> a = (1, 2, 3, 4, 5, 6, 7)
+>>> a[1:4]
+(2, 3, 4)
+>>> a[::-1]
+(7, 6, 5, 4, 3, 2, 1)
+```
+
+
+## String
+
+```
+>>> a = 'Hello World'
+>>> a[0]
+'H'
+>>> a[5]
+' '
+>>> a[1:]
+'ello World'
+>>> a[::-1] # Reverse
+'dlroW olleH'
+```
+
+```
+>>> s = "I am Dutch"
+>>> s
+I am Dutch'
+>>> s = "Here is a line \
+... split in two lines"
+>>> s
+'Here is a line split in two lines
+```
+
+```
+>>> s = """ This is a
+... multiline string, so you can
+... write many lines"""
+>>> print(s)
+This is a
+multiline string, so you can
+write many lines
+```
+
+
+### Operations
+
+```
+>>> s = "gerard braad"
+>>> s.title()
+'Gerard Braad'
+>>> z = s.upper()
+>>> z
+'GERARD BRAAD'
+>>> z.lower()
+'gerard braad'
+​>>> s = "123"
+>>> s.isdigit()
+True
+>>> s = "Fedora24"
+>>> s.isdigit()
+False
+```
+
+
+### Split Method
+
+```
+>>> s = "Let's learn Python3"
+>>> s.split(" ")
+["Let's", 'learn', 'Python3']
+```
+
+``` 
+>>> s.split()
+["Let's", 'learn', 'Python3']
+```
+
+```
+>>> s = "This is: ME"
+>>> s.split(":")
+['This is', ' ME']
+```
+
+
+### Join Method
+
+```
+>>> s = "We all love Python."
+>>> s.split(".")
+['We all love Python', '']
+```
+
+```
+>>> "3".join(s.split("."))
+'We all love Python3'
+```
+
+
+### Strip Method
+
+```
+>>> s = "    abc  "
+>>> s.strip()
+'abc'
+```
+
+```
+>>> # Strip from left hand and right hand size
+>>> s = "www.fedoraproject.org"
+>>> s.lstrip("www.")
+'fedoraproject.org'
+```
+
+```
+>>> s.rstrip(".org")
+'www.fedoraproject'
+```
+
+
+## Enumerate
+
+```
+>>> for i, j in enumerate(['a', 'b', 'c']):
+...     print(i, j)
+...
+0 a
+1 b
+2 c
+```
+
+
+## Functions
+
+```
+def functionname(params):
+    statement1
+    statement2
+```
+
+```
+>>> def sum(a, b):
+...     return a + b
+ 
+>>> res = sum(2, 3)
+>>> res
+5
+```
+
+
+### Check Palindrome
+
+```
+>>> def check_palindrome(word):
+...     rev_word = word[::-1]
+...     if word == rev_word:
+...         print("Palindrome")
+...     else:
+...         print("Not Palindrome")
+...
+>>> check_palindrome("madam")
+Palindrome
+>>> check_palindrome("python3")
+Not Palindrome
+```
+
+
+### Default Arguments
+
+```
+>>> def test(a , b=-99):
+...     if a > b:
+...         return True
+...     else:
+...         return False
+```
+
+```
+>>> test(12, 23)
+False
+>>> test(12)
+True
+```
+
+
+### Keyword Arguments
+
+```
+>>> def func(a, b=5, c=10):
+...     print('a is', a, 'and b is', b, 'and c is', c)
+...
+>>> func(12)
+a is 12 and b is 5 and c is 10
+>>> func(12, 24)
+a is 12 and b is 24 and c is 10
+>>> func(12, c = 25)
+a is 12 and b is 5 and c is 25
+>>> func(a=12)
+a is 12 and b is 5 and c is 10
+```
+
+Note: Can not have non-keyword argument after a keyword based argument
+
+
+
+## File Handling
+
+    r - Open with read only mode
+    w - Open with write mode
+    a - Open with append mode
+
+
+### Reading File
+
+```
+>>> f = open('sample.txt', 'r')
+>>> f.read()
+"Hello World.\nLet's learn Python3.\n"
+>>> f.close()
+>>> f = open('sample.txt', 'r')
+>>> f.readline()
+'Hello World.\n'
+>>> f.readline()
+"Let's learn Python3.\n"
+>>> f.close()
+>>> f = open('sample.txt', 'r')
+>>> f.readlines()
+['Hello World.\n', "Let's learn Python3.\n"]
+>>> f.close()
+```
+
+
+### Loop through Lines
+
+```
+>>> f = open('sample.txt', 'r')
+>>> for i in f:
+...     if 'Python' in i:
+...         print(i)
+...    f.close()
+
+```
+
+    Let's learn Python3.
+    
+
+
+### Write and Append
+
+```
+>>> f = open('test.txt', 'w') # Write
+>>> f.write("Hello world")
+>>> f.close()
+>>> f = open('test.txt', 'r')
+>>> f.read()
+'Hello world'
+>>> f.close()
+>>> f = open('test.txt', 'a') # Append
+>>> f.write(" Python')
+>>>f.close()
+>>> f = open('test.txt', 'r')
+>>> f.read()
+"Hello world Python"
+>>>f.close()
+```
+
+
+#### Using with Statement
+```
+>>> with open('sample.txt', 'r') as f:
+...     f.read()
+...
+"Hello World.\nLet's learn Python3.\n"
+```
+
+```
+>>> with open('sample.txt', 'r') as f:
+...     for i in f:
+...         if 'Python' in i:
+...             print(i)
+...
+Let's learn Python3.
+```
+
+
+## Modules
+
+   * import module 
+   * from module import something
+   * from module import *
+
+
+
+`math.py`
+```
+def square(x):
+    return x * x
+```
+
+`result.py`
+```
+from math import square
+print(square(5))
+```
+
+
+### `__name__` and `__main__`
+
+`math.py`
+```
+def square(x):
+    return x * x
+if __name__ == '__main__':
+    print("Result: for square(5) == %d " % square(5))
+```
+
+`result.py`
+```
+import math
+print(math.square(5))
+```
