@@ -28,6 +28,7 @@
   * [Photon OS](technology/photonos.md)
   * [Python](technology/python/README.md)
     * [Django](technology/python/django.md)
+    * [Django](technology/python/syntax.md)
   * [Raspberry Pi](technology/raspi.md)
   * [RISC-V](technology/riscv.md)
   * [rsync](technology/rsync.md)
