@@ -1,5 +1,9 @@
-IRSSI Commands
-==============
+IRSSI
+=====
+
+
+Commands
+--------
 
 To Connect to Server:
 
