@@ -325,3 +325,60 @@ Supports multiple datatypes
 >>> a
 [1, 2, 3, 34, 1]
 ```
+
+### Lists Comprehensions
+```
+>>> a = [1, 2, 3]
+>>> [x ** 2 for x in a]
+[1, 4, 9]
+```
+
+```
+>>> z = [x + 1 for x in [x ** 2 for x in a]]
+>>> z
+[2, 5, 10]
+```
+
+### Tuple
+
+```
+>>> a = 'Fedora', 'Debian', 10, 12
+>>> a
+('Fedora', 'Debian', 10, 12)
+>>> a[1]
+'Debian'
+>>> for x in a:
+...     print(x, end=' ')
+...
+Fedora Debian 10 12
+>>> type(a)
+<class 'tuple'>
+>>> len(a)
+4
+```
+
+
+### Immutable (Cannot modify any value)
+
+```
+>>> a = (1, 2, 3, 4)
+>>> del a[0]
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object doesn't support item deletion
+```
+
+
+### Tuple Packing & Unpacking
+```
+>>> a = (1, 2, 3) # Packing
+>>> (first, second, third) = a # Unpacking
+>>> first
+1
+>>> second
+2
+>>> third
+3
+>>> (first, second, third) = (1, 2, 3) # Another way
+```
+
