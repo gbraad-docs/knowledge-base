@@ -358,7 +358,7 @@ Fedora Debian 10 12
 ```
 
 
-### Immutable (Cannot modify any value)
+#### Immutable (Cannot modify any value)
 
 ```
 >>> a = (1, 2, 3, 4)
@@ -369,7 +369,7 @@ TypeError: 'tuple' object doesn't support item deletion
 ```
 
 
-### Tuple Packing & Unpacking
+#### Tuple Packing & Unpacking
 ```
 >>> a = (1, 2, 3) # Packing
 >>> (first, second, third) = a # Unpacking
@@ -382,3 +382,19 @@ TypeError: 'tuple' object doesn't support item deletion
 >>> (first, second, third) = (1, 2, 3) # Another way
 ```
 
+
+### Dictionary
+
+```
+>>> data = {'quentin':'Fedora', 'diwen':'Debian', 'steve':'Mac'}
+>>> data
+{'quentin': 'Fedora', 'steve': 'Mac', 'diwen': 'Debian'}
+>>> data['steve']
+'Mac'
+>>> data['gerard'] = 'Fedora'
+>>> data
+{'gerard': 'Fedora', 'quentin': 'Fedora', 'steve': 'Mac', 'diwen': 'Debian'}
+>>> del data['steve']
+>>> data
+{'gerard': 'Fedora', 'quentin': 'Fedora', 'diwen': 'Debian'}
+```
