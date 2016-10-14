@@ -118,3 +118,71 @@ print("Z = ", z)
 >>> str(a)
 '8.126768'
 ```
+
+
+## Print and string formatting
+
+```
+>>> name = 'Yongyuan'
+>>> country = 'China'
+>>> print("%s is from %s" % (name, country))
+Yongyuan is from China
+>>> print("{0} is from {1}".format(name, country))
+Yongyuan is from China
+>>> print("{} is from {}".format(name, country))
+Yongyuan is from China
+>>> print("{} is from {}".format(name))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: tuple index out of range
+```
+
+
+## Conditions and Control Flow
+```
+if expression:
+    do this
+elif expression:
+    do this
+else: 
+    do this
+```
+
+
+## Do's and dont's
+
+```
+if x == True:
+    do not this  
+ 
+if x == False:
+    do not this
+```
+
+```
+if x:
+    do this
+ 
+if not x:
+    do this
+```
+
+## Looping
+
+
+### While Loop
+
+```
+while condition:
+    statement1
+    statement2
+```
+
+```
+>>> # Print 0-10
+>>> n = 0 
+>>> while n < 11:
+...     print(n)
+...     n += 1
+```
+
