@@ -1,11 +1,11 @@
 Python
 ======
 
+  * [Syntax](syntax.md)
   * [Django](django.md)
 
 
-Books
------
+## Books
 
   * [Learning Python The Hard Way](http://learnpythonthehardway.org/)
   * [Hacker's Guide to Python ](https://thehackerguidetopython.com/)
