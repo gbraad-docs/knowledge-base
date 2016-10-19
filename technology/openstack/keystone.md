@@ -165,16 +165,13 @@ $ sudo -u keystone /usr/local/bin/keystone-all --config-file=/etc/keystone/keyst
 ```
 
 
-## Verify Keystone using `curl`
+## Verify Keystone using `cURL`
 
   * http://docs.openstack.org/developer/keystone/api_curl_examples.html
 
 ```
-$ curl -s -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "password"},"tenantName": "admin"}}' -H "Content-Type: application/json" http://localhost:5000/v2.0/tokens
-# Add
-#   | python -mjson.tool
-#   | jq .
-# for pretty print
+export PRETTYJSON="python -mjson.tool" # or use "jq ."
+$ curl -s -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "password"},"tenantName": "admin"}}' -H "Content-Type: application/json" http://localhost:5000/v2.0/tokens | $PRETTYJSON
 ```
 
     {
@@ -228,6 +225,46 @@ $ curl -s -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "
         }
       }
     }
+
+
+## Get token using `cURL`
+To continue this:
+```
+$ curl -i -H "Content-Type: application/json" -d '
+{ "auth": {
+    "identity": {
+      "methods": ["password"],
+      "password": {
+        "user": {
+          "name": "admin",
+          "domain": { "name": "Default" },
+          "password": "password"
+        }
+      }
+    },
+    "scope": {
+      "project": {
+        "name": "admin",
+        "domain": { "name": "Default" }
+      }
+    }
+  }
+}' http://172.17.0.6:5000/v3/auth/tokens
+```
+
+A response will follow. You need to set the value of `X-Subject-Token` to
+`OS_TOKEN`.
+
+```
+$ OS_TOKEN=8d4079e745064b578470d87c816119e2
+```
+
+To list users:
+
+```
+
+$ curl -s -H "X-Auth-Token: $OS_TOKEN" http://localhost:5000/v3/users | PRETTYJSON
+```
 
     
 ## Use `python-openstackclient`
