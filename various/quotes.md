@@ -46,3 +46,5 @@ Quotes
 "The best way to predict the future is to create it"
 
 "If you don't have any shadows, you're not standing in the light" - Marissa Mayer
+
+"Do not change to fit how the tool works, but change the tool to fit how you work."
