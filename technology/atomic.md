@@ -256,7 +256,7 @@ mkdir -p ~/output
 disk-image-create fedora-atomic -o ~/output/fedora-atomic
 ```
 
-[Ref](https://gist.github.com/gbraad/eaeb278460ca158a0fac9c5a3e71bfe8)
+[Ref](https://github.com/strigazi/custom-fedora-atomic-builds/blob/master/fa24/run.sh)
 
 
 
