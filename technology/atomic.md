@@ -219,6 +219,47 @@ $ vagrant init fedora/24-atomic-host && vagrant up --provider virtualbox
 [Source](https://atlas.hashicorp.com/fedora/boxes/24-atomic-host)
 
 
+
+Using OpenStack DiskImage Builder (Magnum)
+------------------------------------------
+
+### Create the ostree
+```
+git clone https://pagure.io/fedora-atomic.git -b f24
+ostree init --repo=/srv/repo --mode=archive-z2
+rpm-ostree compose tree --repo=/srv/repo ~/fedora-atomic/fedora-atomic-docker-host.json
+
+ostree trivial-httpd -d -P 9001 /srv/repo
+```
+
+### Create the image
+```
+git clone https://git.openstack.org/openstack/magnum
+git clone https://git.openstack.org/openstack/diskimage-builder.git
+git clone https://git.openstack.org/openstack/dib-utils.git
+
+export PATH="${PWD}/dib-utils/bin:$PATH"
+export PATH="${PWD}/diskimage-builder/bin:$PATH"
+
+export ELEMENTS_PATH="${PWD}/diskimage-builder/elements"
+export ELEMENTS_PATH="${ELEMENTS_PATH}:${PWD}/magnum/magnum/drivers/common/image"
+
+export DIB_RELEASE=24
+export DIB_DEBUG_TRACE=1
+export DIB_IMAGE_SIZE=3.0
+
+export FEDORA_ATOMIC_TREE_URL=http://localhost:9001
+export FEDORA_ATOMIC_TREE_REF=$(cat /srv/f24ah/refs/heads/fedora-atomic/24/x86_64/docker-host)
+
+mkdir -p ~/output
+
+disk-image-create fedora-atomic -o ~/output/fedora-atomic
+```
+
+[Ref](https://gist.github.com/gbraad/eaeb278460ca158a0fac9c5a3e71bfe8)
+
+
+
 Other resources
 ---------------
 
