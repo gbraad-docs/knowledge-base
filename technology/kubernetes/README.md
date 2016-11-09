@@ -13,7 +13,6 @@ $ git clone https://github.com/kubernetes/kubernetes.git
 $ cd kubernetes
 $ export GOROOT=/opt/go
 $ export PATH=$PATH:$PWD/_gopath/bin
-$ GOPATH=$PWD/_gopath go get -u github.com/jteeuwen/go-bindata/go-bindata
 $ GOPATH=$PWD/_gopath make
 ```
 
