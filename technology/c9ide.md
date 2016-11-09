@@ -69,6 +69,17 @@ $ ansible-playbook -i hosts deploy-c9sdk-workstations.yml
 ```
 
 
+#### Running
+After a susccesul install, the intrface can be started using the following command:
+```
+$ /home/user/.c9/node/bin/node /opt/c9sdk/server.js \
+    --listen 0.0.0.0 \
+    --port 8181 \
+    -a $USERNAME:$PASSWORD \
+    -w /workspace
+```
+
+
 ### Docker
 The Docker container is based on standard images, provided by CentOS, Fedora and Ubuntu, and install `curl`, `ansible` and `python` to allow the Docker build process to deploy using the Ansible playbook. This means that the containers are minimal in setup, but allow you to fully customize the environment.
 
