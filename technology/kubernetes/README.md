@@ -26,6 +26,7 @@ $ chmod +x kubectl
 ```
 
   * [Docker container](https://github.com/gbraad/docker-kubernetes-client)
+  * [Flatpak application](https://gitlab.com/gbraad/flatpak-kubernetes-client)
 
 
 Ansible
