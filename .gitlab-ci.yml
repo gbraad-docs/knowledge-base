@@ -29,6 +29,8 @@ publish:
 
 pages:
   stage: deploy
+  script:
+    - mkdir -p public
   artifacts:
     paths:
       - public
