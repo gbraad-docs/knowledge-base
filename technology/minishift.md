@@ -6,7 +6,7 @@ Build environment
 -----------------
 
 ```bash
-#/bin/sh
+#!/bin/sh
 OS=linux
 ARCH=amd64
 GO_VERSION=1.7.1
