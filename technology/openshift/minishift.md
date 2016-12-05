@@ -6,6 +6,7 @@ Build environment
 -----------------
 
 ```bash
+#!/bin/sh
 GO_TARGET=$HOME
 GLIDE_TARGET=$HOME
 SRC_TARGET=$HOME
