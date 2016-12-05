@@ -35,7 +35,7 @@ export GOROOT=${GO_TARGET}/go/
 export PATH=$PATH:${GO_TARGET}/go/bin
 
 GLIDE_OS_ARCH=`go env GOHOSTOS`-`go env GOHOSTARCH`
-if [ ! -x "${GO_TARGET}/go" ]
+if [ ! -x "${GLIDE_TARGET}/glide" ]
 then
     GLIDE_TAG=$(curl -s https://glide.sh/version)
     GLIDE_LATEST_RELEASE_URL="https://github.com/Masterminds/glide/releases/download/${GLIDE_TAG}/glide-${GLIDE_TAG}-${GLIDE_OS_ARCH}.tar.gz"
