@@ -41,7 +41,7 @@ $ ansible -i hosts all -u centos -s -m shell -a "rm -rf /"
 
 ```
 import logging
-logging.basicConfig(filename="/tmp/ansible-debug.log', level=logging.DEBUG)
+logging.basicConfig(filename="/tmp/ansible-debug.log", level=logging.DEBUG)
 ```
 
 Somewhere else in the code do:
