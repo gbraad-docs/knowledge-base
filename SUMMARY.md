@@ -1,65 +1,86 @@
 # Summary
 
-# Technology
+# Containers & Cloud
 
-- [Android](technology/unsorted/android.md)
-- [Ansible](technology/unsorted/ansible.md)
-- [ARM](technology/unsorted/arm.md)
-- [Atomic](technology/unsorted/atomic.md)
-- [C9 IDE](technology/unsorted/c9ide.md)
-- [Ceph](technology/unsorted/ceph.md)
-- [Cockpit](technology/unsorted/cockpit.md)
-- [Cloud Foundry](technology/unsorted/cloudfoundry.md)
-- [cloud-init](technology/unsorted/cloudinit.md)
-- [containers](technology/unsorted/containers.md)
-  - [Docker](technology/unsorted/docker.md)
-- [Flatpak](technology/unsorted/flatpak.md)
-- [Git](technology/git/README.md)
-  - [GitHub](technology/git/github.md)
-  - [GitLab](technology/git/gitlab.md)
-- [Kubernetes](technology/kubernetes/README.md)
-- [Linux](technology/unsorted/linux.md)
-- [ManageIQ](technology/unsorted/manageiq.md)
-- [Open edX](technology/unsorted/openedx.md)
-- [OpenShift](technology/openshift/README.md)
-  - [minishift](technology/openshift/minishift.md)
-- [ostree](technology/unsorted/ostree.md)
-- [Photon OS](technology/unsorted/photonos.md)
-- [Python](technology/python/README.md)
-  - [Syntax](technology/python/syntax.md)
-  - [Django](technology/python/django.md)
-- [Raspberry Pi](technology/unsorted/raspi.md)
-- [RISC-V](technology/unsorted/riscv.md)
-- [rsync](technology/unsorted/rsync.md)
-- [sed](technology/unsorted/sed.md)
-- [shell scripting](technology/unsorted/shell.md)
-- [Software installation](technology/unsorted/install.md)
-- [Libvirt/virsh](technology/unsorted/virsh.md)
-- [Windows](technology/unsorted/windows.md)
-
-# Network
-
-- [nginx](technology/unsorted/nginx.md)
-- [tcpdump](technology/unsorted/tcpdump.md)
-- [traefik](technology/unsorted/traefik.md)
+- [Overview](containers-cloud/README.md)
+- [containers](containers-cloud/containers.md)
+- [Docker](containers-cloud/docker.md)
+- [Atomic](containers-cloud/atomic.md)
+- [cloud-init](containers-cloud/cloudinit.md)
+- [Cloud Foundry](containers-cloud/cloudfoundry.md)
+- [Ceph](containers-cloud/ceph.md)
+- [ManageIQ](containers-cloud/manageiq.md)
+- [Kubernetes](containers-cloud/kubernetes/README.md)
+- [OpenShift](containers-cloud/openshift/README.md)
+  - [minishift](containers-cloud/openshift/minishift.md)
 
 # OpenStack
 
-- [Overview](technology/openstack/README.md)
-- [TripleO](technology/openstack/tripleo.md)
-- [Client](technology/openstack/client.md)
-- [Devstack](technology/openstack/devstack.md)
-- [Fuel](technology/openstack/fuel.md)
-- [Keystone](technology/openstack/keystone.md)
-- [Puppet](technology/openstack/puppet.md)
-- [RDO](technology/openstack/rdo.md)
-- [PackStack](technology/openstack/packstack.md)
+- [Overview](containers-cloud/openstack/README.md)
+- [TripleO](containers-cloud/openstack/tripleo.md)
+- [Client](containers-cloud/openstack/client.md)
+- [Devstack](containers-cloud/openstack/devstack.md)
+- [Fuel](containers-cloud/openstack/fuel.md)
+- [Keystone](containers-cloud/openstack/keystone.md)
+- [Puppet](containers-cloud/openstack/puppet.md)
+- [RDO](containers-cloud/openstack/rdo.md)
+- [PackStack](containers-cloud/openstack/packstack.md)
+
+# Linux
+
+- [Overview](linux/README.md)
+- [Linux](linux/linux.md)
+- [ARM](linux/arm.md)
+- [Raspberry Pi](linux/raspi.md)
+- [RISC-V](linux/riscv.md)
+- [Photon OS](linux/photonos.md)
+- [ostree](linux/ostree.md)
+- [Flatpak](linux/flatpak.md)
+- [Libvirt/virsh](linux/virsh.md)
+- [Software installation](linux/install.md)
+- [Storage](linux/storage.md)
+- [Cockpit](linux/cockpit.md)
+- [Android](linux/android.md)
+- [GlusterFS](linux/glusterfs.md)
+
+# Development
+
+- [Overview](development/README.md)
+- [Git](development/git/README.md)
+  - [GitHub](development/git/github.md)
+  - [GitLab](development/git/gitlab.md)
+- [Python](development/python/README.md)
+  - [Syntax](development/python/syntax.md)
+  - [Django](development/python/django.md)
+- [Go](development/golang.md)
+- [Ansible](development/ansible.md)
+- [C9 IDE](development/c9ide.md)
+- [sed](development/sed.md)
+- [shell scripting](development/shell.md)
+
+# Networking
+
+- [Overview](networking/README.md)
+- [nginx](networking/nginx.md)
+- [traefik](networking/traefik.md)
+- [tcpdump](networking/tcpdump.md)
+- [SSH](networking/ssh.md)
+- [rsync](networking/rsync.md)
+- [curl/wget](networking/curlwget.md)
+
+# Security
+
+- [Overview](security/README.md)
+- [Security](security/security.md)
 
 # Various
 
 - [Persuasion](various/persuasion.md)
 - [Quotes](various/quotes.md)
 - [Todo](various/todo.md)
+- [irssi](various/irssi.md)
+- [Open edX](various/openedx.md)
+- [Windows](various/windows.md)
 
 # Books
 
