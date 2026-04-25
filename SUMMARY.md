@@ -52,11 +52,23 @@
 - [Python](development/python/README.md)
   - [Syntax](development/python/syntax.md)
   - [Django](development/python/django.md)
+- [Rust](development/rust/README.md)
+  - [Basics](development/rust/basics.md)
+  - [Ownership & Borrowing](development/rust/ownership.md)
+  - [Structs, Enums & Patterns](development/rust/types.md)
+  - [Error Handling](development/rust/error-handling.md)
+  - [Traits & Generics](development/rust/traits.md)
+- [newlib](development/newlib.md)
 - [Go](development/golang.md)
 - [Ansible](development/ansible.md)
 - [C9 IDE](development/c9ide.md)
 - [sed](development/sed.md)
 - [shell scripting](development/shell.md)
+- [Audio](development/audio/README.md)
+  - [Pure Data](development/audio/puredata.md)
+  - [Csound](development/audio/csound.md)
+  - [Faust](development/audio/faust.md)
+  - [Schwung/Move effects](development/audio/schwung-move-effects.md)
 
 # Networking
 
