@@ -1,0 +1,13 @@
+{
+    "name": "mdBook environment",
+    "build": {
+        "dockerfile": "Containerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bierner.markdown-mermaid"
+            ]
+        }
+    }
+}

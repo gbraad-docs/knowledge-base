@@ -1,0 +1,14 @@
+[book]
+authors = ["Gerard Braad"]
+language = "en"
+multilingual = false
+src = "."
+title = "Gerard Braad's Knowledge Base"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "light"
+additional-css = ["theme/custom.css"]
+git-repository-url = "https://github.com/gbraad-docs/knowledge-base"
+
+[preprocessor.callouts]

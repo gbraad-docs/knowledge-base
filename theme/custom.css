@@ -1,0 +1,235 @@
+/* ============================================================
+   GERARD BRAAD - mdBook Theme
+   Matches the shared-theme: Orange (#ff8c00) + Blue (#0f93f9)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Design tokens */
+:root {
+    --gb-bg-primary: #f5f5f5;
+    --gb-bg-secondary: #ffffff;
+    --gb-bg-tertiary: #e8e8e8;
+    --gb-accent-orange: #ff8c00;
+    --gb-accent-blue: #0f93f9;
+    --gb-accent-orange-dim: #cc7000;
+    --gb-accent-blue-dim: #0c76c7;
+    --gb-text-primary: #1a1a1a;
+    --gb-text-secondary: #4a4a4a;
+    --gb-text-tertiary: #6a6a6a;
+    --gb-border: #d0d0d0;
+    --gb-shadow-orange: rgba(255, 140, 0, 0.15);
+    --gb-shadow-blue: rgba(15, 147, 249, 0.15);
+}
+
+/* Override mdBook light theme variables */
+.light, :root {
+    --bg: var(--gb-bg-primary);
+    --fg: var(--gb-text-secondary);
+    --sidebar-bg: var(--gb-bg-secondary);
+    --sidebar-fg: var(--gb-text-primary);
+    --sidebar-non-existant: var(--gb-text-tertiary);
+    --sidebar-active: var(--gb-accent-orange);
+    --sidebar-spacer: var(--gb-bg-tertiary);
+    --scrollbar: var(--gb-border);
+    --icons: var(--gb-text-tertiary);
+    --icons-hover: var(--gb-accent-orange);
+    --links: var(--gb-accent-blue);
+    --inline-code-color: var(--gb-accent-orange-dim);
+    --theme-popup-bg: var(--gb-bg-secondary);
+    --theme-popup-border: var(--gb-border);
+    --theme-hover: var(--gb-bg-tertiary);
+    --quote-bg: var(--gb-bg-tertiary);
+    --quote-border: var(--gb-accent-orange);
+    --table-border-color: var(--gb-border);
+    --table-header-bg: var(--gb-bg-tertiary);
+    --table-alternate-bg: var(--gb-bg-primary);
+    --searchbar-border-color: var(--gb-border);
+    --searchbar-bg: var(--gb-bg-secondary);
+    --searchbar-fg: var(--gb-text-primary);
+    --searchbar-shadow-color: var(--gb-shadow-orange);
+    --searchresults-header-fg: var(--gb-text-secondary);
+    --searchresults-border-color: var(--gb-border);
+    --searchresults-li-bg: var(--gb-bg-secondary);
+    --search-mark-bg: rgba(15, 147, 249, 0.2);
+}
+
+/* Typography */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Top menu bar — matches the blue banner */
+.menu-bar {
+    background: var(--gb-accent-blue) !important;
+    border-bottom: none !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-bar .icon-button {
+    color: #ffffff !important;
+}
+
+.menu-bar .icon-button:hover {
+    color: var(--gb-accent-orange) !important;
+    background: transparent !important;
+}
+
+.menu-title {
+    color: #ffffff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+}
+
+/* Sidebar */
+#sidebar {
+    border-right: 1px solid var(--gb-border);
+}
+
+#sidebar .chapter li a {
+    color: var(--gb-text-secondary);
+    transition: color 0.2s;
+}
+
+#sidebar .chapter li a:hover {
+    color: var(--gb-accent-orange);
+}
+
+#sidebar .chapter li.chapter-item.expanded > a,
+#sidebar .chapter li a.active {
+    color: var(--gb-accent-orange) !important;
+    font-weight: bold;
+}
+
+#sidebar .part-title {
+    color: var(--gb-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    border-top: 1px solid var(--gb-border);
+    padding-top: 0.5em;
+}
+
+/* Content area */
+.content main {
+    max-width: 900px;
+}
+
+/* Headings */
+h1 {
+    color: var(--gb-text-primary);
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--gb-accent-orange);
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    color: var(--gb-text-primary);
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--gb-border);
+    padding-bottom: 0.2em;
+}
+
+h3 {
+    color: var(--gb-accent-orange);
+}
+
+h4 {
+    color: var(--gb-accent-blue);
+}
+
+/* Links */
+a {
+    color: var(--gb-accent-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--gb-accent-blue-dim);
+    text-decoration: underline;
+}
+
+/* Code blocks */
+code {
+    font-family: 'Courier New', monospace;
+    background: var(--gb-bg-tertiary);
+    border-radius: 3px;
+    padding: 1px 4px;
+    color: var(--gb-accent-orange-dim);
+}
+
+pre {
+    border-left: 3px solid var(--gb-accent-orange);
+    border-radius: 0 4px 4px 0;
+}
+
+pre code {
+    color: inherit;
+    background: transparent;
+    padding: 0;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--gb-accent-orange);
+    background: var(--gb-bg-tertiary);
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    color: var(--gb-text-secondary);
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background: var(--gb-bg-tertiary);
+    color: var(--gb-text-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+    border-bottom: 2px solid var(--gb-accent-orange);
+}
+
+td, th {
+    border: 1px solid var(--gb-border);
+    padding: 0.5em 0.75em;
+}
+
+tr:nth-child(even) td {
+    background: var(--gb-bg-primary);
+}
+
+/* Search bar */
+#searchbar {
+    border: 1px solid var(--gb-border);
+    border-radius: 4px;
+}
+
+#searchbar:focus {
+    border-color: var(--gb-accent-blue);
+    box-shadow: 0 0 0 2px var(--gb-shadow-blue);
+    outline: none;
+}
+
+/* Nav arrows */
+.nav-chapters {
+    color: var(--gb-accent-orange);
+    transition: color 0.2s;
+}
+
+.nav-chapters:hover {
+    color: var(--gb-accent-orange-dim);
+}
+
+/* Print */
+@media print {
+    .menu-bar, #sidebar, .nav-chapters { display: none; }
+}

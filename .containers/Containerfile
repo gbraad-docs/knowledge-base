@@ -1,0 +1,24 @@
+FROM ubuntu:24.04 AS builder
+
+RUN apt-get update && apt-get install -y \
+    curl \
+    build-essential \
+    pkg-config \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
+RUN cargo install mdbook --version 0.4.43
+RUN cargo install mdbook-callouts
+
+
+FROM ubuntu:24.04
+
+COPY --from=builder /root/.cargo/bin/mdbook /usr/bin/
+COPY --from=builder /root/.cargo/bin/mdbook-* /usr/bin/
+
+RUN mkdir -p /workspace
+WORKDIR /workspace
+ENTRYPOINT ["mdbook"]
