@@ -69,6 +69,7 @@
   - [Pure Data](development/audio/puredata.md)
   - [Csound](development/audio/csound.md)
   - [Faust](development/audio/faust.md)
+  - [Logue SDK](development/audio/logue.md)
   - [Schwung/Move effects](development/audio/schwung-move-effects.md)
 
 # Networking

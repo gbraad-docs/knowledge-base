@@ -4,11 +4,11 @@ An introductory course covering Rust's core concepts. Rust is a systems language
 
 ## Course outline
 
-- [[basics]] - installation, hello world, variables, types, functions
-- [[ownership]] - ownership, borrowing, references, slices
-- [[types]] - structs, enums, pattern matching
-- [[error-handling]] - `Result`, `Option`, the `?` operator
-- [[traits]] - traits, generics, lifetimes
+- [Basics](basics.md) - installation, hello world, variables, types, functions
+- [Ownership & Borrowing](ownership.md) - ownership, borrowing, references, slices
+- [Structs, Enums & Patterns](types.md) - structs, enums, pattern matching
+- [Error Handling](error-handling.md) - `Result`, `Option`, the `?` operator
+- [Traits & Generics](traits.md) - traits, generics, lifetimes
 
 ## Resources
 
