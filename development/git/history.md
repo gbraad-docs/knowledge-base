@@ -86,7 +86,7 @@ git gc --prune=now --aggressive
 git push --force
 ```
 
-BFG is faster than `git filter-repo` for large repos but less flexible — it cannot filter by path prefix or apply arbitrary transformations.
+BFG is faster than `git filter-repo` for large repos but less flexible - it cannot filter by path prefix or apply arbitrary transformations.
 
 ## Notes on GitHub / GitLab caching
 

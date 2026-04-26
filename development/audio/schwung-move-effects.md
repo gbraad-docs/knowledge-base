@@ -1,8 +1,8 @@
-# Schwung — Custom Modules for Ableton Move
+# Schwung - Custom Modules for Ableton Move
 
 Schwung (formerly Move Everything) is an unofficial framework for running custom instruments, effects, and controllers on the **Ableton Move** hardware. It adds a Shadow UI that runs alongside stock Move firmware, allowing additional synths, FX, and tools to run in parallel with the normal Move interface.
 
-> **Disclaimer:** Not endorsed or supported by Ableton. Modifying Move firmware carries risk — back up your sets and know how to use DFU restore mode before installing.
+> **Disclaimer:** Not endorsed or supported by Ableton. Modifying Move firmware carries risk - back up your sets and know how to use DFU restore mode before installing.
 
 ## How it works
 
@@ -124,7 +124,7 @@ Every module has a `src/module.json` that defines its identity and parameters:
 
 ## Standalone modules
 
-Standalone modules take full control of Move hardware — Move firmware is suspended while the module runs, then restarted on exit. They talk directly to the SPI interface:
+Standalone modules take full control of Move hardware - Move firmware is suspended while the module runs, then restarted on exit. They talk directly to the SPI interface:
 
 ```c
 // Open the SPI device
@@ -171,9 +171,9 @@ The Module Store reads `release.json` from each module's repo to discover new ve
 | Module | Type | Description |
 |--------|------|-------------|
 | [Dexed](https://github.com/charlesvestal/schwung-dx7) | Sound generator | 6-operator FM (DX7 .syx banks) |
-| [Surge XT](https://github.com/charlesvestal/schwung-surge) | Sound generator | Hybrid synth — wavetable, FM, subtractive |
+| [Surge XT](https://github.com/charlesvestal/schwung-surge) | Sound generator | Hybrid synth - wavetable, FM, subtractive |
 | [Braids](https://github.com/charlesvestal/schwung-braids) | Sound generator | Mutable Instruments macro oscillator (47 algorithms) |
-| [NAM](https://github.com/charlesvestal/schwung-nam) | Audio FX | Neural Amp Modeler — guitar amp emulation |
+| [NAM](https://github.com/charlesvestal/schwung-nam) | Audio FX | Neural Amp Modeler - guitar amp emulation |
 | [CHOWTape](https://github.com/charlesvestal/schwung-chowtape) | Audio FX | Analog tape with Jiles-Atherton hysteresis |
 | [CloudSeed](https://github.com/charlesvestal/schwung-cloudseed) | Audio FX | Algorithmic reverb |
 | [DJ Deck](https://github.com/charlesvestal/schwung-dj) | Overtake/tool | Dual-deck CDJ player with timestretch/stems |

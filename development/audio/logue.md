@@ -1,6 +1,6 @@
 # Logue SDK
 
-The Korg logue SDK allows developing custom oscillators and effects for Korg's logue-compatible hardware. Units compile to ARM Cortex-M4/M7 bare-metal code — see [ARM](../../linux/arm.md) for toolchain setup.
+The Korg logue SDK allows developing custom oscillators and effects for Korg's logue-compatible hardware. Units compile to ARM Cortex-M4/M7 bare-metal code - see [ARM](../../linux/arm.md) for toolchain setup.
 
 ## Hardware targets
 
@@ -25,15 +25,15 @@ The Korg logue SDK allows developing custom oscillators and effects for Korg's l
 
 `genericfx` is NTS-3 Kaoss exclusive. Unlike other effect types, it can process audio continuously in the background regardless of touch pad state.
 
-## GenericFX — NTS-3 background effects
+## GenericFX - NTS-3 background effects
 
-Normal effect units (`modfx`, `delfx`, `revfx`) receive audio via the `in` parameter in `unit_render`, which is routed through the effect on/off state. When the touch pad is not held (and HOLD/XY Freeze is off), the input is bypassed — the effect stops processing.
+Normal effect units (`modfx`, `delfx`, `revfx`) receive audio via the `in` parameter in `unit_render`, which is routed through the effect on/off state. When the touch pad is not held (and HOLD/XY Freeze is off), the input is bypassed - the effect stops processing.
 
 `genericfx` units can sidestep this by calling `get_raw_input()` through the runtime context, which returns the raw audio input unaffected by touch pad state. The effect runs continuously in the background.
 
 ### Storing the runtime descriptor
 
-Save the descriptor passed to `unit_init` — it carries the hooks needed later in `unit_render`:
+Save the descriptor passed to `unit_init` - it carries the hooks needed later in `unit_render`:
 
 ```cpp
 #include "unit_genericfx.h"
@@ -78,7 +78,7 @@ Using `raw_input` instead of `in` means the effect processes audio continuously 
 | Approach | Input source | Requires HOLD? |
 |----------|-------------|----------------|
 | Normal effect | `in` parameter | Yes, when pad not touched |
-| Background effect | `ctxt->get_raw_input()` | No — always running |
+| Background effect | `ctxt->get_raw_input()` | No - always running |
 
 ### NTS-3 extras
 
@@ -154,7 +154,7 @@ fast_inline void Render(float* out, size_t frames) {
 
 ### VLA pitfall
 
-`unit_render` receives `frames` as a runtime value. Stack-allocating with a runtime size is a C99 VLA — not valid C++ and dangerous on Cortex-M with limited stack:
+`unit_render` receives `frames` as a runtime value. Stack-allocating with a runtime size is a C99 VLA - not valid C++ and dangerous on Cortex-M with limited stack:
 
 ```cpp
 // WRONG: VLA, not valid C++
@@ -222,7 +222,7 @@ The same DSP core can target multiple runtimes beyond bare-metal hardware:
 | Pure Data → C | `.nts3unit` | hvcc | Pd patches compiled to Logue units |
 | Faust → C | `.nts3unit` | faust2logue | Faust DSP compiled to Logue units |
 
-The Regroovelizer loads `.nts3unit` ELF files on ARM Linux by parsing relocations and resolving logue SDK symbols at runtime — allowing the same unit binary to run on desktop for development before flashing to hardware.
+The Regroovelizer loads `.nts3unit` ELF files on ARM Linux by parsing relocations and resolving logue SDK symbols at runtime - allowing the same unit binary to run on desktop for development before flashing to hardware.
 
 ## Resources
 

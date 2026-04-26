@@ -15,3 +15,4 @@ Notes on Linux distributions, hardware platforms, and system tools.
 - [Cockpit](cockpit.md) - web-based Linux administration
 - [Android](android.md) - Android development and ADB
 - [GlusterFS](glusterfs.md) - distributed filesystem
+- [WSL](wsl.md) - Windows Subsystem for Linux, mounts, metadata, wsl.conf
