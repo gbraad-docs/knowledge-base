@@ -49,6 +49,7 @@
 - [Git](development/git/README.md)
   - [GitHub](development/git/github.md)
   - [GitLab](development/git/gitlab.md)
+  - [Rewriting history](development/git/history.md)
 - [Python](development/python/README.md)
   - [Syntax](development/python/syntax.md)
   - [Django](development/python/django.md)
