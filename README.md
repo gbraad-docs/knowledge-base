@@ -1,26 +1,13 @@
-Gerard Braad's Knowledge Base
-=============================
+# Gerard Braad's Knowledge Base
 
-[!["Scribble"](https://raw.githubusercontent.com/gbraad/assets/gh-pages/icons/scribble-icon-64.png)](http://github.com/gbraad)
+A personal reference for tools, platforms, languages, and workflows collected over time.
 
-This repository contains collected information of things I have used or are currently researching; this could be hardware, software, books, language, etc.
+## Contents
 
-
-Content
--------
-
-[Table of Contents](SUMMARY.md)
-
-
-Authors
--------
-
-| [!["Gerard Braad"](http://gravatar.com/avatar/e466994eea3c2a1672564e45aca844d0.png?s=60)](http://gbraad.nl "Gerard Braad <me@gbraad.nl>") |
-|---|
-| [@gbraad](https://twitter.com/gbraad)  |
-
-
-License
--------
-
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+- [Containers & Cloud](containers-cloud/README.md) - Docker, Kubernetes, OpenShift, OpenStack, Ceph
+- [Linux](linux/README.md) - ARM, RISC-V, Raspberry Pi, storage, virtualization
+- [Development](development/README.md) - Rust, Python, Go, Git, shell, audio
+- [Networking](networking/README.md) - nginx, SSH, traefik, curl
+- [Security](security/README.md) - tools and hardening
+- [Books](books/README.md) - reading notes
+- [Language](language/english/README.md) - Chinese tech vocabulary, English
