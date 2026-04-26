@@ -2,7 +2,7 @@
 
 Container orchestration platform originally developed by Google, now governed by the CNCF.
 
-- [OpenShift](../openshift/README.md) - enterprise Kubernetes distribution by Red Hat
+- [OpenShift](../openshift/) - enterprise Kubernetes distribution by Red Hat
 
 ## Quick start
 

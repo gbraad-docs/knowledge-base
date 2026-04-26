@@ -9,6 +9,6 @@ Notes on container runtimes, orchestration, and cloud platforms.
 - [Cloud Foundry](cloudfoundry.md) - PaaS platform
 - [Ceph](ceph.md) - distributed storage
 - [ManageIQ](manageiq.md) - cloud management platform
-- [Kubernetes](kubernetes/README.md) - container orchestration
-- [OpenShift](openshift/README.md) - Kubernetes distribution by Red Hat
-- [OpenStack](openstack/README.md) - open source cloud infrastructure
+- [Kubernetes](kubernetes/) - container orchestration
+- [OpenShift](openshift/) - Kubernetes distribution by Red Hat
+- [OpenStack](openstack/) - open source cloud infrastructure

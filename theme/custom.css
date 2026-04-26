@@ -24,9 +24,9 @@
 
 /* Override mdBook light theme variables */
 .light, :root {
-    --bg: var(--gb-bg-primary);
+    --bg: #ffffff;
     --fg: var(--gb-text-secondary);
-    --sidebar-bg: var(--gb-bg-secondary);
+    --sidebar-bg: #eef0f3;
     --sidebar-fg: var(--gb-text-primary);
     --sidebar-non-existant: var(--gb-text-tertiary);
     --sidebar-active: var(--gb-accent-orange);
@@ -163,8 +163,13 @@ code {
 }
 
 pre {
+    background-color: #000000 !important;
     border-left: 3px solid var(--gb-accent-orange);
     border-radius: 0 4px 4px 0;
+}
+
+pre > .hljs {
+    background: #000000;
 }
 
 pre code {

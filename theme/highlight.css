@@ -1,0 +1,16 @@
+/* Tomorrow Night Bright — highlight.js theme */
+.hljs {
+    background: #000000;
+    color: #eaeaea;
+}
+.hljs-comment, .hljs-quote { color: #969896; }
+.hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name,
+.hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion { color: #d54e53; }
+.hljs-number, .hljs-built_in, .hljs-literal, .hljs-type,
+.hljs-params, .hljs-meta, .hljs-link { color: #e78c45; }
+.hljs-attribute { color: #e7c547; }
+.hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition { color: #b9ca4a; }
+.hljs-title, .hljs-section { color: #7aa6da; }
+.hljs-keyword, .hljs-selector-tag { color: #c397d8; }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: bold; }
