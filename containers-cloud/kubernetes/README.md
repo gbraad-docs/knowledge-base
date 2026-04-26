@@ -1,50 +1,39 @@
-Kubernetes
-==========
+# Kubernetes
 
-  * Hands-on-labs
-    * Source: [GitHub](https://github.com/gbraad/kubernetes-handsonlabs), [GitLab](https://gitlab.com/gbraad/kubernetes-handsonlabs)
-    * Published: [GitBook](https://gbraad.gitbooks.io/kubernetes-handsonlabs/content/), [HTML](http://gbraad.gitlab.io/kubernetes-handsonlabs/)
+Container orchestration platform originally developed by Google, now governed by the CNCF.
 
+- [OpenShift](../openshift/README.md) - enterprise Kubernetes distribution by Red Hat
 
-Build from source
------------------
-```
-$ git clone https://github.com/kubernetes/kubernetes.git
-$ cd kubernetes
-$ export GOROOT=/opt/go
-$ export PATH=$PATH:$PWD/_gopath/bin
-$ GOPATH=$PWD/_gopath make
-```
+## Quick start
 
+```bash
+# Install kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -Ls https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl && mv kubectl /usr/local/bin/
 
-Client
-------
-
-```
-$ wget http://storage.googleapis.com/kubernetes-release/release/v1.3.4/bin/linux/amd64/kubectl
-$ chmod +x kubectl
+# Basic commands
+kubectl get nodes
+kubectl get pods -A
+kubectl apply -f manifest.yaml
+kubectl logs <pod> -f
+kubectl exec -it <pod> -- bash
 ```
 
-  * [Docker container](https://github.com/gbraad/docker-kubernetes-client)
-  * [Flatpak application](https://gitlab.com/gbraad/flatpak-kubernetes-client)
+## Build from source
 
+```bash
+git clone https://github.com/kubernetes/kubernetes.git
+cd kubernetes
+make
+```
 
-Ansible
--------
+## Ansible roles
 
-### Deployment playbook
+- [gbraad.kubernetes-master](https://github.com/gbraad/ansible-role-kubernetes-master)
+- [gbraad.kubernetes-node](https://github.com/gbraad/ansible-role-kubernetes-node)
+- [gbraad.kubernetes-client](https://github.com/gbraad/ansible-role-kubernetes-client)
+- [Deployment playbook](https://github.com/gbraad/ansible-playbook-kubernetes)
 
-  * [GitHub](https://github.com/gbraad/ansible-playbook-kubernetes)
+## Resources
 
-
-### Ansible Roles
-  * gbraad.docker  
-    [Galaxy](https://galaxy.ansible.com/gbraad/docker/), [GitHub](https://github.com/gbraad/ansible-role-docker) / [GitLab](https://gitlab.com/gbraad/ansible-role-docker)
-  * gbraad.docker-registry  
-    [Galaxy](https://galaxy.ansible.com/gbraad/docker-registry/), [GitHub](https://github.com/gbraad/ansible-role-docker-registry) / [GitLab](https://gitlab.com/gbraad/ansible-role-docker-registry)
-  * gbraad.kubernetes-master  
-    [Galaxy](https://galaxy.ansible.com/gbraad/kubernetes-master/), [GitHub](https://github.com/gbraad/ansible-role-kubernetes-master) / [GitLab](https://gitlab.com/gbraad/ansible-role-kubernetes-master)
-  * gbraad.kubernetes-node  
-    [Galaxy](https://galaxy.ansible.com/gbraad/kubernetes-node/), [GitHub](https://github.com/gbraad/ansible-role-kubernetes-node) / [GitLab](https://gitlab.com/gbraad/ansible-role-kubernetes-node)
-  * gbraad.kubernetes-client  
-    [Galaxy](https://galaxy.ansible.com/gbraad/kubernetes-client/), [GitHub](https://github.com/gbraad/ansible-role-kubernetes-client) / [GitLab](https://gitlab.com/gbraad/ansible-role-kubernetes-client)
+- [Hands-on-labs](https://github.com/gbraad/kubernetes-handsonlabs)
