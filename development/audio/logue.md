@@ -15,12 +15,84 @@ The Korg logue SDK allows developing custom oscillators and effects for Korg's l
 
 ## Unit types
 
-| Type | Callback entry | Description |
-|------|---------------|-------------|
-| `osc` | `unit_render` produces audio from MIDI | Custom oscillator / sound generator |
-| `modfx` | `unit_render` processes audio in-place | Modulation effect (chorus, flanger) |
-| `delfx` | `unit_render` processes audio in-place | Delay effect |
-| `revfx` | `unit_render` processes audio in-place | Reverb effect |
+| Type | Header | Description |
+|------|--------|-------------|
+| `osc` | `unit.h` | Custom oscillator / sound generator |
+| `modfx` | `unit_modfx.h` | Modulation effect (chorus, flanger) |
+| `delfx` | `unit_delfx.h` | Delay effect |
+| `revfx` | `unit_revfx.h` | Reverb effect |
+| `genericfx` | `unit_genericfx.h` | NTS-3 background effect (always running) |
+
+`genericfx` is NTS-3 Kaoss exclusive. Unlike other effect types, it can process audio continuously in the background regardless of touch pad state.
+
+## GenericFX — NTS-3 background effects
+
+Normal effect units (`modfx`, `delfx`, `revfx`) receive audio via the `in` parameter in `unit_render`, which is routed through the effect on/off state. When the touch pad is not held (and HOLD/XY Freeze is off), the input is bypassed — the effect stops processing.
+
+`genericfx` units can sidestep this by calling `get_raw_input()` through the runtime context, which returns the raw audio input unaffected by touch pad state. The effect runs continuously in the background.
+
+### Storing the runtime descriptor
+
+Save the descriptor passed to `unit_init` — it carries the hooks needed later in `unit_render`:
+
+```cpp
+#include "unit_genericfx.h"
+
+static unit_runtime_desc_t s_runtime_desc;
+
+__unit_callback int8_t unit_init(const unit_runtime_desc_t *desc) {
+    if (!desc) return k_unit_err_undef;
+    if (desc->target != unit_header.common.target) return k_unit_err_target;
+    if (!UNIT_API_IS_COMPAT(desc->api)) return k_unit_err_api_version;
+
+    s_runtime_desc = *desc;   // store for get_raw_input() access
+
+    // optional: SDRAM allocation for delay buffers etc.
+    if (s_effect_instance.getBufferSize() > 0) {
+        float *buf = (float *)desc->hooks.sdram_alloc(
+            s_effect_instance.getBufferSize() * sizeof(float));
+        if (!buf) return k_unit_err_memory;
+        s_effect_instance.init(buf);
+    }
+    return k_unit_err_none;
+}
+```
+
+### Background render
+
+```cpp
+__unit_callback void unit_render(const float *in, float *out, uint32_t frames) {
+    // Cast runtime context to genericfx type to access get_raw_input()
+    const unit_runtime_genericfx_context_t *ctxt =
+        static_cast<const unit_runtime_genericfx_context_t *>(
+            s_runtime_desc.hooks.runtime_context);
+
+    // get_raw_input() bypasses effect on/off routing - always live audio
+    const float *raw_input = ctxt->get_raw_input();
+    s_effect_instance.process(raw_input, out, frames);
+}
+```
+
+Using `raw_input` instead of `in` means the effect processes audio continuously without requiring the HOLD button.
+
+| Approach | Input source | Requires HOLD? |
+|----------|-------------|----------------|
+| Normal effect | `in` parameter | Yes, when pad not touched |
+| Background effect | `ctxt->get_raw_input()` | No — always running |
+
+### NTS-3 extras
+
+`genericfx` also receives XY pad events via `unit_touch_event`, not available on other platforms:
+
+```cpp
+__unit_callback void unit_touch_event(uint8_t id, uint8_t phase, uint32_t x, uint32_t y) {
+    s_effect_instance.touchEvent(id, phase, x, y);
+}
+```
+
+Memory available: 32 KB SRAM + 3 MB SDRAM (allocated via `desc->hooks.sdram_alloc`).
+
+Template: `logue-sdk/platform/nts-3_kaoss/dummy-genericfx/`
 
 ## Callback architecture
 
