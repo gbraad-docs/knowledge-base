@@ -73,6 +73,7 @@
   - [Csound](development/audio/csound.md)
   - [Faust](development/audio/faust.md)
   - [Logue SDK](development/audio/logue.md)
+  - [Drumlogue Units](development/audio/drumlogue.md)
   - [Schwung/Move effects](development/audio/schwung-move-effects.md)
 
 # Networking

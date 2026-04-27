@@ -11,7 +11,7 @@ The Korg logue SDK allows developing custom oscillators and effects for Korg's l
 | NTS-3 Kaoss | `.nts3unit` | Cortex-M7 | Primary target |
 | minilogue xd | `.mnlgxdunit` | Cortex-M4F | Polyphonic synth |
 | prologue | `.prlgunit` | Cortex-M4F | Polyphonic synth |
-| drumlogue | `.drmlgunit` | Cortex-A7 | Drum machine |
+| [drumlogue](drumlogue.md) | `.drmlgunit` | Cortex-A7 | Drum machine |
 
 ## Unit types
 
