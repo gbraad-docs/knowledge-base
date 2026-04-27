@@ -219,43 +219,211 @@ mode. The device mounts as a drive with a `Units/Synths/` directory. Copy
 `.drmlgunit` files there, then restart the device. Units load in alphabetical
 order and appear in the SYN1–4 slot selection.
 
-## Unit patterns
+## Filesystem access
 
-### Single-voice drum (rg909 pattern)
+Because the drumlogue runs Linux, units have full POSIX file I/O via the standard
+C library (`fopen`, `fread`, `fwrite`, `opendir`, etc.). Three distinct mechanisms
+are available depending on what you need to access.
 
-One synth engine per unit. The unit sounds like one instrument. `GateOn` fires
-it; `NoteOn` can optionally vary pitch. Used by `rg909_drum` (TR-909 bass drum).
+### User filesystem (userfs)
 
-```cpp
-inline void GateOn(uint8_t velocity) {
-    rs1_poly_static_note_on(&voice_, 60, velocity);
+The drumlogue daemon exposes a persistent writable area at:
+
+```
+/var/lib/drumlogued/userfs/
+```
+
+This is where units read and write user data: sample files, presets, configuration.
+It survives reboots and is accessible from USB mass storage as a subdirectory of the
+mounted drive. On MicroKorg2 the equivalent base is `/var/lib/microkorgd/userfs/`.
+
+Namespace your unit's files under a subdirectory to avoid collisions with other units:
+
+```c
+char path[256];
+snprintf(path, sizeof(path), "/var/lib/drumlogued/userfs/MyUnit/preset_%d.dat", idx);
+FILE* f = fopen(path, "rb");
+if (f) {
+    /* read data */
+    fclose(f);
 }
 ```
 
-### Multi-voice drum machine (rd1/rd2 pattern)
+For units that target both drumlogue and MicroKorg2, `UNIT_TARGET_PLATFORM` is a
+C enum value, not a preprocessor macro, so it cannot be used in `#if` expressions.
+Pass a `-D` flag via `UDEFS` in `config.mk` and test with `#if defined(...)`:
 
-Six independent voices: kick, snare, closed hat, open hat, clap, tom. Each has
-a level parameter. `NoteOn` uses GM note mapping; `GateOn` fires whichever drum
-`PARAM_GATE` selects.
+```makefile
+# config.mk (drumlogue)
+UDEFS = -DUNIT_TARGET_PLATFORM_DRUMLOGUE
+
+# config.mk (MicroKorg2)
+UDEFS = -DUNIT_TARGET_PLATFORM_MICROKORG2
+```
+
+```c
+/* paths.h */
+#if defined(UNIT_TARGET_PLATFORM_DRUMLOGUE)
+#  define MYUNIT_USERFS "/var/lib/drumlogued/userfs/MyUnit"
+#elif defined(UNIT_TARGET_PLATFORM_MICROKORG2)
+#  define MYUNIT_USERFS "/var/lib/microkorgd/userfs/MyUnit"
+#endif
+```
+
+### SDK sample bank API
+
+`unit_runtime_desc_t` (passed to `unit_init`) carries three function pointers
+for accessing the drumlogue's built-in sample library without touching the
+filesystem directly:
+
+```cpp
+typedef struct unit_runtime_desc {
+    // ...
+    unit_runtime_get_num_sample_banks_ptr     get_num_sample_banks;
+    unit_runtime_get_num_samples_for_bank_ptr get_num_samples_for_bank;
+    unit_runtime_get_sample_ptr               get_sample;
+} unit_runtime_desc_t;
+```
+
+`get_sample(bank, index)` returns a `sample_wrapper_t*`:
+
+```c
+typedef struct sample_wrapper {
+    uint8_t      bank, index, channels, _padding;
+    char         name[32];
+    size_t       frames;
+    const float* sample_ptr;   /* PCM already in memory, ready to use */
+} sample_wrapper_t;
+```
+
+The sample data is pre-loaded into memory by the runtime; `sample_ptr` points
+directly to 32-bit float PCM. Store `desc` at `Init` time and call `get_sample`
+later as needed:
+
+```cpp
+const unit_runtime_desc_t* runtime_desc_ = nullptr;
+
+inline int8_t Init(const unit_runtime_desc_t* desc) {
+    runtime_desc_ = desc;
+    return k_unit_err_none;
+}
+
+bool loadSample(uint8_t bank, uint8_t index, const float** data, size_t* frames) {
+    const sample_wrapper_t* s = runtime_desc_->get_sample(bank, index);
+    if (!s || !s->sample_ptr) return false;
+    *data   = s->sample_ptr;
+    *frames = s->frames;
+    return true;
+}
+```
+
+### Embedded data (cart injection)
+
+For data that ships with the unit itself (cartridges, wavetables, sample banks)
+the cart injection pattern embeds the data in a named ELF section inside the
+`.drmlgunit` binary. The runtime loads the binary as a shared library, so the
+section is mapped directly into the process address space with no file I/O.
+
+```c
+/* declare a replaceable block inside the unit binary */
+__attribute__((section(".my_cart")))
+const uint8_t my_cart_data[4096] = { /* placeholder bytes */ };
+```
+
+A host-side patcher reads the ELF, locates the section by name, and overwrites
+its contents without recompiling. The unit accesses the array as a normal C
+pointer at runtime.
+
+| Mechanism | Location | When to use |
+|-----------|----------|-------------|
+| `userfs` file I/O | `/var/lib/drumlogued/userfs/` | User-provided samples, presets, config |
+| SDK sample bank | RAM via `desc->get_sample()` | Factory samples on the device SD card |
+| ELF section (cart injection) | Inside `.drmlgunit` binary | Data bundled with the unit, patchable post-build |
+
+## Unit patterns
+
+### Single-voice drum
+
+One synth engine per unit. The unit produces a single instrument sound. `GateOn`
+triggers it; `NoteOn` can optionally vary pitch. Typical parameter set: pitch,
+decay, level, tone.
+
+```cpp
+inline void GateOn(uint8_t velocity) {
+    engine_trigger(&voice_, 60, velocity);
+}
+
+inline void NoteOn(uint8_t note, uint8_t velocity) {
+    engine_trigger(&voice_, note, velocity);
+}
+```
+
+### Multi-voice drum machine
+
+Six independent voices: kick, snare, closed hat, open hat, clap, tom. Each voice
+has a level parameter. `NoteOn` uses GM note mapping; `GateOn` fires whichever
+voice `PARAM_GATE` selects.
 
 ```
 PARAM_KICK_LEVEL  PARAM_SNARE_LEVEL  PARAM_CH_LEVEL  PARAM_OH_LEVEL
 PARAM_CLAP_LEVEL  PARAM_TOM_LEVEL    PARAM_MASTER    PARAM_GATE (0-5)
 ```
 
-`rd1_drumlogue` uses the RS1 engine (`RS1_PolyStatic` per voice).  
-`rd2_drumlogue` uses the RS2 engine (`RS2_Poly` per voice), enabling PCM sample
-operators alongside the algorithmic resonator/noise operators.
+```cpp
+inline void NoteOn(uint8_t note, uint8_t velocity) {
+    switch (note) {
+    case 36: voice_trigger(&kick_,  velocity); break;
+    case 38: voice_trigger(&snare_, velocity); break;
+    case 39: voice_trigger(&clap_,  velocity); break;
+    case 42: voice_trigger(&ch_,    velocity); break;
+    case 46: voice_trigger(&oh_,    velocity); break;
+    case 50: voice_trigger(&tom_,   velocity); break;
+    }
+}
 
-### Polyphonic synth (rs1/rs2 pattern)
+inline void GateOn(uint8_t velocity) {
+    void* voices[] = { &kick_, &snare_, &ch_, &oh_, &clap_, &tom_ };
+    voice_trigger(voices[gate_drum_], velocity);
+}
+```
 
-One polyphonic engine (4–8 voices internally). `NoteOn`/`NoteOff` handle melody
-playing; `GateOn` triggers at a fixed pitch. `PARAM_PRESET` selects from
-built-in factory presets.
+### Polyphonic synth with file-loaded presets
 
-`rs1_drumlogue` uses `RS1_PolyStatic` with 6 melodic presets (Default, Bell,
-Lead, Supersaw, Bass, Pad). `rs2_drumlogue` uses `RS2_Poly` with an algorithmic
-resonator preset.
+One polyphonic engine (4-8 voices internally). `NoteOn`/`NoteOff` handle melody;
+`GateOn` triggers at a fixed pitch. `PARAM_PRESET` selects from N preset slots.
+
+Each slot loads a preset file at `Init`; if the file is absent a built-in preset
+is used as fallback. The preset name shown on the display comes from a `name`
+field embedded in the file, falling back to the factory name.
+
+```
+/var/lib/drumlogued/userfs/MyUnit/preset_0.dat  ->  slot 0
+/var/lib/drumlogued/userfs/MyUnit/preset_1.dat  ->  slot 1
+...
+```
+
+```cpp
+void loadPresets() {
+    for (int i = 0; i < NUM_PRESETS; i++) {
+        char path[256];
+        snprintf(path, sizeof(path),
+                 "/var/lib/drumlogued/userfs/MyUnit/preset_%d.dat", i);
+        bool loaded = false;
+        FILE* f = fopen(path, "rb");
+        if (f) {
+            uint8_t buf[PRESET_SIZE];
+            if (fread(buf, 1, PRESET_SIZE, f) == PRESET_SIZE)
+                loaded = preset_deserialize(&presets_[i], buf);
+            fclose(f);
+        }
+        if (!loaded)
+            presets_[i] = factory_preset(i);
+    }
+}
+```
+
+`getParameterStrValue` returns `presets_[value].name` for the preset selector
+so the display shows the embedded name rather than a raw number.
 
 ## Ecosystem examples
 
@@ -263,9 +431,9 @@ Several third-party ports demonstrate what the drumlogue runtime can host:
 
 | Project | Engine | Notes |
 |---------|--------|-------|
-| [Lillian](https://github.com/boochow/eurorack_drumlogue) | Mutable Instruments Braids | 47 wavetable shapes, dual envelopes, FM, VCA — full eurorack port |
-| [maxisynth](https://github.com/boochow/maxisynth) | Maximilian audio library | Band-limited oscillator, LP filter, full ADSR — demonstrates C++ library integration |
-| [libpd-test](https://github.com/boochow/libpd_drumlogue_test_synth) | libpd (Pure Data) | Runs a `.pd` patch directly on hardware — demonstrates scripting runtime integration |
+| [Lillian](https://github.com/boochow/eurorack_drumlogue) | Mutable Instruments Braids | 47 wavetable shapes, dual envelopes, FM, VCA; full eurorack port |
+| [maxisynth](https://github.com/boochow/maxisynth) | Maximilian audio library | Band-limited oscillator, LP filter, full ADSR; demonstrates C++ library integration |
+| [libpd-test](https://github.com/boochow/libpd_drumlogue_test_synth) | libpd (Pure Data) | Runs a `.pd` patch directly on hardware; demonstrates scripting runtime integration |
 
 These show that the Linux runtime allows porting substantial audio codebases
 without the severe size and performance constraints of bare-metal Cortex-M.
