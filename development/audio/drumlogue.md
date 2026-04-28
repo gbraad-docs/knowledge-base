@@ -43,16 +43,16 @@ A minimal drumlogue unit project contains five files:
 
 ```
 my_drum/
-├── Makefile      — copy from rs2_drumlogue; references common/ and config.mk
+├── Makefile      — copy from platform/drumlogue/dummy-synth/; references common/ and config.mk
 ├── config.mk     — PROJECT, PROJECT_TYPE, CSRC, CXXSRC, UINCDIR, ULIBS
 ├── header.c      — unit_header_t: name, params, dev_id
 ├── synth.h       — Synth class: Init, Render, NoteOn, GateOn, setParameter, …
 └── unit.cc       — SDK callbacks delegating to Synth class instance
 ```
 
-`unit.cc` is boilerplate that barely changes between projects. Copy it from an
-existing unit (e.g. `rs2_drumlogue/unit.cc`) and it delegates every SDK callback
-to the `Synth` class defined in `synth.h`.
+`unit.cc` is boilerplate that barely changes between projects. Copy it from the
+SDK reference unit (`platform/drumlogue/dummy-synth/unit.cc`) and it delegates
+every SDK callback to the `Synth` class defined in `synth.h`.
 
 ## Parameters
 
@@ -103,19 +103,19 @@ Consequences for drum machine units:
 // In synth.h
 inline void GateOn(uint8_t velocity) {
     // trigger whatever drum PARAM_GATE selects
-    RS2_Poly* voices[] = { kick_, snare_, ch_, oh_, clap_, tom_ };
-    rs2_poly_note_on(voices[gate_drum_], 60, velocity);
+    Voice* voices[] = { &kick_, &snare_, &ch_, &oh_, &clap_, &tom_ };
+    voice_note_on(voices[gate_drum_], 60, velocity);
 }
 
 inline void NoteOn(uint8_t note, uint8_t velocity) {
     // GM drum map for external MIDI
     switch (note) {
-    case 36: rs2_poly_note_on(kick_,  60, velocity); break;
-    case 38: rs2_poly_note_on(snare_, 60, velocity); break;
-    case 39: rs2_poly_note_on(clap_,  60, velocity); break;
-    case 42: rs2_poly_note_on(ch_,    60, velocity); break;
-    case 46: rs2_poly_note_on(oh_,    60, velocity); break;
-    case 50: rs2_poly_note_on(tom_,   60, velocity); break;
+    case 36: voice_note_on(&kick_,  60, velocity); break;
+    case 38: voice_note_on(&snare_, 60, velocity); break;
+    case 39: voice_note_on(&clap_,  60, velocity); break;
+    case 42: voice_note_on(&ch_,    60, velocity); break;
+    case 46: voice_note_on(&oh_,    60, velocity); break;
+    case 50: voice_note_on(&tom_,   60, velocity); break;
     }
 }
 ```
@@ -126,17 +126,17 @@ Because drumlogue runs Linux, `malloc`/`free` and C++ `new`/`delete` are fully
 available. Heap-allocated engines per voice are normal:
 
 ```cpp
-RS2_Poly* kick_voice_ = nullptr;
+MyEngine* engine_ = nullptr;
 
 inline int8_t Init(const unit_runtime_desc_t* desc) {
-    kick_voice_ = rs2_poly_create((float)desc->samplerate);
-    if (!kick_voice_) return k_unit_err_memory;
+    engine_ = my_engine_create((float)desc->samplerate);
+    if (!engine_) return k_unit_err_memory;
     ...
 }
 
 inline void Teardown() {
-    rs2_poly_destroy(kick_voice_);
-    kick_voice_ = nullptr;
+    my_engine_destroy(engine_);
+    engine_ = nullptr;
 }
 ```
 
@@ -169,12 +169,12 @@ __unit_callback void unit_render(const float* in, float* out, uint32_t frames) {
 }
 ```
 
-`RS2_Poly::process` outputs split left/right buffers, not interleaved — mix
+Engines that output split left/right buffers (not interleaved) need to be mixed
 voices into a mono accumulator, then write to both channels:
 
 ```cpp
 float mix[frames], l[frames], r[frames];
-rs2_poly_process(voice_, l, r, (int)frames);
+engine_process(voice_, l, r, (int)frames);
 for (size_t i = 0; i < frames; i++) mix[i] += l[i] * level_;
 // ... accumulate other voices ...
 for (size_t i = 0; i < frames; i++) {
@@ -184,32 +184,42 @@ for (size_t i = 0; i < frames; i++) {
 
 ## Building
 
-Units are cross-compiled inside a container. The project directory is mounted
-into the SDK platform tree at build time:
+Units are cross-compiled inside a container using the logue SDK development
+environment. Place the unit directory inside `platform/drumlogue/`, then use
+the SDK's `run_cmd.sh` script:
+
+```bash
+# From the logue-sdk root
+./docker/run_cmd.sh build drumlogue/my_drum
+```
+
+This mounts `platform/` as `/workspace` inside the container, sources the
+drumlogue environment, and runs `make install`. The resulting
+`my_drum.drmlgunit` is written back into `platform/drumlogue/my_drum/`.
+
+For units that live outside the SDK tree (e.g. a separate project repo), mount
+the unit directory and any additional source paths manually:
 
 ```bash
 podman run --rm \
     -v "$PLATFORM_PATH:/workspace:rw" \
     -v "$PROJECT_DIR:/workspace/drumlogue/my_drum:rw" \
-    -v "$RFX_ROOT:/rfx:ro" \
     ghcr.io/gbraad-logue/logue-sdk/dev-env:latest \
     /app/cmd_entry bash -c "
         source /app/drumlogue/environment &&
         cd /workspace/drumlogue/my_drum &&
-        make clean SYNTH_PATH=/rfx/synth &&
-        make install SYNTH_PATH=/rfx/synth
+        make clean &&
+        make install
     "
 ```
 
-The `SYNTH_PATH` override redirects the default `../../../synth` relative path
-to the absolute container path. The resulting `my_drum.drmlgunit` is installed
-back into the project directory on the host via the container mount.
-
-A build orchestration script (`build-drum.sh`) wraps this loop for a list of
-units and copies outputs to `bin/`:
+Any extra source paths (shared libraries, external engines) are passed as make
+variable overrides and mounted as additional read-only volumes:
 
 ```bash
-bash logue/build-drum.sh rs1_drumlogue rd1_drumlogue rd2_drumlogue
+-v "$ENGINE_SRC:/engine:ro"
+# then in make:
+make install ENGINE_PATH=/engine
 ```
 
 ## Loading onto the device
